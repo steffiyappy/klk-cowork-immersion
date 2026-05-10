@@ -263,6 +263,138 @@
     color: #fff; font-size: 11px; font-weight: 700;
     letter-spacing: .04em; text-transform: uppercase;
   }
+
+  /* ───── Runbook ───── */
+  .rb-tagline {
+    display: inline-block; font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .14em; color: var(--green);
+    background: var(--accent-bg); padding: 4px 10px; border-radius: 999px;
+    border: 1px solid #bbf7d0; margin-bottom: 12px;
+  }
+  .rb-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 16px; margin: 18px 0 30px;
+  }
+  .rb-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 24px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+    transition: transform .12s, box-shadow .12s;
+    text-decoration: none; color: var(--ink);
+  }
+  .rb-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .rb-uc-num {
+    display: inline-block;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 5px;
+    letter-spacing: .04em; margin-bottom: 10px; align-self: flex-start;
+    background: #ede9fe; color: #5b21b6;
+  }
+  .rb-uc-num.green { background: #dcfce7; color: #14532d; }
+  .rb-uc-num.blue  { background: #dbeafe; color: #1e40af; }
+  .rb-uc-num.gold  { background: #fef3c7; color: #92400e; }
+  .rb-uc-num.rose  { background: #ffe4e6; color: #9f1239; }
+  .rb-uc-num.slate { background: #f1f5f9; color: #334155; }
+  .rb-uc-num.teal  { background: #ccfbf1; color: #115e59; }
+  .rb-card h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.35; }
+  .rb-card p  { font-size: 13.5px; margin: 0 0 12px; flex: 1; color: var(--ink-soft); }
+  .rb-card .rb-link {
+    color: var(--green); font-size: 13px; font-weight: 600; margin-top: auto;
+  }
+
+  .rb-detail {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px 30px; margin: 22px 0;
+    scroll-margin-top: 20px; box-shadow: var(--shadow);
+  }
+  .rb-detail .rb-head {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .rb-detail .rb-cat {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); font-weight: 700;
+  }
+  .rb-detail h2 {
+    margin: 4px 0 0; flex-basis: 100%;
+    font-size: 22px; color: var(--ink); border: 0; padding: 0;
+  }
+  .rb-detail .rb-sub { color: var(--muted); margin: 4px 0 14px; font-size: 14.5px; }
+  .rb-detail h4 {
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); font-weight: 700; margin: 22px 0 10px;
+  }
+  .rb-detail .rb-meta { margin: 8px 0 14px; }
+
+  .rb-files { margin: 4px 0 6px; }
+  .rb-file {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 4px 10px 4px 4px;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: var(--card); font-size: 12.5px;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    color: var(--ink-soft); margin: 0 6px 6px 0;
+  }
+  .rb-file .ext {
+    background: #16a34a; color: #fff;
+    padding: 2px 6px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: .04em;
+  }
+  .rb-file.pdf  .ext { background: #dc2626; }
+  .rb-file.png  .ext, .rb-file.jpg .ext { background: #f59e0b; }
+  .rb-file.docx .ext { background: #2563eb; }
+  .rb-file.pptx .ext { background: #ea580c; }
+
+  .rb-prompt-block {
+    background: #f8fafc; border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 18px 18px;
+    margin: 14px 0;
+  }
+  .rb-prompt-head {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .rb-prompt-num {
+    background: var(--green); color: #fff;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px;
+    letter-spacing: .04em;
+  }
+  .rb-prompt-title {
+    font-size: 15px; font-weight: 600; color: var(--ink);
+  }
+  .rb-prompt-block .prompt { margin: 0; }
+
+  .rb-callouts {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px; margin: 18px 0 0;
+  }
+  @media (max-width: 900px) { .rb-callouts { grid-template-columns: 1fr; } }
+  .rb-callout {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .rb-callout-label {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: .12em;
+    font-weight: 700; color: var(--muted); margin-bottom: 8px;
+  }
+  .rb-callout.watch  { border-left: 3px solid var(--green); }
+  .rb-callout.honest { border-left: 3px solid var(--gold); }
+  .rb-callout ul { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-soft); }
+  .rb-callout ul li { margin: 4px 0; }
+  .rb-callout p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+
+  .pattern-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 10px; padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .pattern-card .pattern-num {
+    display: inline-block; background: var(--green); color: #fff;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 4px;
+    letter-spacing: .04em; margin-bottom: 8px;
+  }
+  .pattern-card h3 { margin: 4px 0 6px; font-size: 15px; }
+  .pattern-card p  { font-size: 13px; margin: 0; color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -308,6 +440,7 @@
     <div class="nav-section">The Demo</div>
     <nav>
       <a onclick="show('demo', this)">The Cowork Demo <span class="badge">★</span></a>
+      <a onclick="show('runbook', this)">Cowork Runbook <span class="badge">★</span></a>
     </nav>
 
     <div class="nav-section">Use Cases · By Division</div>
@@ -661,6 +794,884 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
         <p>You can ask Cowork to run a similar prompt automatically on a cadence. For example:</p>
         <div class="prompt">Every quarter, two weeks before the scheduled Board Operations Review date in my calendar, draft the Q-end executive summary, sustainability briefing and Board deck from the latest Group Operations Report in /Documents/Board/.<button class="copy" onclick="copyP(this)">Copy</button></div>
       </div>
+    </section>
+
+    <!-- ═══════════════ COWORK RUNBOOK ═══════════════ -->
+    <section class="page" id="runbook">
+      <span class="rb-tagline">Copy-paste ready · 10 use cases · 6 patterns</span>
+      <h1 class="page-title">Cowork <span style="color:var(--green);">Runbook</span></h1>
+      <p class="page-sub">Ten end-to-end Cowork orchestrations across every division and every group function — each one a multi-step prompt chain with sample source files, named outputs and honest framing. Built around the six core patterns Cowork is best at.</p>
+
+      <h2>The six core patterns</h2>
+      <div class="grid-3">
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 1</span>
+      <h3>Spreading + Parity Check</h3>
+      <p>Pull raw source data into a company template, then re-check that the rebuilt totals tie back. Cowork verifies its own work before you do.</p>
+    </div>
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 2</span>
+      <h3>Mixed-Format Extraction</h3>
+      <p>Pull the same data out of PDFs, scanned images and Excel into one standardised schema. OCR low-confidence rows get flagged, not silently committed.</p>
+    </div>
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 3</span>
+      <h3>Council of Agents</h3>
+      <p>One source pack, five expert lenses in parallel. Each agent owns a viewpoint; a synthesis pass surfaces the dissent register.</p>
+    </div>
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 4</span>
+      <h3>Recursive Entity Research</h3>
+      <p>Drill down through corporate ownership until you reach natural persons or hit a depth limit. Every node carries a source URL and a verified-on date.</p>
+    </div>
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 5</span>
+      <h3>Structured Pack with Citations</h3>
+      <p>A fixed output format (sections A–I) plus a hard rule: cite note numbers, do not fabricate metrics. Missing data lands in the follow-up section.</p>
+    </div>
+    <div class="pattern-card">
+      <span class="pattern-num">Pattern 6</span>
+      <h3>Model → Interactive App</h3>
+      <p>Convert an Excel financial model into Python plus a self-contained HTML with sliders. The committee moves the assumptions in the room.</p>
+    </div>
+      </div>
+
+      <h2>The 10 use cases</h2>
+      <div class="rb-grid">
+    <a class="rb-card" href="#rb-1" onclick="event.preventDefault();document.getElementById('rb-1').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num green">UC 1</span>
+      <h3>Estate Spreading + Parity Check</h3>
+      <p>Three estate monthly logs land in the Group Estate Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-2" onclick="event.preventDefault();document.getElementById('rb-2').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num green">UC 2</span>
+      <h3>Capex Model → Interactive Scenario App</h3>
+      <p>A 5-year Klang oleochem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-3" onclick="event.preventDefault();document.getElementById('rb-3').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num blue">UC 3</span>
+      <h3>Investment Council of Agents — Damansara Phase 3</h3>
+      <p>One IM + DD pack, five expert lenses in parallel — Land Bank, Macro, Construction Risk, Stress Test, Compliance — plus a synthesis pass and a dissent register.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-4" onclick="event.preventDefault();document.getElementById('rb-4').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num rose">UC 4</span>
+      <h3>Mixed-Format Bank Statement Extraction</h3>
+      <p>Maybank text PDF, CIMB scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-5" onclick="event.preventDefault();document.getElementById('rb-5').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num gold">UC 5</span>
+      <h3>Recursive UBO + Sanctions Pack</h3>
+      <p>An Indonesian smallholder consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-6" onclick="event.preventDefault();document.getElementById('rb-6').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num slate">UC 6</span>
+      <h3>Counterparty Underwriting Memo (Cite, Don't Fabricate)</h3>
+      <p>Three years of audited statements become a structured underwriting pack with cited note numbers — and a section called out for what the source pack didn't disclose.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-7" onclick="event.preventDefault();document.getElementById('rb-7').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num purple">UC 7</span>
+      <h3>Top-50 Talent Review Council</h3>
+      <p>Performance, potential, retention, DEI and successor mapping — five HR lenses on the same Top-50 cohort, in parallel, with a 9-box and a successor map for the ExCo room.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-8" onclick="event.preventDefault();document.getElementById('rb-8').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num rose">UC 8</span>
+      <h3>Quarterly Results Spreading + Parity Check</h3>
+      <p>Trial balance + segment reporting → Bursa quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-9" onclick="event.preventDefault();document.getElementById('rb-9').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num teal">UC 9</span>
+      <h3>Multi-Estate GHG Standardisation (CDP-Ready)</h3>
+      <p>Twelve estates' fuel + electricity + fertiliser logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+    <a class="rb-card" href="#rb-10" onclick="event.preventDefault();document.getElementById('rb-10').scrollIntoView({behavior:'smooth',block:'start'});">
+      <span class="rb-uc-num blue">UC 10</span>
+      <h3>Group P&amp;L → Interactive Strategy App</h3>
+      <p>The FY27 group plan model — Plantation + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
+      <span class="rb-link">Open prompts →</span>
+    </a>
+      </div>
+
+    <div class="rb-detail" id="rb-1">
+      <div class="rb-head">
+        <span class="rb-uc-num green">UC 1</span>
+        <span class="rb-cat">Plantation · Group Finance</span>
+        <h2>Estate Spreading + Parity Check</h2>
+      </div>
+      <p class="rb-sub">Three estate monthly logs land in the Group Estate Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Spreading + Parity Check</span>
+        <span class="pill blue">Apps · Excel · Word · SharePoint</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_LahadDatu_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Tawau_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Sandakan_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Group_Estate_Performance_Template_v3.xlsx</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Spread to template</span>
+      </div>
+      <div class="prompt">I've attached three estate monthly performance logs (Lahad Datu, Tawau, Sandakan) and the Group Estate Performance Template v3.
+
+Spread each estate's data into the template's `Estate Performance` sheet — one column per estate. Map: FFB tonnage, OER, mature/immature hectares, harvester productivity (FFB/manday), fertiliser issued (kg/ha), diesel consumption (litres), rainfall (mm), unit cost per FFB tonne (MYR).
+
+Capture multi-line manager commentary intact in the `Notes` column.
+
+Standardise dates to yyyy-mm-dd. Standardise units (tonnes, hectares, mm, litres, MYR).
+
+Don't perform any translation.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Parity check</span>
+      </div>
+      <div class="prompt">Now run a parity check on what you just spread:
+1. For each estate, sum FFB harvested per week and confirm it ties to the monthly total in the source — flag any divergence &gt; 2%.
+2. Confirm OER calculated from (CPO produced / FFB processed) ties to the OER reported in the log — flag divergence &gt; 0.3 percentage points.
+3. Confirm fertiliser kg/ha × mature hectares ties to total fertiliser issued.
+4. Cross-foot the template totals row.
+
+Produce `Parity_Check_Mar2026.xlsx` with one tab per estate showing source value, template value, variance, and a Pass/Flag column.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">Brief the Plantation MD</span>
+      </div>
+      <div class="prompt">Write a one-page Word brief titled "Estate Performance Spreading — March 2026 — Group Roll-up" for the Plantation MD. Highlight: any flagged parity issues, the worst three KPI shifts vs February, and the three estates worth a site visit.
+
+Save the spreading workbook, parity check, and brief to /Plantation/Monthly/Mar2026/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Three different estate-log formats land in one canonical template.</li>
+          <li>Cowork re-checks its own arithmetic — finds its own errors before the MD does.</li>
+          <li>Multi-line manager commentary preserved, not flattened.</li>
+          <li>One single source of truth for the GM, with a parity log behind it.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Parity check assumes the source totals are themselves correct. If a manager's source total is wrong, Cowork agrees with it — humans still own the underlying field data. For new template versions, do a one-off sample run before production use.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-2">
+      <div class="rb-head">
+        <span class="rb-uc-num green">UC 2</span>
+        <span class="rb-cat">Manufacturing · Strategy</span>
+        <h2>Capex Model → Interactive Scenario App</h2>
+      </div>
+      <p class="rb-sub">A 5-year Klang oleochem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Model → Interactive App</span>
+        <span class="pill blue">Apps · Excel · Code Interpreter · PowerPoint</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Klang_Oleochem_Capex_Model_FY27.xlsx</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Understand + build the app</span>
+      </div>
+      <div class="prompt">I've attached our 5-year Klang oleochem capex model. First walk me through the structure — drivers, inputs, formulas, and any assumptions an investment committee will push back on.
+
+Then convert it into a Python program with an interactive HTML front-end:
+- Sliders for: WACC (8–14%), USD/MYR (4.20–4.80), CPKO feedstock USD/T (800–1,400), capex contingency (5–15%), opex escalation (0–6%).
+- Show: total 5-year capex, NPV, IRR, payback period, year-by-year cash-out chart, sensitivity heatmap (CPKO × WACC).
+
+Deliver runnable Python plus a self-contained HTML I can preview locally.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Validate + run scenarios</span>
+      </div>
+      <div class="prompt">Run the new app at the model's original assumptions and produce a parity report against the spreadsheet (capex by year, NPV, IRR, total outflow) — flag any divergence &gt; MYR 100k.
+
+Then run three scenarios:
+- Base (current): WACC 11%, MYR 4.45, CPKO USD 1,050, contingency 8%.
+- Upside: WACC 9%, MYR 4.30, CPKO USD 950, contingency 6%.
+- Downside: WACC 13%, MYR 4.65, CPKO USD 1,250, contingency 12%.
+
+Summarise NPV swing and the top three line items driving variance.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">Pack for the IC</span>
+      </div>
+      <div class="prompt">Build a 6-slide Investment Committee pack titled "Klang Capacity Expansion FY27 — Sensitivity Pack":
+1. Cover
+2. Scenario table
+3. NPV waterfall
+4. Sensitivity heatmap
+5. Key risks
+6. Recommendation.
+
+Save to /Manufacturing/Klang/FY27_Capex/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Cowork reads every sheet, formula, and named range — not just the numbers visible on screen.</li>
+          <li>Generated code is version-controllable; the model becomes auditable.</li>
+          <li>The IC moves the sliders themselves in the room — no more "can you re-run it with WACC 12%?".</li>
+          <li>Parity report proves the rebuild is faithful before anyone trusts a new number.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Cowork delivers Python plus a self-contained HTML you run locally. Production deployment happens inside the customer's environment. The Excel model still owns the source of truth — the app proves the rebuild is faithful, not the hosting.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-3">
+      <div class="rb-head">
+        <span class="rb-uc-num blue">UC 3</span>
+        <span class="rb-cat">Property · Contoso Land</span>
+        <h2>Investment Council of Agents — Damansara Phase 3</h2>
+      </div>
+      <p class="rb-sub">One IM + DD pack, five expert lenses in parallel — Land Bank, Macro, Construction Risk, Stress Test, Compliance — plus a synthesis pass and a dissent register.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Council of Agents</span>
+        <span class="pill blue">Apps · Word · PowerPoint · PDF · Deep Research</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Phase3_IM.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Phase3_TechDD.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Site_Plan.pdf</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Convene the council</span>
+      </div>
+      <div class="prompt">You are acting as a council of AI agents helping Contoso Land assess the investment merits of the Damansara Mixed-Use Phase 3 development. For each role below, assume the role completely and produce a long, audit-ready interim report.
+
+Roles:
+1. Land Bank Analyst — deep analysis of land cost, plot ratio, GDV/GFA, demographic catchment, comparable transactions within 5 km, current absorption rates. Cite township masterplans where relevant.
+2. Macro Strategist — assess macro regime (rate path, MYR outlook, household debt, BNM stance), implications for mortgage absorption and pre-sale velocity, correlation surprises.
+3. Construction Risk Officer — independent view across material risk (steel, cement, MYR-USD), labour availability, contractor concentration, monsoon scheduling, defects-liability exposure. Propose mitigations.
+4. Stress Tester — structured scenarios (base / bear / bespoke shocks), kill-switch thresholds, sensitivity narrative, what would force a launch delay.
+5. Compliance &amp; Policy Agent — investment permissibility, township-approval gate status, RUMAH Selangorku quota, Bumiputera lot release schedule, planning conditions, environmental disclosures.
+
+Finally, analyse all interim reports for recommendations, evidence, assumptions and dissenting views. Capture every claim with traceability back to a section of the IM or DD pack.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Synthesise the pack</span>
+      </div>
+      <div class="prompt">Assemble the council outputs into a Word memo titled "Damansara Mixed-Use Phase 3 — Investment Council Recommendation" with:
+- Cover page (one-line recommendation)
+- One section per agent (~1 page each)
+- Dissent register — anywhere two agents disagreed and why
+- Appendix capturing every traceability link
+
+Save to /ContosoLand/Pipeline/Damansara_Phase3/Council/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Five expert lenses on the same document set — in parallel, not sequentially.</li>
+          <li>Dissent register surfaces real risk before it becomes a board-paper edit war.</li>
+          <li>Every claim is traceable to a source-document section, not free-floating opinion.</li>
+          <li>Stress tester names the kill switch — the one assumption that breaks the deal.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Council quality is bounded by IM and DD pack quality — garbage in, structured garbage out. The council does not replace the deal team — it gives them five sharper drafts to argue with.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-4">
+      <div class="rb-head">
+        <span class="rb-uc-num rose">UC 4</span>
+        <span class="rb-cat">Group Finance</span>
+        <h2>Mixed-Format Bank Statement Extraction</h2>
+      </div>
+      <p class="rb-sub">Maybank text PDF, CIMB scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Mixed-Format Extraction</span>
+        <span class="pill blue">Apps · Excel · PDF · Image</span>
+        <span class="pill purple">Complexity · Intermediate</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Maybank_E-Stmt_Mar2026.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>CIMB_E-Stmt_Mar2026.pdf</span><span class="rb-file png"><span class="ext">PNG</span>HSBC_Stmt_Mar2026.png</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Extract → standardise → split by month</span>
+      </div>
+      <div class="prompt">Extract the contents of the three bank statements into one Excel file with the following columns:
+Page No, Bank, Transaction Date, Description, Debit, Credit, Running Balance, Currency, Source File.
+
+Standardise on yyyy-mmm-dd as the date format.
+
+Capture multi-line transaction details intact.
+
+Ignore all text that is not part of a transaction (logos, marketing banners, addresses, footers).
+
+Don't perform any translation.
+
+Split the transactions by month into different worksheets and within each worksheet, sort the transactions chronologically ascending.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Reconcile to the GL</span>
+      </div>
+      <div class="prompt">Now reconcile the workbook to the GL:
+- Pull the corresponding GL bank-account balances from /Finance/GL/Mar2026/.
+- Compare opening balance, closing balance, total debits, total credits per bank.
+- Output `Recon_Mar2026.xlsx` with one tab per bank: source vs GL, variance, status (Match / Investigate / Missing).
+
+Flag anything &gt; MYR 1,000.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Three different formats — text PDF, scanned PDF, mobile screenshot — all land in the same standardised schema.</li>
+          <li>Multi-line descriptions stay intact; bank-side header noise is filtered out.</li>
+          <li>Date normalisation makes downstream reconciliation trivial.</li>
+          <li>One worksheet per month, sorted ascending — reconciliation-ready, not just an extract.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>OCR quality on scanned or low-resolution images can produce edge-case errors on amounts and dates — Cowork flags low-confidence rows rather than silently committing them. Bank-specific layouts evolve; new statement templates may need a sample run before production use.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-5">
+      <div class="rb-head">
+        <span class="rb-uc-num gold">UC 5</span>
+        <span class="rb-cat">Group Procurement · Compliance</span>
+        <h2>Recursive UBO + Sanctions Pack</h2>
+      </div>
+      <p class="rb-sub">An Indonesian smallholder consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Recursive Entity Research</span>
+        <span class="pill blue">Apps · Deep Research · Word · PDF · Excel</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Vendor_Onboarding_PT_Surya_Sawit.pdf</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Build the UBO tree</span>
+      </div>
+      <div class="prompt">Create an Ultimate Beneficial Ownership diagram for PT Surya Sawit Lestari (the vendor on the attached application).
+
+Recursively identify the UBO of each identified shareholder until you reach individual natural persons or until you reach a 5-level depth — whichever comes first.
+
+For each entity:
+- Pull entity data from the application package; for missing data, conduct deep research using publicly available sources (Companies Commission of Malaysia, AHU Online Indonesia, OpenCorporates, EDGAR-equivalent disclosures, OFAC and EU consolidated lists, news archives).
+- For every node, capture: legal entity name, registration number, jurisdiction, % ownership, source URL, last-verified date.
+- Where ownership is unclear or sourced from only one publication, flag the node "Verification needed" — do not guess.
+
+Render as a hierarchical diagram (Mermaid syntax) and a tabular ownership ledger.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Sanctions + adverse-media sweep</span>
+      </div>
+      <div class="prompt">For every node in the UBO tree, run:
+- Sanctions screening against OFAC SDN, EU Consolidated List, UK HMT, MAS, Bank Negara.
+- Adverse-media screening (last 36 months) for: deforestation, land disputes, child labour, corruption, environmental fines.
+- Politically Exposed Person (PEP) check at the natural-person leaves.
+
+Output `Sanctions_Sweep.xlsx` with one row per check: entity, check type, source, hit/no-hit, snippet, link.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">Convert to KYC pack</span>
+      </div>
+      <div class="prompt">Convert the UBO diagram, ownership ledger, and sanctions sweep into a single PDF titled "PT Surya Sawit Lestari — KYC Pack" for the Procurement Committee. Include: cover page, executive summary (recommendation + flag count), UBO diagram, ownership ledger, sanctions sweep, sources &amp; methodology.
+
+Save to /Procurement/Vendors/PT_Surya_Sawit/KYC/. Apply the "Confidential — Procurement" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Recursive — Cowork keeps drilling until it reaches natural persons or hits the depth limit.</li>
+          <li>Every node carries a source URL and a last-verified date.</li>
+          <li>The committee gets one PDF, not 14 browser tabs.</li>
+          <li>"Verification needed" flags are explicit — Cowork refuses to invent ownership.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Public registries lag reality; some jurisdictions (e.g. nominee-friendly) will not surface natural persons. Cowork flags these rather than fabricates them. This is screening, not certification — it does not replace the formal AML/KYC vendor process.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-6">
+      <div class="rb-head">
+        <span class="rb-uc-num slate">UC 6</span>
+        <span class="rb-cat">Group Risk · Treasury</span>
+        <h2>Counterparty Underwriting Memo (Cite, Don't Fabricate)</h2>
+      </div>
+      <p class="rb-sub">Three years of audited statements become a structured underwriting pack with cited note numbers — and a section called out for what the source pack didn't disclose.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Structured Pack with Citations</span>
+        <span class="pill blue">Apps · PDF · Word · Excel · Enterprise Search</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY24.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY23.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY22.pdf</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Build the underwriting pack</span>
+      </div>
+      <div class="prompt">You are acting as Contoso Group Credit Risk. Produce an underwriting memo for the counterparty using only the three attached audited financial statements (FY22, FY23, FY24).
+
+OUTPUT FORMAT (UNDERWRITING PACK):
+A. Executive Summary (Credit View — max 1 page)
+B. Financial Performance Analysis
+C. Balance Sheet &amp; Liquidity Assessment
+D. Cash Flow Adequacy Review
+E. Leverage &amp; Coverage Metrics Table (multi-year)
+F. Accounting &amp; Disclosure Risk Commentary
+G. Debt Servicing Capacity Assessment
+H. Key Credit Risks &amp; Red Flags (incl. potential early warning indicators, structural weaknesses in the financial profile)
+I. Required Follow-Up Items for Credit Approval (missing information; questions to management before credit approval)
+
+Cite statement sections or note numbers when highlighting findings (e.g., "see Note 18 — Borrowings").
+
+Do not fabricate financial metrics if not derivable from the provided documents.
+
+Maintain professional tone suitable for an internal underwriting memo.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Limit recommendation</span>
+      </div>
+      <div class="prompt">Based on the underwriting pack, recommend:
+- Credit limit (USD m)
+- Tenor cap (months)
+- Security requirement
+- The three covenants Contoso should require.
+
+Justify each recommendation in two sentences citing specific findings from sections E and G.
+
+Apply the "Confidential — Treasury" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Output is structured — the same nine sections every time, every analyst.</li>
+          <li>Every claim is anchored to a note number, not floating in the air.</li>
+          <li>Cowork refuses to invent ratios — missing data lands in section I as a follow-up to management.</li>
+          <li>Section F surfaces accounting flags an analyst might miss on a 250-page filing.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Underwriting still requires a human credit officer; this is the analyst draft, not the final approval. Disclosure quality of the source PDFs caps how good section F can be.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-7">
+      <div class="rb-head">
+        <span class="rb-uc-num purple">UC 7</span>
+        <span class="rb-cat">Group HR</span>
+        <h2>Top-50 Talent Review Council</h2>
+      </div>
+      <p class="rb-sub">Performance, potential, retention, DEI and successor mapping — five HR lenses on the same Top-50 cohort, in parallel, with a 9-box and a successor map for the ExCo room.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Council of Agents</span>
+        <span class="pill blue">Apps · Excel · PowerPoint · Word</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>TopTalent_Profiles_FY26.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Performance_2yr_2024_2025.xlsx</span><span class="rb-file pdf"><span class="ext">PDF</span>EngagementSurvey_2025.pdf</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Convene the talent council</span>
+      </div>
+      <div class="prompt">You are acting as a council of AI agents helping Contoso Group HR run the FY26 Top-50 talent review. For each role below, assume the role completely and produce an audit-ready interim report.
+
+Roles:
+1. Performance Reviewer — analyse the 2-year performance file. Cluster the 52 names into Exceeds / Meets / Below; surface anyone whose rating moved by ≥1 band year over year.
+2. Potential Assessor — read the engagement survey and competency notes. Map each name onto the 9-box (performance × potential).
+3. Retention Risk Analyst — flag retention risk per name (engagement score, tenure, time-since-last-promotion, market hotness of role). High / Med / Low with rationale.
+4. DEI Reviewer — assess representation across the cohort by gender, division, business unit and nationality; flag pipeline concentrations.
+5. Successor Mapper — for each of the top 10 critical roles in the org, propose 2 ready-now and 2 ready-in-2yrs successors from the cohort.
+
+Finally, analyse all interim reports for recommendations, evidence, assumptions and dissenting views.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Pack for the ExCo</span>
+      </div>
+      <div class="prompt">Assemble the council outputs into a 12-slide PowerPoint titled "Top-50 Talent Review FY26" plus a Word appendix:
+- Cover, council recommendation, 9-box, retention heatmap, DEI cut, top-10 successor map, watch-list, asks of ExCo.
+
+Names in the pack only — no compensation figures, no engagement-survey verbatims.
+
+Save to /Group/HR/TalentReview/FY26/. Apply the "Confidential — HR Restricted" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>Five HR lenses on the same cohort, simultaneously.</li>
+          <li>9-box and retention heatmap come from data, not gut feel.</li>
+          <li>Successor map is data-driven, not "who-the-CHRO-likes".</li>
+          <li>Sensitive verbatims and comp figures are excluded by design.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Output quality depends on data quality (engagement-survey response rate, currency of role profiles). The council surfaces patterns; final calibration still happens in the ExCo room.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-8">
+      <div class="rb-head">
+        <span class="rb-uc-num rose">UC 8</span>
+        <span class="rb-cat">Group IR · Finance</span>
+        <h2>Quarterly Results Spreading + Parity Check</h2>
+      </div>
+      <p class="rb-sub">Trial balance + segment reporting → Bursa quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Spreading + Parity Check</span>
+        <span class="pill blue">Apps · Excel · Word · SharePoint</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Q1_FY26_Trial_Balance.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Q1_FY26_Segment_Reporting.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Bursa_Quarterly_Filing_Template_v6.xlsx</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Spread to Bursa template</span>
+      </div>
+      <div class="prompt">Spread the Q1 FY26 trial balance and segment reporting workbooks into the Bursa Quarterly Filing Template v6.
+
+Map every GL account to the correct Bursa line item per the chart-of-accounts in the template's `Mapping` sheet.
+
+Capture segment splits (Plantation, Manufacturing, Property, Other) into the segment table.
+
+Don't perform any translation. Don't change formulas in the Bursa template — populate inputs only.
+
+Date format yyyy-mm-dd. Currency MYR thousands.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Four-way parity check</span>
+      </div>
+      <div class="prompt">After spreading, run a four-way parity check:
+1. Bursa template Group total revenue = sum of segment revenue.
+2. Bursa template Group net profit = sum of segment net profit ± inter-segment eliminations.
+3. Bursa template balance sheet = previous-quarter closing + current-quarter movements.
+4. Bursa template segment cap-ex = segment cap-ex from the source file.
+
+Output `Q1_Parity_Check.xlsx` with each check, expected vs actual, variance, status. Flag anything ≠ 0.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">Bursa announcement narrative</span>
+      </div>
+      <div class="prompt">Now write the Bursa Quarterly Announcement narrative (max 4 pages) covering: overview, segment performance, balance sheet, outlook, prospects.
+
+Tone: factual, forward-looking statements caveated, every figure traceable to the spreading workbook.
+
+Do not commit to any number that is not in the trial balance.
+
+Save everything to /Group/IR/Q1_FY26/Working_Drafts/. Apply the "Confidential — IR Working Drafts" sensitivity label. Treat every figure as price-sensitive until released.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>One template, three source files, four parity checks — Cowork refuses to file numbers it can't tie out.</li>
+          <li>The same template re-runs every quarter — institutional muscle memory.</li>
+          <li>Sensitivity-labelled and price-sensitive throughout.</li>
+          <li>Narrative draft cites the spreading workbook, not a fabricated figure.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>The Bursa template owns the formulas; Cowork populates inputs only. IR working drafts are reviewed by CFO + IR before any external release — this is the analyst draft, not the announcement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-9">
+      <div class="rb-head">
+        <span class="rb-uc-num teal">UC 9</span>
+        <span class="rb-cat">Group Sustainability</span>
+        <h2>Multi-Estate GHG Standardisation (CDP-Ready)</h2>
+      </div>
+      <p class="rb-sub">Twelve estates' fuel + electricity + fertiliser logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Mixed-Format Extraction</span>
+        <span class="pill blue">Apps · Excel · PDF · Image · Word</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Fuel_Logs_x4.xlsx</span><span class="rb-file pdf"><span class="ext">PDF</span>Estate_Diesel_Receipts_x5.pdf</span><span class="rb-file png"><span class="ext">PNG</span>Estate_Meter_Reads_x3_scans.png</span><span class="rb-file xlsx"><span class="ext">XLSX</span>GHG_Protocol_Scope123_Tracker_v2.xlsx</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Extract → standardise → map to scopes</span>
+      </div>
+      <div class="prompt">Extract diesel litres, electricity kWh, fertiliser tonnes (with N/P/K split where stated), and methane (kg) from the 12 attached estate monthly logs into the GHG Protocol Tracker:
+- Map each fuel/input and its emission factor (Defra 2024 / IPCC AR6) to Scope 1, 2 or 3, using the named-range factors in the tracker's `Factors` sheet.
+- Capture multi-line descriptions intact.
+- Ignore footers, signatures, and watermarks.
+- Standardise on litres (fuel), kWh (electricity), tonnes (fertiliser), kg (methane).
+- One worksheet per estate, then a Group rollup sheet.
+
+Convert into tCO2e using the named-range emission factors. Where a unit on the source is ambiguous, flag the row — do not guess.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Outlier sweep</span>
+      </div>
+      <div class="prompt">Run an outlier sweep:
+- Estate-month combinations where diesel litres / mature ha is &gt; 2 standard deviations above the cohort.
+- Months where electricity is missing or zero (vs prior 12-month baseline).
+- Fertiliser application &gt; 1.2 × historical 12-month average.
+
+Output `Outlier_Sweep_Mar2026.xlsx`. Pre-fill the "Likely Cause" column with options: Data gap / Operational / Verification needed.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">CDP brief</span>
+      </div>
+      <div class="prompt">Write a 3-page Word brief titled "Group Scope 1+2+3 — March 2026 — CDP Cut" for the Sustainability Director: total tCO2e, intensity (tCO2e per CPO tonne), top three contributors, vs FY25 baseline, anomalies and decisions required.
+
+Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>12 mixed-format logs land in one CDP-ready tracker.</li>
+          <li>Outliers surfaced before the CDP submission deadline, not after.</li>
+          <li>Emission factors are versioned in a named range — auditable and stable.</li>
+          <li>Ambiguous units get flagged, not silently converted.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>Emission-factor accuracy is bounded by the source files' unit clarity. This produces a draft for CDP — the assurance auditor still walks the calculation. New estate log formats may need a sample run before production use.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-detail" id="rb-10">
+      <div class="rb-head">
+        <span class="rb-uc-num blue">UC 10</span>
+        <span class="rb-cat">Group Strategy · CEO Office</span>
+        <h2>Group P&amp;L → Interactive Strategy App</h2>
+      </div>
+      <p class="rb-sub">The FY27 group plan model — Plantation + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
+
+      <div class="rb-meta">
+        <span class="pill">Pattern · Model → Interactive App</span>
+        <span class="pill blue">Apps · Excel · Code Interpreter · PowerPoint</span>
+        <span class="pill purple">Complexity · Advanced</span>
+      </div>
+
+      <h4>Sample source files</h4>
+      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Group_FY27_Plan_Model.xlsx</span></div>
+
+      <h4>Prompts</h4>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P1</span>
+        <span class="rb-prompt-title">Understand + build the app</span>
+      </div>
+      <div class="prompt">I've attached Contoso's FY27 group plan model. First walk me through the structure — divisions, drivers, intercompany eliminations, and any assumptions Strategy will have to defend at the September board.
+
+Then convert into a Python program with an interactive HTML front-end:
+- Sliders: CPO USD/T (750–1,250), USD/MYR (4.20–4.80), oleochem EBITDA margin (8–18%), property pre-sale velocity (60–110% of plan), opex inflation (0–6%).
+- Show: Group revenue, Group EBITDA, Group PAT, division contribution waterfall, EBITDA bridge vs FY26, board-level scorecard.
+
+Deliver runnable Python plus a self-contained HTML I can preview locally.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P2</span>
+        <span class="rb-prompt-title">Validate + run scenarios</span>
+      </div>
+      <div class="prompt">Run the new app at the original plan assumptions. Produce a parity report against the spreadsheet (revenue, EBITDA, PAT by division, group total) — flag any divergence &gt; MYR 1m.
+
+Then run three scenarios:
+- Base (current plan).
+- Bull: CPO USD 1,200, MYR 4.30, oleochem margin 16%, property pre-sale 105%.
+- Bear: CPO USD 850, MYR 4.65, oleochem margin 9%, property pre-sale 75%.
+
+Summarise EBITDA swing, the top three division/driver combinations driving variance, and identify the one assumption the bear scenario hinges on.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+    <div class="rb-prompt-block">
+      <div class="rb-prompt-head">
+        <span class="rb-prompt-num">P3</span>
+        <span class="rb-prompt-title">Strategy off-site pack</span>
+      </div>
+      <div class="prompt">Build a 10-slide deck titled "FY27 Plan — Sensitivity Pack for Strategy Off-site":
+1. Cover
+2. Scenario table
+3. EBITDA bridge
+4. Division contribution waterfall
+5. Sensitivity heatmap (CPO × FX)
+6. Bear-case kill switch
+7. Property pre-sale sensitivity
+8. Oleochem margin sensitivity
+9. Decisions required
+10. Appendix.
+
+Save to /Group/Strategy/FY27_Offsite/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+    </div>
+
+      <div class="rb-callouts">
+        <div class="rb-callout watch">
+          <div class="rb-callout-label">What to watch</div>
+          <ul>
+          <li>The board can move sliders themselves and see the EBITDA bridge update live.</li>
+          <li>Eliminations are preserved — Cowork doesn't double-count divisional revenue.</li>
+          <li>Bear case names the single assumption that breaks the plan — strategic insight, not just numbers.</li>
+          <li>Parity report proves the rebuild before the off-site.</li>
+          </ul>
+        </div>
+        <div class="rb-callout honest">
+          <div class="rb-callout-label">Honest framing</div>
+          <p>The Excel model still owns the source of truth; the app proves the rebuild is faithful. Slider ranges should be set by Strategy — Cowork's defaults are reasonable but not blessed.</p>
+        </div>
+      </div>
+    </div>
+
+      <h2>How to use the runbook</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>For your own work</h3>
+          <ol class="steps">
+            <li><strong>Pick the closest UC</strong> — the patterns are reusable; the divisions are illustrative.</li>
+            <li><strong>Swap the placeholders</strong> in <code>[BRACKETS]</code> for your real values.</li>
+            <li><strong>Upload your real source files</strong> — Cowork only sees what you attach.</li>
+            <li><strong>Run P1 first</strong> — review the structured output before chaining P2 / P3.</li>
+            <li><strong>Save to a stable folder path</strong> — the runbook re-runs cleanly when the path is consistent.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>For show-and-tell</h3>
+          <ol class="steps">
+            <li><strong>Frame the scenario in 30 seconds</strong> — who's asking, what's at stake.</li>
+            <li><strong>Show the source files</strong> — the chips above the prompt — so the audience sees the input mess.</li>
+            <li><strong>Run P1 live</strong>; while it works, narrate what Cowork is doing (the side panel surfaces every skill).</li>
+            <li><strong>Stop on the parity / dissent / sanctions step</strong> — that is the moment that lands.</li>
+            <li><strong>Read the Honest Framing aloud</strong> — credibility comes from naming the limit before the audience does.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2>Patterns × skills × where it earns its keep</h2>
+      <table class="skills">
+        <thead><tr><th>Pattern</th><th>Cowork skills involved</th><th>Where it earns its keep</th></tr></thead>
+        <tbody>
+          <tr><td class="skill-name">Spreading + Parity Check</td><td>Excel · Word · Enterprise Search</td><td>Monthly close, segment reporting, regulator filings, estate / plant rollups.</td></tr>
+          <tr><td class="skill-name">Mixed-Format Extraction</td><td>Excel · PDF · Image · Word</td><td>Bank statement extraction, supplier invoices, expense receipts, ESG meter logs.</td></tr>
+          <tr><td class="skill-name">Council of Agents</td><td>Word · PowerPoint · Deep Research · Enterprise Search</td><td>Investment Committee, M&amp;A DD, Talent review, Sustainability committee.</td></tr>
+          <tr><td class="skill-name">Recursive Entity Research</td><td>Deep Research · Word · PDF · Excel</td><td>Vendor onboarding, KYC, customer due diligence, joint-venture screening.</td></tr>
+          <tr><td class="skill-name">Structured Pack with Citations</td><td>PDF · Word · Excel</td><td>Credit underwriting, legal contract summary, audit findings, regulatory submissions.</td></tr>
+          <tr><td class="skill-name">Model → Interactive App</td><td>Excel · Code Interpreter · PowerPoint</td><td>IC pack, board sensitivity, plan-review off-site, capex defence.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="card warn">
+        <h3 style="margin-top:0;">⚠️ Technical-feasibility notes</h3>
+        <ul>
+          <li><strong>Code Interpreter (UC 2 + UC 10)</strong> — Cowork delivers Python plus a self-contained HTML you preview locally. Production hosting is your environment.</li>
+          <li><strong>Deep Research (UC 3 + UC 5)</strong> — public-source-only; will not access paywalled databases or internal CRM unless those are surfaced through M365 search.</li>
+          <li><strong>OCR (UC 4 + UC 9)</strong> — scanned PDFs and low-resolution images return per-row confidence; low-confidence rows are flagged, not silently committed.</li>
+          <li><strong>Sensitivity labels</strong> — Cowork can apply labels you have permission to apply. The label list itself is governed by Purview in your tenant.</li>
+          <li><strong>Approval gates</strong> — every external send (email / LinkedIn / Bursa) is drafts-only; the human still presses send.</li>
+        </ul>
+      </div>
+
     </section>
 
     <!-- ═══════════════ USE CASES · PLANTATION ═══════════════ -->
