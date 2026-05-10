@@ -1149,7 +1149,7 @@ Keep terminology consistent. Drafts only for external actions.<button class="cop
     if (v === PW) {
       document.getElementById('gate').style.display = 'none';
       document.getElementById('app').style.display = 'block';
-      try { sessionStorage.setItem('klk_unlocked', '1'); } catch(e) {}
+      try { sessionStorage.setItem('cowork_unlocked', '1'); } catch(e) {}
     } else {
       document.getElementById('err').style.display = 'block';
     }
@@ -1158,7 +1158,7 @@ Keep terminology consistent. Drafts only for external actions.<button class="cop
     if (e.key === 'Enter') unlock();
   });
   try {
-    if (sessionStorage.getItem('klk_unlocked') === '1') {
+    if (sessionStorage.getItem('cowork_unlocked') === '1') {
       document.getElementById('gate').style.display = 'none';
       document.getElementById('app').style.display = 'block';
     }
