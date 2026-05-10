@@ -58,15 +58,16 @@
     position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
     background: transparent; border: 0; cursor: pointer; padding: 6px 8px;
     color: var(--muted); font-size: 16px; line-height: 1; border-radius: 6px;
+    width: auto; margin: 0; font-weight: normal;
     transition: background .12s, color .12s;
   }
   #gate .pw-toggle:hover { background: #f1f5f9; color: var(--ink); }
-  #gate button {
+  #gate button:not(.pw-toggle) {
     margin-top: 12px; width: 100%; padding: 12px 14px; border: 0; border-radius: 8px;
     background: var(--green); color: #fff; font-size: 15px; font-weight: 600;
     cursor: pointer; transition: background .15s;
   }
-  #gate button:hover { background: var(--green-deep); }
+  #gate button:not(.pw-toggle):hover { background: var(--green-deep); }
   #gate .err { display: none; margin-top: 10px; color: #b91c1c; font-size: 13px; }
   #gate .footer { margin-top: 22px; font-size: 12px; color: var(--muted); }
 
@@ -1129,7 +1130,7 @@ Keep terminology consistent. Drafts only for external actions.<button class="cop
 
 <script>
   // ───── Password gate ─────
-  const PW = "KLKCowork14May";
+  const PW = "ContosoCowork14May";
   function togglePw() {
     const inp = document.getElementById('pw');
     const btn = document.getElementById('pw-toggle');

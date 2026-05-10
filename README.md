@@ -3,8 +3,8 @@
 A static, password-gated GitHub Pages site for a guided customer immersion
 focused on **Microsoft 365 Copilot Cowork** (Frontier) for licensed users.
 
-🔗 **Live site:** https://steffiyappy.github.io/klk-cowork-immersion/
-🔐 **Access code:** `KLKCowork14May`
+🔗 **Live site:** https://steffiyappy.github.io/contoso-cowork-immersion/
+🔐 **Access code:** `ContosoCowork14May`
 
 ## What's inside
 
@@ -49,3 +49,5 @@ new customer:
    a different worked example
 3. Adjust the use-case industry slant (plantation/manufacturing/property)
    to fit the customer's context
+4. Optionally `gh repo rename <new-name>` and push — GitHub Pages picks up
+   the new URL automatically
