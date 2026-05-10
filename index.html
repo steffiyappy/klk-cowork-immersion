@@ -35,181 +35,90 @@
 
   /* ───── Password gate ───── */
   #gate {
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background: linear-gradient(135deg, var(--green-deep) 0%, var(--green) 60%, #166534 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
   }
   #gate .panel {
-    background: #fff;
-    border-radius: 16px;
-    padding: 48px 56px;
-    width: 420px;
-    max-width: 92vw;
-    box-shadow: var(--shadow-lg);
-    text-align: center;
+    background: #fff; border-radius: 16px; padding: 48px 56px;
+    width: 440px; max-width: 92vw; box-shadow: var(--shadow-lg); text-align: center;
   }
-  #gate .icon {
-    font-size: 48px;
-    margin-bottom: 14px;
-  }
-  #gate h1 {
-    margin: 0 0 6px;
-    font-size: 22px;
-    color: var(--green-deep);
-  }
-  #gate p.sub {
-    color: var(--muted);
-    margin: 0 0 26px;
-    font-size: 14px;
-  }
+  #gate .icon { font-size: 48px; margin-bottom: 14px; }
+  #gate h1 { margin: 0 0 6px; font-size: 22px; color: var(--green-deep); }
+  #gate p.sub { color: var(--muted); margin: 0 0 26px; font-size: 14px; }
   #gate input {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: border-color .15s;
+    width: 100%; padding: 12px 44px 12px 14px; border: 1.5px solid var(--border);
+    border-radius: 8px; font-size: 15px; outline: none; transition: border-color .15s;
   }
   #gate input:focus { border-color: var(--green); }
+  #gate .pw-wrap {
+    position: relative;
+  }
+  #gate .pw-toggle {
+    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+    background: transparent; border: 0; cursor: pointer; padding: 6px 8px;
+    color: var(--muted); font-size: 16px; line-height: 1; border-radius: 6px;
+    transition: background .12s, color .12s;
+  }
+  #gate .pw-toggle:hover { background: #f1f5f9; color: var(--ink); }
   #gate button {
-    margin-top: 12px;
-    width: 100%;
-    padding: 12px 14px;
-    border: 0;
-    border-radius: 8px;
-    background: var(--green);
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background .15s;
+    margin-top: 12px; width: 100%; padding: 12px 14px; border: 0; border-radius: 8px;
+    background: var(--green); color: #fff; font-size: 15px; font-weight: 600;
+    cursor: pointer; transition: background .15s;
   }
   #gate button:hover { background: var(--green-deep); }
-  #gate .err {
-    display: none;
-    margin-top: 10px;
-    color: #b91c1c;
-    font-size: 13px;
-  }
-  #gate .footer {
-    margin-top: 22px;
-    font-size: 12px;
-    color: var(--muted);
-  }
+  #gate .err { display: none; margin-top: 10px; color: #b91c1c; font-size: 13px; }
+  #gate .footer { margin-top: 22px; font-size: 12px; color: var(--muted); }
 
   /* ───── App layout ───── */
   #app { display: none; min-height: 100vh; }
   .layout { display: flex; min-height: 100vh; }
 
   aside.sidebar {
-    width: 270px;
-    flex-shrink: 0;
+    width: 270px; flex-shrink: 0;
     background: linear-gradient(180deg, var(--green-deep) 0%, var(--green) 100%);
-    color: #ecfdf5;
-    padding: 28px 18px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
+    color: #ecfdf5; padding: 28px 18px;
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
   }
   aside .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 8px 18px;
-    border-bottom: 1px solid rgba(255,255,255,.18);
-    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 0 8px 18px; border-bottom: 1px solid rgba(255,255,255,.18); margin-bottom: 14px;
   }
   aside .brand .logo {
-    width: 38px;
-    height: 38px;
-    border-radius: 9px;
+    width: 38px; height: 38px; border-radius: 9px;
     background: rgba(255,255,255,.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    display: flex; align-items: center; justify-content: center; font-size: 20px;
   }
-  aside .brand .title {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.25;
-  }
+  aside .brand .title { font-weight: 700; font-size: 15px; line-height: 1.25; }
   aside .brand .title small {
-    display: block;
-    font-weight: 400;
-    font-size: 11px;
-    color: #d1fae5;
-    margin-top: 2px;
+    display: block; font-weight: 400; font-size: 11px; color: #d1fae5; margin-top: 2px;
   }
   aside .nav-section {
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #bbf7d0;
-    letter-spacing: .12em;
-    padding: 14px 10px 6px;
+    text-transform: uppercase; font-size: 10px; color: #bbf7d0;
+    letter-spacing: .12em; padding: 14px 10px 6px;
   }
   aside nav a {
-    display: block;
-    padding: 9px 12px;
-    color: #ecfdf5;
-    text-decoration: none;
-    border-radius: 7px;
-    font-size: 14px;
-    margin-bottom: 2px;
-    transition: background .12s;
-    cursor: pointer;
+    display: block; padding: 9px 12px; color: #ecfdf5; text-decoration: none;
+    border-radius: 7px; font-size: 14px; margin-bottom: 2px;
+    transition: background .12s; cursor: pointer;
   }
   aside nav a:hover { background: rgba(255,255,255,.10); }
-  aside nav a.active {
-    background: rgba(255,255,255,.18);
-    font-weight: 600;
-  }
+  aside nav a.active { background: rgba(255,255,255,.18); font-weight: 600; }
   aside nav a .badge {
-    float: right;
-    font-size: 10px;
-    padding: 2px 7px;
-    border-radius: 10px;
-    background: var(--gold);
-    color: #fff;
-    font-weight: 600;
-    margin-top: 1px;
+    float: right; font-size: 10px; padding: 2px 7px; border-radius: 10px;
+    background: var(--gold); color: #fff; font-weight: 600; margin-top: 1px;
   }
 
-  main {
-    flex: 1;
-    padding: 38px 56px 80px;
-    max-width: 1100px;
-  }
+  main { flex: 1; padding: 38px 56px 80px; max-width: 1100px; }
 
   h1.page-title {
-    font-size: 30px;
-    margin: 0 0 6px;
-    color: var(--ink);
-    font-weight: 700;
+    font-size: 30px; margin: 0 0 6px; color: var(--ink); font-weight: 700;
   }
-  p.page-sub {
-    color: var(--muted);
-    margin: 0 0 28px;
-    font-size: 16px;
-  }
+  p.page-sub { color: var(--muted); margin: 0 0 28px; font-size: 16px; }
   h2 {
-    font-size: 21px;
-    margin: 32px 0 12px;
-    color: var(--green-deep);
-    font-weight: 700;
+    font-size: 21px; margin: 32px 0 12px; color: var(--green-deep); font-weight: 700;
   }
-  h3 {
-    font-size: 17px;
-    margin: 22px 0 10px;
-    color: var(--ink);
-    font-weight: 600;
-  }
+  h3 { font-size: 17px; margin: 22px 0 10px; color: var(--ink); font-weight: 600; }
   p { margin: 10px 0; color: var(--ink-soft); }
 
   .page { display: none; }
@@ -217,92 +126,52 @@
 
   /* ───── Cards & callouts ───── */
   .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 24px;
-    margin: 14px 0;
-    box-shadow: var(--shadow);
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 24px; margin: 14px 0; box-shadow: var(--shadow);
   }
-  .card.accent {
-    border-left: 4px solid var(--green);
-    background: var(--accent-bg);
-  }
-  .card.warn {
-    border-left: 4px solid var(--warn-border);
-    background: var(--warn-bg);
-  }
+  .card.accent { border-left: 4px solid var(--green); background: var(--accent-bg); }
+  .card.warn { border-left: 4px solid var(--warn-border); background: var(--warn-bg); }
   .card.warn p, .card.warn h3 { color: #78350f; }
 
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin: 18px 0;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin: 18px 0;
-  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 18px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 18px 0; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+  @media (max-width: 1100px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 900px) {
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
     main { padding: 28px 22px 60px; }
     aside.sidebar { width: 220px; }
   }
 
   .stat {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px 20px;
-    text-align: center;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; text-align: center;
   }
   .stat .num {
-    display: block;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--green-deep);
+    display: block; font-size: 26px; font-weight: 700; color: var(--green-deep);
   }
-  .stat .lbl {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 4px;
-  }
+  .stat .lbl { color: var(--muted); font-size: 13px; margin-top: 4px; }
 
   /* ───── Tables ───── */
-  table.files {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    background: var(--card);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+  table.files, table.skills {
+    width: 100%; border-collapse: collapse; margin: 16px 0;
+    background: var(--card); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);
   }
-  table.files th,
-  table.files td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
+  table.files th, table.files td,
+  table.skills th, table.skills td {
+    padding: 12px 16px; text-align: left;
+    border-bottom: 1px solid var(--border); font-size: 14px; vertical-align: top;
   }
-  table.files th {
-    background: #f1f5f9;
-    color: var(--ink);
-    font-weight: 600;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
+  table.files th, table.skills th {
+    background: #f1f5f9; color: var(--ink); font-weight: 600;
+    font-size: 12px; text-transform: uppercase; letter-spacing: .04em;
   }
-  table.files tr:last-child td { border-bottom: 0; }
+  table.files tr:last-child td, table.skills tr:last-child td { border-bottom: 0; }
   table.files a {
-    color: var(--green);
-    text-decoration: none;
-    font-weight: 600;
+    color: var(--green); text-decoration: none; font-weight: 600;
   }
   table.files a:hover { text-decoration: underline; }
+  table.skills td.skill-name { font-weight: 600; color: var(--green-deep); white-space: nowrap; }
 
   /* ───── Steps & prompts ───── */
   ol.steps { padding-left: 22px; margin: 12px 0; }
@@ -310,31 +179,16 @@
   ol.steps li strong { color: var(--ink); }
 
   .prompt {
-    position: relative;
-    background: #0f172a;
-    color: #f1f5f9;
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin: 14px 0;
+    position: relative; background: #0f172a; color: #f1f5f9;
+    border-radius: 10px; padding: 18px 20px; margin: 14px 0;
     font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
-    font-size: 13.5px;
-    line-height: 1.65;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
+    font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: break-word;
   }
   .prompt .copy {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255,255,255,.10);
-    border: 1px solid rgba(255,255,255,.20);
-    color: #f1f5f9;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 11px;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background .12s;
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.20);
+    color: #f1f5f9; border-radius: 6px; padding: 4px 10px;
+    font-size: 11px; cursor: pointer; font-family: inherit; transition: background .12s;
   }
   .prompt .copy:hover { background: rgba(255,255,255,.20); }
   .prompt .copy.copied { background: var(--green); border-color: var(--green); }
@@ -345,66 +199,68 @@
   .gcse-expect { color: #f9a8d4; font-weight: 600; }
 
   .pill {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
-    background: var(--accent-bg);
-    color: var(--green-deep);
-    border: 1px solid #bbf7d0;
-    margin-right: 6px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; background: var(--accent-bg);
+    color: var(--green-deep); border: 1px solid #bbf7d0;
+    margin-right: 4px; margin-bottom: 4px;
+    text-transform: uppercase; letter-spacing: .04em;
   }
   .pill.gold { background: #fef3c7; color: #92400e; border-color: #fde68a; }
   .pill.blue { background: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+  .pill.purple { background: #ede9fe; color: #5b21b6; border-color: #ddd6fe; }
+  .pill.rose { background: #ffe4e6; color: #9f1239; border-color: #fecdd3; }
+  .pill.slate { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 
   ul.checks { list-style: none; padding-left: 0; }
   ul.checks li {
-    padding: 6px 0 6px 28px;
-    position: relative;
-    color: var(--ink-soft);
+    padding: 6px 0 6px 28px; position: relative; color: var(--ink-soft);
   }
   ul.checks li:before {
-    content: "✓";
-    position: absolute;
-    left: 4px;
-    color: var(--green);
-    font-weight: 700;
+    content: "✓"; position: absolute; left: 4px; color: var(--green); font-weight: 700;
   }
 
   .star { color: var(--gold); }
 
   .gcse-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
+    width: 100%; border-collapse: collapse; margin: 16px 0;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
   }
   .gcse-table th, .gcse-table td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-    vertical-align: top;
+    padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border);
+    font-size: 14px; vertical-align: top;
   }
-  .gcse-table th {
-    background: #f1f5f9;
-    font-weight: 600;
-    width: 130px;
-  }
+  .gcse-table th { background: #f1f5f9; font-weight: 600; width: 130px; }
   .gcse-table tr:last-child td { border-bottom: 0; }
 
+  .uc-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 24px; margin: 14px 0; box-shadow: var(--shadow);
+  }
+  .uc-card .uc-meta { margin-bottom: 8px; }
+  .uc-card h3 { margin-top: 0; }
+
+  details.uc-detail {
+    margin: 8px 0;
+  }
+  details.uc-detail > summary {
+    cursor: pointer; color: var(--green); font-size: 13px;
+    font-weight: 600; padding: 6px 0; list-style: none;
+  }
+  details.uc-detail > summary::-webkit-details-marker { display: none; }
+  details.uc-detail > summary:before { content: "▸ "; }
+  details.uc-detail[open] > summary:before { content: "▾ "; }
+
   .footer-note {
-    margin-top: 40px;
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 13px;
+    margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px;
+  }
+
+  .frontier-badge {
+    display: inline-block; padding: 4px 10px; border-radius: 6px;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    color: #fff; font-size: 11px; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase;
   }
 </style>
 </head>
@@ -414,9 +270,12 @@
 <div id="gate">
   <div class="panel">
     <div class="icon">🌴</div>
-    <h1>KLK Group Copilot Immersion</h1>
-    <p class="sub">Cowork &amp; M365 Copilot Workshop</p>
-    <input id="pw" type="password" placeholder="Enter access code" autocomplete="off" />
+    <h1>KLK Group · Copilot Cowork Immersion</h1>
+    <p class="sub">Microsoft 365 Copilot Cowork <span class="frontier-badge">Frontier</span></p>
+    <div class="pw-wrap">
+      <input id="pw" type="password" placeholder="Enter access code" autocomplete="off" />
+      <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password" onclick="togglePw()">👁</button>
+    </div>
     <button onclick="unlock()">Enter</button>
     <div class="err" id="err">Incorrect access code. Please try again.</div>
     <div class="footer">For M365 Copilot licensed users · Internal use only</div>
@@ -440,21 +299,27 @@
     <div class="nav-section">Welcome</div>
     <nav>
       <a onclick="show('overview', this)" class="active">Overview</a>
+      <a onclick="show('what', this)">What is Cowork</a>
       <a onclick="show('story', this)">Your Story</a>
       <a onclick="show('start', this)">Get Started</a>
     </nav>
 
-    <div class="nav-section">Exercises</div>
+    <div class="nav-section">The Demo</div>
     <nav>
-      <a onclick="show('ex1', this)">1 · Yield Analysis</a>
-      <a onclick="show('ex2', this)">2 · Operations Reports</a>
-      <a onclick="show('ex3', this)">3 · Cowork <span class="badge">★</span></a>
-      <a onclick="show('ex4', this)">4 · Agent Builder</a>
+      <a onclick="show('demo', this)">The Cowork Demo <span class="badge">★</span></a>
+    </nav>
+
+    <div class="nav-section">Use Cases · By Division</div>
+    <nav>
+      <a onclick="show('uc-plantation', this)">Plantation</a>
+      <a onclick="show('uc-manufacturing', this)">Manufacturing</a>
+      <a onclick="show('uc-property', this)">Property · KLK Land</a>
+      <a onclick="show('uc-group', this)">Group Functions</a>
     </nav>
 
     <div class="nav-section">Reference</div>
     <nav>
-      <a onclick="show('usecases', this)">Use Cases</a>
+      <a onclick="show('skills', this)">Cowork Skills</a>
       <a onclick="show('tips', this)">Prompting Tips</a>
     </nav>
   </aside>
@@ -464,54 +329,138 @@
 
     <!-- ═══════════════ OVERVIEW ═══════════════ -->
     <section class="page active" id="overview">
-      <h1 class="page-title">Welcome to the KLK Copilot Immersion</h1>
-      <p class="page-sub">A walkthrough of Microsoft 365 Copilot — with a focus on the new <strong>Copilot Cowork</strong> experience.</p>
+      <h1 class="page-title">Welcome to the KLK Group Copilot Immersion</h1>
+      <p class="page-sub">A guided look at <strong>Microsoft 365 Copilot Cowork</strong> — and where it earns its keep across the Group.</p>
 
       <div class="card accent">
         <h3 style="margin-top:0;">What you'll see today</h3>
-        <p>Today's session is a guided demonstration designed for M365 Copilot licensed users at KLK Group. We'll work through a realistic plantation operations scenario and watch Copilot turn hours of work into minutes — across Excel, Word, PowerPoint, Outlook, Teams, Agent Builder, and the brand-new Cowork experience.</p>
+        <p>This session is a guided demonstration for M365 Copilot licensed users at KLK Group. We'll focus on a single capability — <strong>Cowork</strong> — the new Frontier experience that lets Copilot carry out multi-step work on your behalf across Outlook, Word, Excel, PowerPoint, Teams, OneDrive and SharePoint. We'll watch one realistic demo and then walk through a long catalogue of where Cowork applies across plantation, manufacturing, property and the group functions.</p>
       </div>
 
       <div class="grid-3">
-        <div class="stat"><span class="num">4</span><div class="lbl">Exercises</div></div>
-        <div class="stat"><span class="num">5</span><div class="lbl">Apps covered</div></div>
-        <div class="stat"><span class="num">★</span><div class="lbl">Cowork centerpiece</div></div>
+        <div class="stat"><span class="num">★</span><div class="lbl">One Frontier capability</div></div>
+        <div class="stat"><span class="num">13</span><div class="lbl">Built-in skills</div></div>
+        <div class="stat"><span class="num">30+</span><div class="lbl">KLK use cases</div></div>
       </div>
 
-      <h2>Session flow</h2>
+      <h2>Today's flow</h2>
       <div class="grid-2">
         <div class="card">
-          <h3 style="margin-top:0;">1 · Yield Analysis <span class="pill blue">Excel</span></h3>
-          <p>Use Copilot in Excel and the Analyst agent to find the two estates dragging Q1 OER below target — without writing a single formula.</p>
+          <h3 style="margin-top:0;">1 · Frame</h3>
+          <p>What Cowork is, what it can do, how it's different from regular Copilot, and what's needed to switch it on.</p>
         </div>
         <div class="card">
-          <h3 style="margin-top:0;">2 · Operations Reports <span class="pill blue">Word</span> <span class="pill blue">PowerPoint</span></h3>
-          <p>Summarise a 7-section Group Operations Report, extract action items, and have Copilot draft the Board update deck.</p>
+          <h3 style="margin-top:0;">2 · Demo <span class="pill gold">★</span></h3>
+          <p>One master prompt &rarr; six parallel Board-prep deliverables across Word, Outlook, Calendar and Teams.</p>
         </div>
         <div class="card">
-          <h3 style="margin-top:0;">3 · Cowork <span class="pill gold">★ Centerpiece</span></h3>
-          <p>Delegate five board-prep deliverables in a single prompt. Copilot drafts them in parallel — you review and refine.</p>
+          <h3 style="margin-top:0;">3 · Use cases</h3>
+          <p>A catalogue of Cowork scenarios across <strong>Plantation, Manufacturing, KLK Land, and Group functions</strong> (Finance, HR, Sustainability, IR, Procurement, Legal, IT).</p>
         </div>
         <div class="card">
-          <h3 style="margin-top:0;">4 · Agent Builder <span class="pill blue">Copilot Studio</span></h3>
-          <p>Build a "Plantation Advisor" agent grounded in the Group Operations Report — answering questions in English or Bahasa Malaysia.</p>
+          <h3 style="margin-top:0;">4 · Tips &amp; skills</h3>
+          <p>The full Cowork skills reference and a prompt-writing framework you can take home.</p>
         </div>
       </div>
 
       <div class="card warn">
         <h3 style="margin-top:0;">📌 A note on the demo</h3>
-        <p>The persona, company name (Contoso Plantation Berhad), and figures used today are <strong>fictional</strong>. They are designed to mirror the kinds of problems plantation, manufacturing, and property teams at KLK face every quarter. Any resemblance to actual estates, mills, or people is incidental.</p>
+        <p>The persona, company name (Contoso Plantation Berhad), and figures used today are <strong>fictional</strong>. They are designed to mirror the kinds of problems plantation, manufacturing, property and group teams at KLK face every quarter. Any resemblance to actual estates, mills or people is incidental.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ WHAT IS COWORK ═══════════════ -->
+    <section class="page" id="what">
+      <h1 class="page-title">What is Cowork? <span class="frontier-badge">Frontier</span></h1>
+      <p class="page-sub">Microsoft 365 Copilot Cowork carries out <em>tasks</em> on your behalf — across Microsoft 365.</p>
+
+      <div class="card accent">
+        <p>You describe what you need in natural language, and Cowork does the work — sending emails, scheduling meetings, creating documents, posting in Teams, and managing files. It can plan a multi-step task, ask you for clarification, run skills in sequence or parallel, and pause for your approval before any action that affects the outside world.</p>
+        <p style="margin-bottom:0;"><em>Source:</em> <a href="https://support.microsoft.com/en-us/topic/get-started-with-cowork-frontier-60be4cea-b913-471b-a0d8-f9ab73c6b0be" target="_blank">Get started with Cowork (Frontier) — Microsoft Support</a></p>
+      </div>
+
+      <h2>What Cowork can do</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">📧 Outlook</h3>
+          <p>Send emails, reply to messages, forward entire threads with attachments. Save drafts, manage attachments before sending.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">📅 Calendar</h3>
+          <p>Schedule meetings using natural language. Add Teams meeting links. Manage your calendar.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">📄 Documents</h3>
+          <p>Create and edit Word documents, Excel spreadsheets, PowerPoint presentations and PDFs.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">💬 Teams</h3>
+          <p>Post messages in Teams channels and chats — with the right tone for each audience.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">🔍 Search</h3>
+          <p>Search across your organization for files, people and information.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">📁 Files</h3>
+          <p>Browse and manage files in OneDrive and SharePoint.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">🔬 Deep Research</h3>
+          <p>Conduct deep research across multiple sources and compile comprehensive analysis on complex topics.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">🌅 Daily Briefing &amp; meeting prep</h3>
+          <p>Prepare daily briefings and meeting intelligence summaries.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">📣 Communications</h3>
+          <p>Draft stakeholder communications such as status updates and announcements.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">⏰ Scheduled prompts</h3>
+          <p>Run prompts on a schedule so recurring tasks happen automatically — daily, weekly or monthly.</p>
+        </div>
+      </div>
+
+      <h2>How it's different from regular Copilot</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">Regular Copilot</h3>
+          <p>You're <em>in</em> an app — Word, Excel, Outlook — and Copilot helps you with that one thing. Single surface, single artefact.</p>
+        </div>
+        <div class="card accent">
+          <h3 style="margin-top:0;">Cowork</h3>
+          <p>You delegate a <em>task</em> with multiple steps and outputs across surfaces. Cowork plans the work, runs the skills, asks for approval before sending or posting, and shows you progress as it goes.</p>
+        </div>
+      </div>
+
+      <h2>The shape of a Cowork session</h2>
+      <ol class="steps">
+        <li><strong>You describe the task</strong> in natural language — up to 16,000 characters. Attach files, use voice input, or pick a starter prompt.</li>
+        <li><strong>Cowork plans</strong> and shows a thinking indicator + skill messages ("Preparing to compose emails", "Creating your presentation").</li>
+        <li><strong>It may ask for clarification</strong> — pick from suggested choices or skip.</li>
+        <li><strong>It approves before acting</strong> — sending email, posting Teams message, scheduling meeting. Each approval shows a preview and a risk indicator.</li>
+        <li><strong>Files appear in the side panel</strong> — Input, Output, Skills used, Permissions granted, Schedule.</li>
+        <li><strong>You can pause, resume or cancel</strong> the run at any time.</li>
+        <li><strong>You can schedule the prompt</strong> to run again — daily, weekly, on a cadence.</li>
+      </ol>
+
+      <div class="card warn">
+        <h3 style="margin-top:0;">📌 Always review before approving</h3>
+        <p>AI-generated documents, emails and messages should be treated as drafts. Always verify recipients, content and parameters in the approval dialog before letting Cowork send or post anything on your behalf.</p>
       </div>
     </section>
 
     <!-- ═══════════════ STORY ═══════════════ -->
     <section class="page" id="story">
       <h1 class="page-title">Your Story</h1>
-      <p class="page-sub">Meet Lim Siew Ling — and the week she has ahead of her.</p>
+      <p class="page-sub">A single thread that connects every demo and use case in this session.</p>
 
       <div class="card accent">
-        <h3 style="margin-top:0;">👤 Lim Siew Ling, Group COO · Contoso Plantation Berhad</h3>
-        <p>Lim Siew Ling has been Group COO of Contoso Plantation Berhad for four years. She oversees plantation operations across Malaysia, Indonesia and Liberia, the Group's downstream oleochemical manufacturing, and KLK Land — the property division. She reports to the Group MD and presents to the Board every quarter.</p>
+        <h3 style="margin-top:0;">👤 Siew Ling · Group COO, Contoso Plantation Berhad</h3>
+        <p>Siew Ling has been Group COO of Contoso Plantation Berhad for four years. She oversees plantation operations across Malaysia, Indonesia and Liberia, the Group's downstream oleochemical manufacturing, and KLK Land — the property division. She reports to the Group MD and presents to the Board every quarter.</p>
+        <p style="margin-bottom:0;">Her week pulls her across all three segments and into every group function — Finance, HR, Sustainability, IR, Procurement, Legal, IT. She is the perfect Cowork user: too many parallel deliverables, too many surfaces, not enough pairs of hands.</p>
       </div>
 
       <h2>Contoso Plantation Berhad at a glance</h2>
@@ -524,40 +473,71 @@
       <div class="grid-3">
         <div class="card">
           <h3 style="margin-top:0;">🌴 Plantation</h3>
-          <p>Oil palm and rubber estates in Sabah, Pahang, Perak, North Sumatra and Liberia. ~280,000 mature hectares.</p>
+          <p>Oil palm and rubber estates in Sabah, Pahang, Perak, North Sumatra and Liberia. ~280,000 mature hectares. Mills, smallholders, sustainability programmes.</p>
         </div>
         <div class="card">
           <h3 style="margin-top:0;">🏭 Manufacturing</h3>
-          <p>Oleochemicals — fatty acids, fatty alcohols, glycerine, soap noodles. Plants in Klang, Rawang and Düsseldorf.</p>
+          <p>Oleochemicals — fatty acids, fatty alcohols, glycerine, soap noodles. Plants in Klang, Rawang and Düsseldorf. Sells into FMCG, personal care, industrial.</p>
         </div>
         <div class="card">
           <h3 style="margin-top:0;">🏘️ KLK Land</h3>
-          <p>Property division — township and industrial development on legacy estate land in Selangor and Negeri Sembilan.</p>
+          <p>Property division — township and industrial development on legacy estate land in Selangor and Negeri Sembilan. Multiple residential and industrial launches a year.</p>
         </div>
       </div>
 
-      <h2>This week's challenge</h2>
-      <div class="card">
-        <p>It's Monday morning. Siew Ling has the <strong>quarterly Board Operations Review on Friday</strong>. By close of business Wednesday she needs:</p>
-        <ul class="checks">
-          <li>A Q1 yield variance analysis identifying the worst-performing estates</li>
-          <li>An executive summary of the Group Operations Report for the Board pack</li>
-          <li>A Board-ready PowerPoint deck</li>
-          <li>A pre-meeting briefing note on sustainability (RSPO, MSPO, EUDR readiness)</li>
-          <li>An email to division heads reminding them of the agenda and expected pre-reads</li>
-          <li>A calendar invite for the Tuesday follow-up on Liberia operations</li>
-          <li>A heads-up Teams message to the Plantation Operations leadership channel</li>
-        </ul>
-        <p>Last quarter, this list took her team three full days. Today, we'll watch Copilot help her get most of it drafted in under an hour — and most of <em>that</em> hour comes from one Cowork prompt.</p>
+      <h2>Group functions that show up in this session</h2>
+      <div class="grid-4">
+        <div class="card"><strong>Group Finance</strong><br /><small>Monthly close, capex, treasury, tax</small></div>
+        <div class="card"><strong>Group HR</strong><br /><small>Hiring, L&amp;D, employee comms</small></div>
+        <div class="card"><strong>Sustainability</strong><br /><small>RSPO, MSPO, EUDR, climate</small></div>
+        <div class="card"><strong>Investor Relations</strong><br /><small>Quarterly results, analyst Q&amp;A</small></div>
+        <div class="card"><strong>Procurement</strong><br /><small>Fertiliser, fuel, contractors</small></div>
+        <div class="card"><strong>Group Legal</strong><br /><small>Contracts, regulatory, compliance</small></div>
+        <div class="card"><strong>Group IT</strong><br /><small>Service delivery, security, change</small></div>
+        <div class="card"><strong>Internal Comms</strong><br /><small>Townhalls, intranet, broadcasts</small></div>
       </div>
     </section>
 
     <!-- ═══════════════ GET STARTED ═══════════════ -->
     <section class="page" id="start">
-      <h1 class="page-title">Get Started</h1>
-      <p class="page-sub">Files we'll reference today. Download these to follow along visually.</p>
+      <h1 class="page-title">Get Started with Cowork</h1>
+      <p class="page-sub">What you'll need, where to find it, and the files we reference today.</p>
 
-      <h2>Demo files</h2>
+      <div class="card warn">
+        <h3 style="margin-top:0;">⚠️ Frontier program required</h3>
+        <p>Cowork is part of the <a href="https://adoption.microsoft.com/copilot/frontier-program/" target="_blank">Microsoft 365 Copilot Frontier program</a> — early access to experimental features. Your tenant administrator must enable Frontier and the Anthropic subprocessor for your organisation. If you don't see Cowork in the Agent Store, that's the lever — IT can switch it on.</p>
+      </div>
+
+      <h2>Prerequisites</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">✅ For users</h3>
+          <ul class="checks">
+            <li>A Microsoft 365 Copilot licence</li>
+            <li>Edge or Chrome on a work device</li>
+            <li>Access to <a href="https://m365.cloud.microsoft" target="_blank">m365.cloud.microsoft</a> or the Microsoft 365 Copilot desktop app</li>
+            <li>Cowork added from the Agent Store (see below)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">⚙️ For tenant admins</h3>
+          <ul class="checks">
+            <li>Frontier program opt-in for the tenant</li>
+            <li>Anthropic enabled as a subprocessor</li>
+            <li>Cowork rolled out to the right user groups</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Add Cowork to your Copilot</h2>
+      <ol class="steps">
+        <li>Sign in to <a href="https://m365.cloud.microsoft" target="_blank">m365.cloud.microsoft</a></li>
+        <li>In the left navigation pane, select <strong>Agents</strong></li>
+        <li>Find and add <strong>Cowork (Frontier)</strong></li>
+        <li>You should now see <strong>Cowork</strong> in the left navigation under <em>Agents</em></li>
+      </ol>
+
+      <h2>Reference files for today</h2>
       <table class="files">
         <thead>
           <tr><th>File</th><th>Description</th><th>Used in</th></tr>
@@ -565,426 +545,581 @@
         <tbody>
           <tr>
             <td><a href="files/01_Contoso_YieldData.xlsx" download>📊 01_Contoso_YieldData.xlsx</a></td>
-            <td>Q1 2025 plantation yield data — FFB tonnes, OER %, CPO output, FFB/ha across all estates and three countries.</td>
-            <td>Exercise 1</td>
+            <td>Q1 2025 plantation yield data — FFB tonnes, OER %, CPO, FFB/ha across all estates and three countries.</td>
+            <td>The Demo · Plantation use cases</td>
           </tr>
           <tr>
             <td><a href="files/02_Contoso_OpsReport.docx" download>📄 02_Contoso_OpsReport.docx</a></td>
-            <td>Q1 2025 Group Operations Report — 7 sections covering plantation, manufacturing, property, sustainability and risk. Includes a meeting transcript with action items.</td>
-            <td>Exercises 2, 3, 4</td>
+            <td>Q1 2025 Group Operations Report — 7 sections covering plantation, manufacturing, property, sustainability, risk. Includes a meeting transcript with action items.</td>
+            <td>The Demo · most use cases</td>
           </tr>
         </tbody>
       </table>
 
-      <h2>Before we start</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin-top:0;">✅ You'll need</h3>
-          <ul class="checks">
-            <li>A Microsoft 365 Copilot licence</li>
-            <li>Edge or Chrome on a work device</li>
-            <li>Access to Word, Excel, PowerPoint, Outlook and Teams</li>
-            <li>(Optional) Access to <a href="https://m365.cloud.microsoft" target="_blank">m365.cloud.microsoft</a> for Cowork</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0;">💡 How this session works</h3>
-          <p>This is a guided walkthrough. You don't need to type along — sit back, watch the prompts run, and ask questions as we go. All prompts are reproduced on the page so you can copy them later for your own work.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ EX 1 — YIELD ANALYSIS ═══════════════ -->
-    <section class="page" id="ex1">
-      <h1 class="page-title">Exercise 1 · Q1 Yield Analysis</h1>
-      <p class="page-sub"><span class="pill blue">Excel</span> <span class="pill blue">Analyst Agent</span> · ~10 minutes</p>
-
-      <div class="card accent">
-        <h3 style="margin-top:0;">🎯 Objective</h3>
-        <p>Use Copilot in Excel and the Analyst agent to investigate Q1 OER performance across Contoso's estates, identify the two estates pulling the average below target (20%), and produce a chart Siew Ling can drop into her Board pack.</p>
-      </div>
-
-      <h2>Steps</h2>
-      <ol class="steps">
-        <li><strong>Open</strong> <code>01_Contoso_YieldData.xlsx</code> and switch to the <em>Yield Data</em> sheet. Click the <strong>Copilot</strong> icon in the ribbon.</li>
-        <li><strong>Ask Copilot</strong> for a high-level read on Q1 performance — using the prompt below.</li>
-        <li><strong>Drill down</strong> on the worst performers using the follow-up prompt.</li>
-        <li><strong>Insert a chart</strong> for the Board deck.</li>
-        <li><strong>(Optional)</strong> Hand off to the <strong>Analyst agent</strong> in Microsoft 365 Chat for deeper statistical analysis.</li>
-      </ol>
-
-      <h3>Prompt 1 · High-level read</h3>
-      <div class="prompt">I am Lim Siew Ling, Group COO at Contoso Plantation Berhad, preparing for the quarterly Board Operations Review.
-
-Analyse this yield dataset and tell me:
-1. Group-level Q1 OER versus our 20% target.
-2. Top 3 and bottom 3 estates by OER.
-3. Any country (Malaysia, Indonesia, Liberia) tracking materially below target.
-4. Estates flagged as CRITICAL — why, and what's the OER gap to target?
-
-Present as a short executive summary, no more than 150 words, followed by a clean table.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h3>Prompt 2 · Drill into the worst performers</h3>
-      <div class="prompt">For the two CRITICAL estates (Temerloh, Pahang and Simalungun, North Sumatra), compare:
-- Their OER versus the group average and our 20% target
-- Their FFB/ha versus the group average
-- Whether the two estates share a pattern (age profile, region, weather)
-
-Then suggest three operational hypotheses I should ask the Regional Heads about in the Board review.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h3>Prompt 3 · Insert a chart</h3>
-      <div class="prompt">Create a column chart of Q1 OER % by estate, sorted descending, with a dashed reference line at the 20% target. Use a green palette.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <div class="card">
-        <h3 style="margin-top:0;">What to notice</h3>
-        <ul class="checks">
-          <li>Copilot pulls a <strong>group-level OER</strong> without you writing AVERAGEIF or PIVOT formulas.</li>
-          <li>It correctly flags <strong>Temerloh (17.5%)</strong> and <strong>Simalungun (17.6%)</strong> as the two CRITICAL estates.</li>
-          <li>It identifies <strong>Lahad Datu, Sabah (21.3%)</strong> as the top performer — useful counter-example for the Board.</li>
-          <li>The Analyst agent can take this further: regression of OER vs. FFB/ha, age profile, rainfall — directly in chat.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ═══════════════ EX 2 — OPS REPORTS ═══════════════ -->
-    <section class="page" id="ex2">
-      <h1 class="page-title">Exercise 2 · Operations Reports</h1>
-      <p class="page-sub"><span class="pill blue">Word</span> <span class="pill blue">PowerPoint</span> · ~12 minutes</p>
-
-      <div class="card accent">
-        <h3 style="margin-top:0;">🎯 Objective</h3>
-        <p>Take the 7-section Q1 Group Operations Report and produce two Board-ready artefacts: a one-page executive summary in Word, and a draft Board update deck in PowerPoint — both anchored on the same source document.</p>
-      </div>
-
-      <h2>Part A · Summarise the report (Word)</h2>
-      <ol class="steps">
-        <li><strong>Open</strong> <code>02_Contoso_OpsReport.docx</code> and click the Copilot icon in Word.</li>
-        <li><strong>Ask Copilot</strong> to produce an executive summary using the prompt below.</li>
-        <li><strong>Then</strong> ask it to extract the action items separately so they can be tracked.</li>
-      </ol>
-
-      <h3>Prompt · Executive summary</h3>
-      <div class="prompt">Summarise this Q1 2025 Group Operations Report as a one-page executive summary for the Contoso Plantation Berhad Board.
-
-Use this structure:
-- Headline (2 sentences — what mattered this quarter)
-- Plantation: Q1 OER, top/bottom estates, headline risks
-- Manufacturing: oleochemicals utilisation, margin trend
-- Property (KLK Land): launches, take-up, receivables
-- Sustainability: RSPO, MSPO and EUDR status
-- Top 3 risks the Board needs to discuss
-
-Tone: factual, calm, board-grade. Maximum 350 words.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h3>Prompt · Extract action items</h3>
-      <div class="prompt">From the meeting transcript section of this report, extract every action item as a table with columns: Owner, Action, Due date, Status. Sort by due date ascending.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h2>Part B · Build the Board deck (PowerPoint)</h2>
-      <ol class="steps">
-        <li><strong>Open</strong> a new PowerPoint presentation and click <em>Copilot &rarr; Create presentation from file</em>.</li>
-        <li><strong>Reference</strong> <code>02_Contoso_OpsReport.docx</code>.</li>
-        <li><strong>Use the prompt below</strong> to shape the deck.</li>
-      </ol>
-
-      <h3>Prompt · Generate Board deck</h3>
-      <div class="prompt">Create a Board update presentation from /02_Contoso_OpsReport.docx for the Q1 2025 Operations Review.
-
-Structure (10-12 slides):
-1. Title slide — "Q1 2025 Operations Review · Contoso Plantation Berhad"
-2. Executive summary
-3. Plantation performance — group OER vs. target
-4. Estate performance heatmap — top 3 / bottom 3
-5. CRITICAL estates — Temerloh and Simalungun
-6. Manufacturing — oleochemicals utilisation and margin
-7. Property — KLK Land launches and take-up
-8. Sustainability — RSPO / MSPO / EUDR status
-9. Risks — top 3 with mitigations
-10. Action items — owner, due date
-11. Asks of the Board
-
-Use a green-and-cream palette, conservative corporate tone, no emojis.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <div class="card">
-        <h3 style="margin-top:0;">What to notice</h3>
-        <ul class="checks">
-          <li>The summary is <strong>grounded in the source document</strong> — quotes, names and numbers come from the report.</li>
-          <li>Copilot can <strong>extract structured tables</strong> (action items) from unstructured prose (transcript).</li>
-          <li>The PowerPoint draft is a <strong>starting point, not a final</strong> — Siew Ling will refine wording, but the heavy lift of "blank deck → 80% draft" is gone.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ═══════════════ EX 3 — COWORK ═══════════════ -->
-    <section class="page" id="ex3">
-      <h1 class="page-title">Exercise 3 · Cowork <span class="star">★</span></h1>
-      <p class="page-sub"><span class="pill gold">Centerpiece</span> <span class="pill blue">M365 Chat</span> · ~15 minutes</p>
-
-      <div class="card warn">
-        <h3 style="margin-top:0;">📌 About Copilot Cowork</h3>
-        <p><strong>Cowork</strong> is the new M365 Copilot experience that lets you delegate <em>multiple</em> deliverables in a single prompt. Copilot drafts them in parallel as separate Word, Excel, PowerPoint, Outlook and Teams artefacts — you review, refine, and ship.</p>
-        <p style="margin-bottom:0;"><strong>Tenant note:</strong> Cowork must be enabled by your tenant administrator at the Microsoft 365 admin centre. If you don't see it yet, that's the lever — your IT team can switch it on.</p>
-      </div>
-
-      <div class="card accent">
-        <h3 style="margin-top:0;">🎯 Objective</h3>
-        <p>In a single Cowork prompt, have Copilot prepare <strong>five Board-prep deliverables in parallel</strong>: an executive summary, a sustainability briefing note, a pre-Board email to division heads, a calendar invite for a follow-up review, and a Teams heads-up message to the Plantation Operations channel.</p>
-      </div>
-
-      <h2>Steps</h2>
-      <ol class="steps">
-        <li><strong>Go to</strong> <a href="https://m365.cloud.microsoft" target="_blank">m365.cloud.microsoft</a> and open Copilot.</li>
-        <li><strong>Switch</strong> to the <strong>Cowork</strong> experience (top of the chat panel).</li>
-        <li><strong>Attach</strong> <code>02_Contoso_OpsReport.docx</code> as a reference.</li>
-        <li><strong>Paste</strong> the master prompt below.</li>
-        <li><strong>Watch</strong> Copilot fan out the work — five drafts arriving in parallel within a couple of minutes.</li>
-        <li><strong>Review</strong> each draft, refine in place, and save / send.</li>
-      </ol>
-
-      <h3>The master Cowork prompt</h3>
-      <div class="prompt">I am Lim Siew Ling, Group COO at Contoso Plantation Berhad. The quarterly Board Operations Review is on Friday. Using the attached Q1 Group Operations Report as the source of truth, prepare these five deliverables in parallel:
-
-1. WORD DOCUMENT — "Q1 2025 Operations Executive Summary"
-   • One page, board-grade, structured: Headline / Plantation / Manufacturing / Property / Sustainability / Top 3 Risks.
-   • Calm, factual tone. ~350 words.
-
-2. WORD DOCUMENT — "Sustainability Briefing Note · Q1 2025"
-   • Two pages.
-   • Cover RSPO recertification status, MSPO compliance, EUDR readiness for the EU Deforestation Regulation.
-   • Highlight the Liberia operations gap and propose a remediation timeline.
-   • End with three questions the Board should expect from the Sustainability Sub-committee.
-
-3. EMAIL — to the four division heads (Plantation, Manufacturing, Property, Sustainability)
-   • Subject line punchy and specific.
-   • Reminds them the Board pack pre-reads close end of Wednesday.
-   • Asks each to confirm two slides and one risk callout.
-   • Warm but firm tone, signed "Siew Ling".
-
-4. CALENDAR INVITE — "Liberia Operations Follow-up · Tuesday next week"
-   • 60 minutes, 9:00 AM Kuala Lumpur time.
-   • Invite the Plantation Director, Liberia Country Manager, and Group Sustainability Lead.
-   • Agenda in the body: yield gap, EUDR readiness, capex pipeline, ask of the Board.
-
-5. TEAMS MESSAGE — to the "Plantation Operations Leadership" channel
-   • Three short paragraphs, conversational but professional.
-   • Heads-up that Friday's Board review will spotlight Temerloh and Simalungun.
-   • Asks Regional Heads to come prepared with a one-line operational hypothesis.
-   • Ends on a positive note about Lahad Datu's strong quarter.
-
-Keep terminology consistent across all five artefacts: OER, FFB/ha, RSPO, MSPO, EUDR, KLK Land. Where you cite numbers, use the figures from the attached report.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h2>What to watch for</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin-top:0;">⚡ Parallel drafting</h3>
-          <p>Five artefacts in five different surfaces — Word ×2, Outlook email, Outlook calendar, Teams message — all from one prompt. Each is a real, editable artefact, not a chat blob.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0;">🧭 Consistent grounding</h3>
-          <p>Because all five reference the same Operations Report, the OER numbers, estate names and risk wording stay <strong>consistent across deliverables</strong>. That's the magic — no copy-paste drift.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0;">🎯 Tone control</h3>
-          <p>The Board summary is calm and factual; the Teams message is conversational; the email is "warm but firm". Cowork lets you set tone <strong>per artefact</strong> in one prompt.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0;">🔁 Refine in place</h3>
-          <p>Each draft opens in its native app. Edit the email directly in Outlook, tweak the deck in PowerPoint, adjust the briefing note in Word — Copilot stays available for follow-up edits.</p>
-        </div>
-      </div>
-
-      <h2>The "before / after" for Siew Ling</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin-top:0;">Before Cowork</h3>
-          <p>Five separate drafting sessions across two days — open Word, draft, save, attach, switch to Outlook, write the email, switch to Teams, write the message, schedule the meeting, brief the EA…</p>
-        </div>
-        <div class="card accent">
-          <h3 style="margin-top:0;">With Cowork</h3>
-          <p>One prompt. Five drafts in parallel in under two minutes. The next 30 minutes is review and refinement — not first-draft drudgery. The team gets time back for what humans actually do best: judgement and conversation.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ EX 4 — AGENT BUILDER ═══════════════ -->
-    <section class="page" id="ex4">
-      <h1 class="page-title">Exercise 4 · Agent Builder</h1>
-      <p class="page-sub"><span class="pill blue">Copilot Studio Lite</span> · ~10 minutes</p>
-
-      <div class="card accent">
-        <h3 style="margin-top:0;">🎯 Objective</h3>
-        <p>Build a lightweight "Plantation Advisor" agent grounded in the Group Operations Report. Anyone in the Plantation team can ask it questions in English or Bahasa Malaysia — and get answers anchored on the actual report, not the open internet.</p>
-      </div>
-
-      <h2>Steps</h2>
-      <ol class="steps">
-        <li><strong>Open</strong> Microsoft 365 Copilot Chat.</li>
-        <li><strong>Click</strong> the <em>Create agent</em> icon (or go to <em>Agents &rarr; Create</em>).</li>
-        <li><strong>Name</strong> the agent <code>Plantation Advisor</code>.</li>
-        <li><strong>Paste</strong> the description below.</li>
-        <li><strong>Upload</strong> <code>02_Contoso_OpsReport.docx</code> as the knowledge source.</li>
-        <li><strong>Add</strong> the suggested starter prompts.</li>
-        <li><strong>Test</strong> with the sample questions, then <strong>publish</strong> to the Plantation team.</li>
-      </ol>
-
-      <h3>Agent description</h3>
-      <div class="prompt">You are the Plantation Advisor — an internal assistant for Contoso Plantation Berhad's plantation operations team.
-
-Answer questions about Q1 2025 estate performance, OER trends, sustainability compliance (RSPO, MSPO, EUDR), and operational risks. Always ground your answers in the attached Q1 Group Operations Report. Where the report does not contain the answer, say so plainly.
-
-Audience: Estate Managers, Regional Heads, Plantation Director and the COO's office.
-Languages: respond in English by default; respond in Bahasa Malaysia when asked.
-Tone: factual, concise, professional. Use bullets and tables where helpful.
-Numbers: always quote the figure from the report and the section it came from.<button class="copy" onclick="copyP(this)">Copy</button></div>
-
-      <h3>Suggested starter prompts</h3>
-      <div class="card">
-        <ul class="checks">
-          <li>"Which estates are CRITICAL this quarter and why?"</li>
-          <li>"Apa status persijilan RSPO untuk operasi Liberia?" <em>(What is the RSPO certification status for Liberia operations?)</em></li>
-          <li>"Summarise the Q1 manufacturing margin story in three bullets."</li>
-          <li>"List every action item from the Q1 review, with owners."</li>
-          <li>"What's our exposure to the EU Deforestation Regulation?"</li>
-        </ul>
-      </div>
-
-      <h2>What to notice</h2>
+      <h2>Tips before you start</h2>
       <ul class="checks">
-        <li>The agent <strong>only</strong> answers from the uploaded document — try asking it "what's CPO trading at today?" and watch it decline.</li>
-        <li>It handles <strong>Bahasa Malaysia</strong> seamlessly — useful for Estate Managers who default to BM.</li>
-        <li>You can <strong>publish</strong> it to a Teams channel so the whole Plantation org has the same answers.</li>
-        <li>Building this took about <strong>3 minutes</strong> end-to-end. No code, no Copilot Studio licence required.</li>
+        <li><strong>Be specific.</strong> Cowork can misinterpret broad instructions. Name the deliverables, the audiences, and the tone.</li>
+        <li><strong>Attach the source.</strong> Drag a file in, or pick from OneDrive / SharePoint / Teams.</li>
+        <li><strong>Approve carefully.</strong> Read each preview before approving an email, post or invite.</li>
+        <li><strong>Use voice.</strong> The microphone button is faster than typing for long prompts.</li>
+        <li><strong>Pause whenever.</strong> You can pause mid-step, redirect, and resume.</li>
       </ul>
     </section>
 
-    <!-- ═══════════════ USE CASES ═══════════════ -->
-    <section class="page" id="usecases">
-      <h1 class="page-title">More Plantation Use Cases</h1>
-      <p class="page-sub">Where else Copilot earns its keep across KLK's day-to-day.</p>
+    <!-- ═══════════════ THE COWORK DEMO ═══════════════ -->
+    <section class="page" id="demo">
+      <h1 class="page-title">The Cowork Demo <span class="star">★</span></h1>
+      <p class="page-sub">One prompt. Six deliverables. Across four surfaces. In parallel.</p>
 
+      <div class="card accent">
+        <h3 style="margin-top:0;">🎯 The scenario</h3>
+        <p>It's Monday. Siew Ling has the <strong>Quarterly Board Operations Review on Friday</strong>. By close of business Wednesday she needs an executive summary, a sustainability briefing note, a Board deck, an email to her division heads, a calendar invite for a follow-up review, and a heads-up Teams message to the Plantation Operations leadership channel.</p>
+        <p style="margin-bottom:0;">Last quarter, this list took her team three full days. Today, we'll watch Cowork knock most of it out in a single conversation.</p>
+      </div>
+
+      <h2>Steps</h2>
+      <ol class="steps">
+        <li><strong>Open</strong> <a href="https://m365.cloud.microsoft" target="_blank">m365.cloud.microsoft</a> and select <strong>Cowork</strong> from the Agents pane.</li>
+        <li><strong>Attach</strong> <code>02_Contoso_OpsReport.docx</code> (drag-and-drop, or "Attach cloud files" from OneDrive).</li>
+        <li><strong>Paste</strong> the master prompt below.</li>
+        <li><strong>Watch</strong> the side panel — Cowork loads skills (Word, Communications, Email, Calendar, PowerPoint), and files start arriving in the Output folder.</li>
+        <li><strong>Approve</strong> each external action — email send, calendar invite, Teams post — only after reviewing the preview.</li>
+        <li><strong>Refine</strong> any draft inline, then ship.</li>
+      </ol>
+
+      <h3>The master Cowork prompt</h3>
+      <div class="prompt">I am Siew Ling, Group COO at Contoso Plantation Berhad. The Quarterly Board Operations Review is on Friday. Using the attached Q1 Group Operations Report as the source of truth, prepare these SIX deliverables in parallel:
+
+1. WORD — "Q1 2025 Operations Executive Summary"
+   • One page, board-grade. Structure: Headline / Plantation / Manufacturing / Property / Sustainability / Top 3 Risks.
+   • Calm, factual tone. ~350 words.
+
+2. WORD — "Sustainability Briefing Note · Q1 2025"
+   • Two pages.
+   • Cover RSPO recertification, MSPO compliance, EUDR readiness for the EU Deforestation Regulation.
+   • Highlight the Liberia operations gap and propose a remediation timeline.
+   • End with three questions the Board should expect from the Sustainability Sub-committee.
+
+3. POWERPOINT — "Q1 2025 Operations Review · Board Pack"
+   • 10-12 slides. Conservative green/cream palette. No emojis.
+   • Title / Executive summary / Plantation OER vs target / CRITICAL estates (Temerloh, Simalungun) / Manufacturing utilisation & margin / KLK Land launches & take-up / Sustainability scorecard / Top 3 risks / Action items / Asks of the Board.
+
+4. EMAIL — to my four division heads (Plantation, Manufacturing, Property, Sustainability)
+   • Subject line punchy and specific.
+   • Reminds them Board pack pre-reads close end of Wednesday.
+   • Asks each to confirm two slides and one risk callout.
+   • Warm but firm tone, signed "Siew Ling". DRAFT only — do not send until I approve.
+
+5. CALENDAR INVITE — "Liberia Operations Follow-up · Tuesday next week"
+   • 60 minutes, 9:00 AM Kuala Lumpur time. Add a Teams meeting link.
+   • Invite the Plantation Director, Liberia Country Manager, Group Sustainability Lead.
+   • Agenda in the body: yield gap, EUDR readiness, capex pipeline, ask of the Board.
+
+6. TEAMS MESSAGE — to the "Plantation Operations Leadership" channel
+   • Three short paragraphs, conversational but professional.
+   • Heads-up that Friday's Board review will spotlight Temerloh and Simalungun.
+   • Asks Regional Heads to come prepared with a one-line operational hypothesis.
+   • Ends on a positive note about Lahad Datu's strong quarter. DRAFT only — do not post until I approve.
+
+Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, EUDR, KLK Land. Where you cite numbers, use the figures from the attached report.<button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <h2>What to watch in the side panel</h2>
       <div class="grid-2">
         <div class="card">
-          <h3 style="margin-top:0;">🏗️ CAPEX review · new mill</h3>
-          <p><strong>Pain:</strong> Estate Managers submit capex business cases in different formats; the COO's office spends hours normalising them.</p>
-          <p><strong>Copilot:</strong> Drop the business case PDF into Copilot — get a standard one-pager: capex amount, payback, NPV, key risks, alignment with strategic plan.</p>
-          <p><strong>Apps:</strong> Word, Excel, M365 Chat.</p>
+          <h3 style="margin-top:0;">📊 Progress</h3>
+          <p>The progress bar climbs as Cowork completes each sub-task. You can read the step-by-step log: <em>"Composing your email"</em>, <em>"Creating your presentation"</em>.</p>
         </div>
-
         <div class="card">
-          <h3 style="margin-top:0;">🧪 Supplier due diligence · fertiliser</h3>
-          <p><strong>Pain:</strong> Procurement reviews 12+ fertiliser suppliers each renewal cycle. Comparing terms, certifications and references is manual.</p>
-          <p><strong>Copilot:</strong> Build a comparison table from the supplier RFQ responses; flag missing certifications; draft questions for the shortlist call.</p>
-          <p><strong>Apps:</strong> Excel, Word, Outlook.</p>
+          <h3 style="margin-top:0;">📁 Output folder</h3>
+          <p>Files appear as they're created — Word, Word, PowerPoint. Each has Download and Preview buttons. Use <strong>Download All</strong> at the top to grab them as a zip.</p>
         </div>
-
         <div class="card">
-          <h3 style="margin-top:0;">🌍 EUDR compliance prep</h3>
-          <p><strong>Pain:</strong> The EU Deforestation Regulation requires geolocation and traceability for every shipment. The data sits across estates, mills and the trading desk.</p>
-          <p><strong>Copilot:</strong> Build a compliance checklist agent grounded in the EUDR guidance + internal SOPs; it answers Estate Manager questions and flags gaps.</p>
-          <p><strong>Apps:</strong> Agent Builder, Teams, Word.</p>
+          <h3 style="margin-top:0;">🔧 Skills</h3>
+          <p>Watch the skills list grow: <em>Word</em>, <em>PowerPoint</em>, <em>Email</em>, <em>Calendar Management</em>, <em>Communications</em>. Cowork loads them as needed.</p>
         </div>
-
         <div class="card">
-          <h3 style="margin-top:0;">📋 RSPO audit prep</h3>
-          <p><strong>Pain:</strong> Annual RSPO surveillance audits require pulling evidence from across HR, Estate Ops, Smallholder Engagement and Mill records.</p>
-          <p><strong>Copilot:</strong> Cowork prompt to draft: audit prep checklist (Word), evidence pack table of contents (Word), kickoff email to estate auditors (Outlook), Teams channel update.</p>
-          <p><strong>Apps:</strong> Cowork, Word, Outlook, Teams.</p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">📈 Yield variance commentary</h3>
-          <p><strong>Pain:</strong> Every month, Regional Heads write narrative commentary explaining yield variances. It's repetitive prose anchored on the same data shape.</p>
-          <p><strong>Copilot:</strong> Feed in the monthly OER and FFB/ha numbers; Copilot drafts the variance narrative in the house style. Regional Head edits the tail.</p>
-          <p><strong>Apps:</strong> Excel, Word.</p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">🏘️ KLK Land sales report</h3>
-          <p><strong>Pain:</strong> Weekly sales report for KLK Land townships pulls from CRM, finance and marketing — and the Group MD wants it on Monday morning.</p>
-          <p><strong>Copilot:</strong> Cowork prompt: weekly summary deck (PPT), commentary doc (Word), email to Group MD (Outlook), Teams update for sales team.</p>
-          <p><strong>Apps:</strong> Cowork, PowerPoint, Word, Outlook, Teams.</p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">🇲🇾 BM-language estate updates</h3>
-          <p><strong>Pain:</strong> Estate Managers default to Bahasa Malaysia; HQ defaults to English. Translation drift introduces errors.</p>
-          <p><strong>Copilot:</strong> Translate Estate Manager weekly updates into English with terminology guardrails (FFB stays FFB; OER stays OER). Reverse-translate HQ memos into BM.</p>
-          <p><strong>Apps:</strong> Word, Outlook.</p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">🛢️ Oleochemicals commercial briefing</h3>
-          <p><strong>Pain:</strong> The Manufacturing GM needs weekly briefings on fatty acid spreads, glycerine demand and customer renewals.</p>
-          <p><strong>Copilot:</strong> Custom agent grounded in internal price reports + customer pipeline; weekly Cowork prompt produces the briefing pack.</p>
-          <p><strong>Apps:</strong> Agent Builder, Cowork, PowerPoint.</p>
+          <h3 style="margin-top:0;">🛡️ Permissions</h3>
+          <p>Each external action — send, post, schedule — requires explicit approval with a preview and a risk indicator. You can <em>Approve &amp; Remember</em> to skip prompts for similar actions later in the conversation.</p>
         </div>
       </div>
+
+      <h2>The "before / after"</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">Before Cowork</h3>
+          <p>Six separate drafting sessions across two days — open Word, draft, save, attach, switch to Outlook, write the email, switch to Teams, write the message, schedule the meeting, brief the EA, repeat.</p>
+        </div>
+        <div class="card accent">
+          <h3 style="margin-top:0;">With Cowork</h3>
+          <p>One prompt. Six drafts in parallel in a few minutes. The next half-hour is review and refinement — not first-draft drudgery. The team gets time back for what humans actually do best: judgement and conversation.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0;">📅 Want this every quarter? Schedule it.</h3>
+        <p>You can ask Cowork to run a similar prompt automatically on a cadence. For example:</p>
+        <div class="prompt">Every quarter, two weeks before the scheduled Board Operations Review date in my calendar, draft the Q-end executive summary, sustainability briefing and Board deck from the latest Group Operations Report in /Documents/Board/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ USE CASES · PLANTATION ═══════════════ -->
+    <section class="page" id="uc-plantation">
+      <h1 class="page-title">Plantation Use Cases</h1>
+      <p class="page-sub">Where Cowork saves hours across estates, mills and the Plantation HQ.</p>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span></div>
+        <h3>1 · Estate visit follow-up pack</h3>
+        <p><strong>Trigger:</strong> COO returns from a two-day site visit to Sabah estates.</p>
+        <p><strong>Cowork delivers:</strong> a one-page visit summary (Word) with key observations and asks; a follow-up email to each Estate Manager confirming the action items they own; a Teams post in the regional channel summarising what was seen and praising specific teams.</p>
+        <details class="uc-detail"><summary>Show prompt</summary>
+        <div class="prompt">From my voice notes attached, prepare a visit summary for the Sabah estates trip. Then draft individual follow-up emails to the three Estate Managers (Lahad Datu, Tawau, Sandakan) confirming their action items. Finally draft a celebratory Teams post for the Sabah Operations channel. Do not send anything until I approve.<button class="copy" onclick="copyP(this)">Copy</button></div>
+        </details>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span><span class="purple pill">Scheduled</span></div>
+        <h3>2 · Monthly yield variance commentary</h3>
+        <p><strong>Trigger:</strong> First Monday of every month, when the FFB and OER numbers close.</p>
+        <p><strong>Cowork delivers:</strong> a monthly OER and FFB/ha variance Excel; a one-page narrative commentary; a Teams update for the Plantation Operations leadership channel.</p>
+        <details class="uc-detail"><summary>Show prompt</summary>
+        <div class="prompt">Every first Monday at 8 AM Kuala Lumpur time, pull the latest OER and FFB/ha numbers from /Plantation/Monthly/. Build a variance Excel against last month and last year. Draft a one-page commentary in our house style: Headline, Country breakdowns, Outliers, Watchlist. Post a short summary in the "Plantation Ops Leadership" Teams channel.<button class="copy" onclick="copyP(this)">Copy</button></div>
+        </details>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
+        <h3>3 · New estate acquisition due diligence</h3>
+        <p><strong>Trigger:</strong> Strategy team is evaluating a 12,000-ha plantation in West Kalimantan.</p>
+        <p><strong>Cowork delivers:</strong> a deep-research briefing covering regulatory environment, land status, deforestation history (EUDR-relevant), local labour market, infrastructure access; followed by a Group-format due diligence template.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">Email</span><span class="pill">Calendar</span></div>
+        <h3>4 · RSPO surveillance audit prep</h3>
+        <p><strong>Trigger:</strong> Annual RSPO audit scheduled in 8 weeks.</p>
+        <p><strong>Cowork delivers:</strong> audit prep checklist, evidence pack table-of-contents, kickoff email to internal estate auditors, calendar invites for evidence-pull workshops, weekly Teams updates on audit-readiness.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>5 · Bahasa Malaysia estate manager updates</h3>
+        <p><strong>Trigger:</strong> Estate Managers default to Bahasa Malaysia for weekly updates.</p>
+        <p><strong>Cowork delivers:</strong> translates BM weekly updates into English with terminology guardrails (FFB stays FFB; OER stays OER); reverse-translates HQ memos into BM for distribution.</p>
+        <details class="uc-detail"><summary>Show prompt</summary>
+        <div class="prompt">Translate the attached weekly update from Estate Manager Encik Zulkifli into English for HQ. Keep these terms untranslated: FFB, OER, CPO, PKO, FFB/ha. Then draft a short response in BM thanking him and asking two clarifying questions about the harvesting interval at Block 7.<button class="copy" onclick="copyP(this)">Copy</button></div>
+        </details>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span></div>
+        <h3>6 · CAPEX paper · new mill</h3>
+        <p><strong>Trigger:</strong> Plantation Director needs to take a new-mill capex to the Investment Committee.</p>
+        <p><strong>Cowork delivers:</strong> standardised one-pager (Word), payback &amp; sensitivity model (Excel), Investment Committee deck (PPT), all from the attached project workbook.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span></div>
+        <h3>7 · Crisis response · estate flooding</h3>
+        <p><strong>Trigger:</strong> Heavy floods affect three Pahang estates.</p>
+        <p><strong>Cowork delivers:</strong> incident summary (Word), notification email to Group Risk and Insurance, Teams broadcast to all Pahang estate teams, holding statement for external comms — drafted in parallel.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Adaptive Cards</span></div>
+        <h3>8 · Smallholder engagement update</h3>
+        <p><strong>Trigger:</strong> Quarterly Smallholder Sub-committee.</p>
+        <p><strong>Cowork delivers:</strong> a smallholder engagement scorecard, a one-page narrative on certification progress, an interactive card response in chat with the top three risks for review.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ USE CASES · MANUFACTURING ═══════════════ -->
+    <section class="page" id="uc-manufacturing">
+      <h1 class="page-title">Manufacturing &amp; Oleochemicals Use Cases</h1>
+      <p class="page-sub">Klang, Rawang, Düsseldorf — fatty acids, fatty alcohols, glycerine, soap noodles.</p>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Daily Briefing</span><span class="purple pill">Scheduled</span></div>
+        <h3>1 · Manufacturing GM daily briefing</h3>
+        <p><strong>Trigger:</strong> Every morning at 7:30 AM.</p>
+        <p><strong>Cowork delivers:</strong> a daily briefing for the Manufacturing GM — overnight production from each plant, customer issues raised in the last 24 hours, planned shutdowns this week, top three meetings on the calendar with prep notes.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span><span class="pill">Email</span></div>
+        <h3>2 · Customer renewal pack</h3>
+        <p><strong>Trigger:</strong> Major FMCG customer's annual contract is up for renewal.</p>
+        <p><strong>Cowork delivers:</strong> account history brief (Word), renewal proposal deck (PPT), draft email to the customer's procurement lead, calendar invite for the renewal kickoff.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span></div>
+        <h3>3 · Margin and spread weekly</h3>
+        <p><strong>Trigger:</strong> Weekly commercial review on Mondays.</p>
+        <p><strong>Cowork delivers:</strong> the spread tracker (Excel) — fatty acid, fatty alcohol, glycerine — vs. CPKO and feedstock, plus a one-pager calling out where margin compressed.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Teams</span><span class="pill">Email</span></div>
+        <h3>4 · Plant incident report</h3>
+        <p><strong>Trigger:</strong> Process upset at the Klang fatty alcohol unit.</p>
+        <p><strong>Cowork delivers:</strong> an incident report (Word), a Teams update to the plant management channel, a notification email to Group HSSE and Insurance, and a calendar block for the incident review meeting.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">Communications</span></div>
+        <h3>5 · ISCC / Halal recertification</h3>
+        <p><strong>Trigger:</strong> Düsseldorf plant ISCC recertification.</p>
+        <p><strong>Cowork delivers:</strong> recertification work-plan, evidence checklist, comms note to the German team, English-and-German bilingual customer letter.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>6 · Customer complaint response</h3>
+        <p><strong>Trigger:</strong> Specification deviation reported by a personal-care customer.</p>
+        <p><strong>Cowork delivers:</strong> a "5-Why" investigation template (Word), a customer-facing response email (warm and accountable), an internal Teams update for the QA channel.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span></div>
+        <h3>7 · New product launch brief</h3>
+        <p><strong>Trigger:</strong> R&amp;D commercialises a new biodegradable surfactant.</p>
+        <p><strong>Cowork delivers:</strong> commercial launch brief, internal sales-force enablement deck, draft customer announcement email, a Teams post in the Sales channel.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ USE CASES · KLK LAND ═══════════════ -->
+    <section class="page" id="uc-property">
+      <h1 class="page-title">KLK Land · Property Use Cases</h1>
+      <p class="page-sub">Township and industrial development on legacy estate land.</p>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">PowerPoint</span><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span><span class="purple pill">Scheduled</span></div>
+        <h3>1 · Weekly sales report pack</h3>
+        <p><strong>Trigger:</strong> Every Monday morning, the Group MD wants the weekly KLK Land sales pack.</p>
+        <p><strong>Cowork delivers:</strong> a 4-slide deck (PPT), a one-page commentary (Word), an email to the MD's office, a Teams post in the Sales channel — all driven from the CRM exports in OneDrive.</p>
+        <details class="uc-detail"><summary>Show prompt</summary>
+        <div class="prompt">Every Monday at 7 AM, pull last week's bookings, signings and conversions from /KLKLand/Sales/Weekly/. Build a 4-slide pack: Headline numbers, Performance vs target, Top three projects this week, Watchlist. Draft a one-page commentary in our usual house style. Email it to the Group MD's office cc'ing the KLK Land MD. Post a 3-paragraph summary in the "KLK Land Sales" Teams channel. Draft only — wait for my approval before sending.<button class="copy" onclick="copyP(this)">Copy</button></div>
+        </details>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span><span class="pill">Email</span></div>
+        <h3>2 · Township launch communications</h3>
+        <p><strong>Trigger:</strong> New KLK Land township phase launch in Selangor.</p>
+        <p><strong>Cowork delivers:</strong> media release, FAQ document, customer email blast, internal Teams announcement, drafted in one consistent voice.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span></div>
+        <h3>3 · Receivables ageing review</h3>
+        <p><strong>Trigger:</strong> Monthly Property Finance review.</p>
+        <p><strong>Cowork delivers:</strong> ageing analysis (Excel), one-page commentary, draft "polite reminder" email templates per ageing bucket.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span></div>
+        <h3>4 · Industrial-park tenant pitch</h3>
+        <p><strong>Trigger:</strong> KLK Land is courting an MNC tenant for the new industrial park.</p>
+        <p><strong>Cowork delivers:</strong> a tenant-tailored proposal (Word), a pitch deck (PPT), a draft NDA cover email, a calendar invite for the site walk.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span></div>
+        <h3>5 · Buyer customer-experience response</h3>
+        <p><strong>Trigger:</strong> A buyer raises a defects-liability complaint on a handed-over unit.</p>
+        <p><strong>Cowork delivers:</strong> a defects-tracking entry, a warm and accountable customer response email, an internal Teams update for the Customer Care team.</p>
+      </div>
+
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">PowerPoint</span><span class="pill">Word</span></div>
+        <h3>6 · Land-bank monetisation paper</h3>
+        <p><strong>Trigger:</strong> Group Strategy reviewing legacy estate land for property conversion.</p>
+        <p><strong>Cowork delivers:</strong> a land-bank summary deck and a board paper outlining options, tenure, NPV and risks.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ USE CASES · GROUP FUNCTIONS ═══════════════ -->
+    <section class="page" id="uc-group">
+      <h1 class="page-title">Group Function Use Cases</h1>
+      <p class="page-sub">Finance · HR · Sustainability · IR · Procurement · Legal · IT · Internal Comms.</p>
+
+      <h2>💰 Group Finance</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span><span class="purple pill">Scheduled</span></div>
+        <h3>1 · Monthly close commentary pack</h3>
+        <p>Cowork pulls each segment's MIS pack, builds a roll-up Excel, drafts segment commentaries, assembles the Group MD note, and notifies division CFOs via Teams — automatically on day-5 of every month.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span><span class="pill">Email</span></div>
+        <h3>2 · Treasury covenant review</h3>
+        <p>From the latest financials and term-loan agreements, Cowork drafts a covenant-headroom report, a banker briefing deck, and an email to the relationship banks at the major lenders.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
+        <h3>3 · Tax change impact note</h3>
+        <p>Cowork researches the latest Malaysian budget proposals, builds a Group-impact note covering plantation, manufacturing and property, and circulates it to Group Tax and the Audit Committee.</p>
+      </div>
+
+      <h2>👥 Group HR</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Communications</span><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span></div>
+        <h3>4 · Townhall comms cascade</h3>
+        <p>From the Group MD's townhall transcript, Cowork drafts an internal recap article, an executive-summary email, a Teams broadcast, and an FAQ for line managers.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span></div>
+        <h3>5 · Talent review pack</h3>
+        <p>For the half-year talent review, Cowork builds a 9-box grid template, drafts a calibration discussion guide, and a succession-risk briefing pack.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>6 · Hiring kit · Estate Manager role</h3>
+        <p>Cowork drafts a job description, an interview scorecard, a candidate-experience email sequence, and a Teams onboarding-channel announcement template.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span></div>
+        <h3>7 · Long-service awards</h3>
+        <p>From the HR system list of awardees, Cowork drafts personalised citation paragraphs, the Group MD's speech notes, and a Teams broadcast for after the event.</p>
+      </div>
+
+      <h2>🌱 Group Sustainability</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span></div>
+        <h3>8 · Annual Sustainability Report drafting</h3>
+        <p>Cowork pulls the year's RSPO, MSPO, EUDR, climate, biodiversity and social data; builds a 60-page draft report; and produces a 12-slide Investor Sustainability Pack.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
+        <h3>9 · Climate-risk scenario brief</h3>
+        <p>Cowork conducts deep research on TCFD-aligned climate scenarios for Malaysian palm oil and produces a board-grade risk note with mitigations.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Adaptive Cards</span></div>
+        <h3>10 · NGO engagement responder</h3>
+        <p>When an NGO query arrives, Cowork drafts a respectful, factual response anchored in our published policies — and surfaces an interactive card flagging which positions to escalate.</p>
+      </div>
+
+      <h2>📊 Investor Relations</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">PowerPoint</span><span class="pill">Word</span><span class="pill">Communications</span></div>
+        <h3>11 · Quarterly results pack</h3>
+        <p>From the financial close, Cowork drafts the analyst-briefing deck, the press release, the website Q-results page copy, and an FAQ anticipating analyst questions.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
+        <h3>12 · Analyst Q&amp;A bank</h3>
+        <p>Cowork researches what analysts have asked KLK and peers in the last four quarters, compiles a 30-question Q&amp;A bank, and drafts pre-approved responses.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Calendar</span><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>13 · Roadshow logistics</h3>
+        <p>For a Singapore + Hong Kong investor roadshow, Cowork builds investor briefing notes per meeting, schedules the calendar with Teams links where remote, and drafts pre-meeting emails.</p>
+      </div>
+
+      <h2>🛒 Procurement</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>14 · Fertiliser RFQ comparison</h3>
+        <p>From a stack of supplier PDFs, Cowork builds a side-by-side comparison table (Excel), a recommendation memo (Word), and a clarification-questions email to the shortlisted three.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">PDF</span><span class="pill">Word</span></div>
+        <h3>15 · Contractor due-diligence pack</h3>
+        <p>Cowork reads the contractor's submitted PDFs (CCM, audited accounts, HSE record), checks them against the Group's contractor-onboarding policy, and drafts a recommendation memo.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span></div>
+        <h3>16 · Supplier code of conduct rollout</h3>
+        <p>Cowork drafts a supplier letter (English and BM), an FAQ, and a Teams post for the procurement community of practice.</p>
+      </div>
+
+      <h2>⚖️ Group Legal &amp; Compliance</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
+        <h3>17 · Contract summary &amp; risk read</h3>
+        <p>Cowork reads a vendor master agreement, drafts a one-page contract summary highlighting unusual clauses, and sends it to the contract owner with three suggested edits.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
+        <h3>18 · Regulatory horizon scan</h3>
+        <p>Quarterly Cowork scan of the regulatory environment — MPOB, Bursa, EUDR, Indonesia ISPO — turned into a one-page brief and a Top-5 implications list for the Group Legal Counsel.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Calendar</span></div>
+        <h3>19 · Anti-bribery refresher cycle</h3>
+        <p>Cowork drafts the half-yearly ABC refresher communications, schedules training sessions across regions, and produces a completion-tracker template.</p>
+      </div>
+
+      <h2>💻 Group IT</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Communications</span><span class="pill">Email</span><span class="pill">Teams</span></div>
+        <h3>20 · Major change comms</h3>
+        <p>For a planned ERP cutover weekend, Cowork drafts the user notification email, the cutover-day Teams broadcast schedule, and a post-cutover service-status update.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">Adaptive Cards</span></div>
+        <h3>21 · Security incident triage</h3>
+        <p>For a phishing-wave incident, Cowork drafts an internal advisory, a one-pager for the IT Steering Committee, and produces an interactive card so the SecOps lead can mark response actions complete.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="purple pill">Scheduled</span></div>
+        <h3>22 · Weekly service review</h3>
+        <p>Every Friday, Cowork drafts the IT weekly service-review pack — incidents, problems, changes, watchlist — for the IT Steering Committee.</p>
+      </div>
+
+      <h2>📣 Internal Communications</h2>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span><span class="pill">Communications</span></div>
+        <h3>23 · Townhall pack</h3>
+        <p>Cowork drafts the Group MD's townhall script, the supporting deck, the post-event recap article, the email to all employees and the Teams broadcast — in one prompt.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Daily Briefing</span><span class="purple pill">Scheduled</span></div>
+        <h3>24 · COO daily briefing</h3>
+        <p>Every weekday at 6:30 AM Cowork prepares Siew Ling's daily briefing — yesterday's headlines across all three segments, today's meetings with prep notes, top emails to triage, and any approvals waiting.</p>
+        <details class="uc-detail"><summary>Show prompt</summary>
+        <div class="prompt">Every weekday at 6:30 AM Kuala Lumpur time, prepare my daily briefing. Cover: headlines from each segment (Plantation / Manufacturing / KLK Land) using last 24h of files in /Group/Daily/, my top three meetings today with one-paragraph prep, the five emails most likely to need my decision, and any Cowork approvals waiting in my queue. Keep it under 600 words.<button class="copy" onclick="copyP(this)">Copy</button></div>
+        </details>
+      </div>
+      <div class="uc-card">
+        <div class="uc-meta"><span class="pill">Communications</span><span class="pill">Word</span></div>
+        <h3>25 · Awards &amp; recognition</h3>
+        <p>Cowork drafts internal celebratory comms when the Group wins an industry award — Teams broadcast, intranet article, LinkedIn post for the Group MD, and a thank-you email to the team.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ COWORK SKILLS ═══════════════ -->
+    <section class="page" id="skills">
+      <h1 class="page-title">Cowork Skills Reference</h1>
+      <p class="page-sub">The 13 out-of-the-box skills Cowork uses — plus how to add your own.</p>
+
+      <div class="card accent">
+        <p>Cowork loads skills as it works. When you ask for an email, it loads the <em>Email</em> skill. When you ask for a deck, it loads <em>PowerPoint</em>. You'll see the skill name appear in the side panel as it's invoked.</p>
+      </div>
+
+      <table class="skills">
+        <thead>
+          <tr><th>Skill</th><th>What it does</th><th>KLK example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="skill-name">Word</td><td>Create and edit Word documents</td><td>Sustainability briefing note</td></tr>
+          <tr><td class="skill-name">Excel</td><td>Create and edit Excel spreadsheets</td><td>Estate yield variance tracker</td></tr>
+          <tr><td class="skill-name">PowerPoint</td><td>Create and edit PowerPoint presentations</td><td>Quarterly Board deck</td></tr>
+          <tr><td class="skill-name">PDF</td><td>Work with PDF documents</td><td>Read supplier RFQ submissions</td></tr>
+          <tr><td class="skill-name">Email</td><td>Compose, reply, forward, send. Save drafts. Manage attachments.</td><td>Pre-Board email to division heads</td></tr>
+          <tr><td class="skill-name">Scheduling</td><td>Schedule meetings</td><td>Liberia operations follow-up</td></tr>
+          <tr><td class="skill-name">Calendar Management</td><td>Create events using natural language, add Teams meeting links, manage your calendar</td><td>Investor roadshow logistics</td></tr>
+          <tr><td class="skill-name">Meetings</td><td>Prepare meeting intelligence and insights</td><td>Pre-meeting brief on a customer</td></tr>
+          <tr><td class="skill-name">Daily Briefing</td><td>Prepare your daily briefing</td><td>COO 6:30 AM briefing</td></tr>
+          <tr><td class="skill-name">Enterprise Search</td><td>Search across your organization for files, people, information</td><td>Find every reference to a contractor across SharePoint</td></tr>
+          <tr><td class="skill-name">Communications</td><td>Draft stakeholder communications — status updates, announcements</td><td>Townhall recap cascade</td></tr>
+          <tr><td class="skill-name">Deep Research</td><td>In-depth multi-source research, comprehensive answers and analysis</td><td>Climate-risk scenario brief</td></tr>
+          <tr><td class="skill-name">Adaptive Cards</td><td>Generate interactive card responses with structured layouts and buttons</td><td>Security incident response checklist</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Custom skills · for KLK power users</h2>
+      <div class="card">
+        <p>Cowork can be extended with custom skills stored in your OneDrive. Create a subfolder in <code>/Documents/Cowork/Skills/</code> with a <code>SKILL.md</code> file inside — name, description and instructions. Cowork picks up your custom skills automatically at the start of each conversation.</p>
+        <p style="margin-bottom:0;">Examples for KLK:</p>
+        <ul class="checks">
+          <li><strong>EUDR-readiness assessor</strong> — checks a shipment file against the EU Deforestation Regulation evidence checklist</li>
+          <li><strong>House-style writer</strong> — rewrites any draft in the KLK Group corporate voice (calm, factual, board-grade)</li>
+          <li><strong>FFB-anomaly flagger</strong> — given a yield Excel, returns a written anomaly summary in the standard variance-commentary format</li>
+          <li><strong>BM ↔ EN translator with terminology guard</strong> — keeps FFB, OER, CPO, PKO untranslated and uses the KLK glossary</li>
+        </ul>
+      </div>
+
+      <h2>Supported file types · in brief</h2>
+      <div class="grid-3">
+        <div class="card"><strong>Word</strong><br /><small>.doc, .docx, .docm, .dot, .dotx, .odt, .rtf</small></div>
+        <div class="card"><strong>Excel</strong><br /><small>.csv, .xls, .xlsm, .xlsx, .ods</small></div>
+        <div class="card"><strong>PowerPoint</strong><br /><small>.odp, .ppt, .pptm, .pptx</small></div>
+        <div class="card"><strong>PDF</strong><br /><small>.pdf</small></div>
+        <div class="card"><strong>Markdown</strong><br /><small>.md, .markdown, .mdx</small></div>
+        <div class="card"><strong>Image</strong><br /><small>.png, .jpg, .gif, .webp, .svg, .bmp, .ico</small></div>
+        <div class="card"><strong>Text</strong><br /><small>.txt, .log</small></div>
+        <div class="card"><strong>Code &amp; config</strong><br /><small>.js, .py, .json, .yaml, .xml, .env, .ipynb …</small></div>
+        <div class="card"><strong>Audio &amp; video</strong><br /><small>.mp3, .wav, .mp4, .mov, .mkv, …</small></div>
+      </div>
+
+      <h2>Limitations · what to expect</h2>
+      <ul class="checks">
+        <li>Cowork can <strong>only access data</strong> your Microsoft 365 account is authorised to use.</li>
+        <li>Cowork <strong>cannot access local files</strong> — work from OneDrive, SharePoint or Teams.</li>
+        <li>Cowork <strong>cannot delete</strong> files or folders in OneDrive or SharePoint.</li>
+        <li>Search results may be incomplete if source data is outdated or not indexed.</li>
+        <li>Complex multi-step tasks with many dependencies may not always complete as expected — pause, redirect, resume.</li>
+        <li>AI-generated artefacts are <strong>drafts</strong>. Always review before approving send or share.</li>
+        <li>Custom skills are <strong>not validated</strong> by Microsoft — review their outputs carefully.</li>
+      </ul>
     </section>
 
     <!-- ═══════════════ TIPS ═══════════════ -->
     <section class="page" id="tips">
-      <h1 class="page-title">Prompting Tips</h1>
-      <p class="page-sub">A simple framework — and a plantation-flavoured prompt library.</p>
+      <h1 class="page-title">Prompting Tips for Cowork</h1>
+      <p class="page-sub">A simple framework — and a KLK-flavoured prompt library you can take home.</p>
 
       <h2>The GCSE framework</h2>
-      <p>Every good prompt has four parts. Get these four right and Copilot stops guessing.</p>
+      <p>Every good Cowork prompt has four parts. Get these right and Cowork stops guessing.</p>
 
       <table class="gcse-table">
         <tr>
           <th><span class="gcse-goal">Goal</span></th>
-          <td>What do you want? Be specific about the output. <em>"Draft a one-page executive summary"</em> — not <em>"Summarise this"</em>.</td>
+          <td>What do you want? Be specific about every output. <em>"Draft these six deliverables in parallel…"</em> — not <em>"Help with my Board prep"</em>.</td>
         </tr>
         <tr>
           <th><span class="gcse-context">Context</span></th>
-          <td>Who are you, who's the audience, what's the stakes? <em>"I'm Group COO preparing for the Board."</em></td>
+          <td>Who are you, who's the audience, what's the stakes? <em>"I'm Group COO preparing the Quarterly Board pack."</em></td>
         </tr>
         <tr>
           <th><span class="gcse-source">Source</span></th>
-          <td>What should Copilot ground the answer in? Attach a file, link a SharePoint doc, or paste the data in.</td>
+          <td>What should Cowork ground the answer in? Attach a file, link a SharePoint doc, or paste the data in.</td>
         </tr>
         <tr>
           <th><span class="gcse-expect">Expectation</span></th>
-          <td>Format, tone, length, structure. <em>"Calm, factual, ≤350 words, four bullets."</em></td>
+          <td>Format, tone, length, structure — and say <em>"draft only — do not send until I approve"</em> for any external action.</td>
         </tr>
       </table>
 
       <h3>Worked example</h3>
-      <div class="prompt"><span class="gcse-context">I am Lim Siew Ling, Group COO at Contoso Plantation Berhad, preparing for the quarterly Board.</span> <span class="gcse-goal">Summarise the attached Q1 Operations Report as a one-page executive summary.</span> <span class="gcse-source">Use only the figures and risks in the document — no external sources.</span> <span class="gcse-expect">Tone: calm, factual. Maximum 350 words. Structure: Headline / Plantation / Manufacturing / Property / Sustainability / Top 3 Risks.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+      <div class="prompt"><span class="gcse-context">I am Siew Ling, Group COO at Contoso Plantation Berhad, preparing for the Quarterly Board Operations Review.</span> <span class="gcse-goal">From the attached Q1 Operations Report, draft three artefacts in parallel: a one-page executive summary, a sustainability briefing note, and an email to my four division heads.</span> <span class="gcse-source">Use only the figures and risks in the document — no external sources.</span> <span class="gcse-expect">Tone: calm, factual, board-grade for the docs; warm but firm for the email. Email is draft only — do not send until I approve.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
 
-      <h2>Plantation prompt library</h2>
+      <h2>Cowork prompt patterns</h2>
 
-      <h3>Excel · Yield analytics</h3>
-      <div class="prompt">Compare Q1 OER % across all Malaysian estates. Highlight any estate >2 percentage points below the group average. Return a table sorted ascending, plus a one-paragraph executive comment.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      <h3>Pattern 1 · Parallel deliverables</h3>
+      <div class="prompt">Using <attached source>, prepare in parallel:
+1. WORD — <name & one-line purpose>
+2. POWERPOINT — <name & one-line purpose>
+3. EMAIL — <recipients, subject hint, tone>
+4. CALENDAR — <title, length, attendees, timezone>
+5. TEAMS — <channel, length, tone>
 
-      <h3>Word · Risk register entry</h3>
-      <div class="prompt">Draft a Group risk register entry for "EUDR non-compliance for Liberia operations". Use this structure: Risk description, Inherent likelihood, Inherent impact, Current controls, Residual rating, Owner, Next review date. Tone: formal, audit-ready.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Keep terminology consistent. Drafts only for external actions.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
-      <h3>Outlook · Estate visit follow-up</h3>
-      <div class="prompt">Draft a follow-up email to the Estate Manager of Temerloh, summarising the three operational hypotheses we discussed during my visit (canopy density, palm age profile, harvesting interval). Ask for a short response by Friday with which one he believes is the dominant driver. Warm but business-like. Sign as Siew Ling.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      <h3>Pattern 2 · Scheduled recurring task</h3>
+      <div class="prompt">Every <cadence> at <time> <timezone>, do <task> using <source folder/files>. Output: <list of artefacts>. Notify me in Teams when done.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
-      <h3>PowerPoint · Sustainability committee</h3>
-      <div class="prompt">Build a 6-slide deck for the Sustainability Sub-committee covering: RSPO recertification timeline, MSPO compliance, EUDR readiness, smallholder engagement progress, biodiversity programme highlights, asks of the Sub-committee. Conservative green/cream palette. No emojis.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      <h3>Pattern 3 · Deep research → brief</h3>
+      <div class="prompt">Conduct deep research on <topic> with focus on <KLK-relevant lens>. Compile findings into a one-page Group brief in our house style: Headline / What we know / What we don't / Implications for KLK / Recommended next step.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
-      <h3>Teams · Operations broadcast</h3>
-      <div class="prompt">Draft a short Teams broadcast to the Plantation Operations channel celebrating Lahad Datu's Q1 OER (21.3%, group leader), thanking the team, and gently signalling that next week's review will focus on Temerloh and Simalungun. Three short paragraphs.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      <h3>Pattern 4 · Triage and respond</h3>
+      <div class="prompt">From the unread emails in my inbox tagged <category> over the last 48 hours, group them into: needs my decision, can be delegated, FYI only. For each "needs my decision", draft a one-line summary plus a suggested response. Drafts only.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
-      <h3>Cowork · Quarterly close pack</h3>
-      <div class="prompt">Using the attached Q1 Group Operations Report, prepare in parallel:
-1. WORD — one-page executive summary for the Board
-2. WORD — sustainability briefing note (RSPO, MSPO, EUDR)
-3. EMAIL — to division heads, agenda + pre-read reminder
-4. CALENDAR — Liberia follow-up review, 60 min next Tuesday 9am MYT
-5. TEAMS — heads-up to Plantation Operations Leadership channel
-
-Keep terminology consistent (OER, FFB/ha, RSPO, MSPO, EUDR). Calm board-grade tone for the docs; warm-but-firm for email; conversational for Teams.<button class="copy" onclick="copyP(this)">Copy</button></div>
+      <h3>Pattern 5 · Cross-divisional rollup</h3>
+      <div class="prompt">From the latest segment reports in /Group/Q-end/ for Plantation, Manufacturing and KLK Land, build a single Group rollup: 1-page narrative, 4-slide summary deck, and a Teams update for the Group Operations channel.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
       <div class="card accent">
         <h3 style="margin-top:0;">🌱 One last tip</h3>
-        <p>Treat Copilot like a smart graduate analyst who's just joined your team. They're fast, willing, and well-trained — but they need <strong>context</strong> and <strong>direction</strong>. Spend 30 seconds on a great prompt and you'll save 30 minutes on a great output.</p>
+        <p>Treat Cowork like a smart, fast graduate analyst who's just joined the team. Hand them a clear brief, name the deliverables, point to the source — and tell them not to send anything until you've reviewed it. Spend 60 seconds on a great prompt and you'll save 60 minutes on a great output.</p>
       </div>
 
       <div class="footer-note">
         KLK Group · Copilot Cowork Immersion · For M365 Copilot licensed users<br />
-        Persona, company name, figures and estates used in this site are fictional and for demonstration only.
+        Persona, company name, figures and estates used in this site are fictional and for demonstration only.<br />
+        Cowork capabilities and skills referenced from
+        <a href="https://support.microsoft.com/en-us/topic/get-started-with-cowork-frontier-60be4cea-b913-471b-a0d8-f9ab73c6b0be" target="_blank">Microsoft Support · Get started with Cowork (Frontier)</a>.
       </div>
     </section>
 
@@ -994,7 +1129,21 @@ Keep terminology consistent (OER, FFB/ha, RSPO, MSPO, EUDR). Calm board-grade to
 
 <script>
   // ───── Password gate ─────
-  const PW = "PlantationCowork10May";
+  const PW = "KLKCowork14May";
+  function togglePw() {
+    const inp = document.getElementById('pw');
+    const btn = document.getElementById('pw-toggle');
+    if (inp.type === 'password') {
+      inp.type = 'text';
+      btn.textContent = '🙈';
+      btn.setAttribute('aria-label', 'Hide password');
+    } else {
+      inp.type = 'password';
+      btn.textContent = '👁';
+      btn.setAttribute('aria-label', 'Show password');
+    }
+    inp.focus();
+  }
   function unlock() {
     const v = document.getElementById('pw').value.trim();
     if (v === PW) {
@@ -1027,8 +1176,7 @@ Keep terminology consistent (OER, FFB/ha, RSPO, MSPO, EUDR). Calm board-grade to
   // ───── Copy buttons ─────
   function copyP(btn) {
     const node = btn.parentElement.cloneNode(true);
-    const b = node.querySelector('.copy');
-    if (b) b.remove();
+    node.querySelectorAll('.copy').forEach(b => b.remove());
     const text = node.innerText.trim();
     navigator.clipboard.writeText(text).then(() => {
       btn.textContent = 'Copied ✓';
