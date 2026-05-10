@@ -333,6 +333,12 @@
     background: var(--card); font-size: 12.5px;
     font-family: 'Cascadia Code', 'Consolas', monospace;
     color: var(--ink-soft); margin: 0 6px 6px 0;
+    text-decoration: none; cursor: pointer;
+    transition: background .12s ease, border-color .12s ease, transform .12s ease;
+  }
+  a.rb-file:hover {
+    background: #eff6ff; border-color: #93c5fd;
+    color: var(--ink); transform: translateY(-1px);
   }
   .rb-file .ext {
     background: #16a34a; color: #fff;
@@ -402,7 +408,7 @@
 <!-- ════════════════════════════ PASSWORD GATE ════════════════════════════ -->
 <div id="gate">
   <div class="panel">
-    <div class="icon">🌴</div>
+    <div class="icon">🏭</div>
     <h1>Cowork Immersion</h1>
     <p class="sub">Microsoft 365 Copilot Cowork <span class="frontier-badge">Frontier</span></p>
     <div class="pw-wrap">
@@ -422,7 +428,7 @@
   <!-- ───── Sidebar ───── -->
   <aside class="sidebar">
     <div class="brand">
-      <div class="logo">🌴</div>
+      <div class="logo">🏭</div>
       <div class="title">
         Cowork Immersion
         <small>Microsoft 365 Copilot · Frontier</small>
@@ -445,7 +451,7 @@
 
     <div class="nav-section">Use Cases · By Division</div>
     <nav>
-      <a onclick="show('uc-plantation', this)">Plantation</a>
+      <a onclick="show('uc-industrial', this)">Industrial Operations</a>
       <a onclick="show('uc-manufacturing', this)">Manufacturing</a>
       <a onclick="show('uc-property', this)">Property · Contoso Land</a>
       <a onclick="show('uc-group', this)">Group Functions</a>
@@ -468,7 +474,7 @@
 
       <div class="card accent">
         <h3 style="margin-top:0;">What you'll see today</h3>
-        <p>This session is a guided demonstration for M365 Copilot licensed users. We'll focus on a single capability — <strong>Cowork</strong> — the new Frontier experience that lets Copilot carry out multi-step work on your behalf across Outlook, Word, Excel, PowerPoint, Teams, OneDrive and SharePoint. We'll watch one realistic demo and then walk through a long catalogue of where Cowork applies across plantation, manufacturing, property and the group functions.</p>
+        <p>This session is a guided demonstration for M365 Copilot licensed users. We'll focus on a single capability — <strong>Cowork</strong> — the new Frontier experience that lets Copilot carry out multi-step work on your behalf across Outlook, Word, Excel, PowerPoint, Teams, OneDrive and SharePoint. We'll watch one realistic demo and then walk through a long catalogue of where Cowork applies across industrial operations, manufacturing, property and the group functions.</p>
       </div>
 
       <div class="grid-3">
@@ -489,7 +495,7 @@
         </div>
         <div class="card">
           <h3 style="margin-top:0;">3 · Use cases</h3>
-          <p>A catalogue of Cowork scenarios across <strong>Plantation, Manufacturing, Contoso Land, and Group functions</strong> (Finance, HR, Sustainability, IR, Procurement, Legal, IT).</p>
+          <p>A catalogue of Cowork scenarios across <strong>Industrial Operations, Manufacturing, Contoso Land, and Group functions</strong> (Finance, HR, Sustainability, IR, Procurement, Legal, IT).</p>
         </div>
         <div class="card">
           <h3 style="margin-top:0;">4 · Tips &amp; skills</h3>
@@ -499,7 +505,7 @@
 
       <div class="card warn">
         <h3 style="margin-top:0;">📌 A note on the demo</h3>
-        <p>The persona, company name (Contoso Plantation Berhad), and figures used today are <strong>fictional</strong>. They are designed to mirror the kinds of problems plantation, manufacturing, property and group teams face every quarter. Any resemblance to actual estates, mills or people is incidental.</p>
+        <p>The persona, company name (Contoso Group), and figures used today are <strong>fictional</strong>. They are designed to mirror the kinds of problems industrial operations, manufacturing, property and group teams face every quarter. Any resemblance to actual sites, plants or people is incidental.</p>
       </div>
     </section>
 
@@ -592,30 +598,30 @@
       <p class="page-sub">A single thread that connects every demo and use case in this session.</p>
 
       <div class="card accent">
-        <h3 style="margin-top:0;">👤 Siew Ling · Group COO, Contoso Plantation Berhad</h3>
-        <p>Siew Ling has been Group COO of Contoso Plantation Berhad for four years. She oversees plantation operations across Malaysia, Indonesia and Liberia, the Group's downstream oleochemical manufacturing, and Contoso Land — the property division. She reports to the Group MD and presents to the Board every quarter.</p>
+        <h3 style="margin-top:0;">👤 Siew Ling · Group COO, Contoso Group</h3>
+        <p>Siew Ling has been Group COO of Contoso Group for four years. She oversees Industrial Operations across North America, Europe, and Asia-Pacific, the Group's downstream specialty-chemical Manufacturing arm, and Contoso Land — the property division. She reports to the Group MD and presents to the Board every quarter.</p>
         <p style="margin-bottom:0;">Her week pulls her across all three segments and into every group function — Finance, HR, Sustainability, IR, Procurement, Legal, IT. She is the perfect Cowork user: too many parallel deliverables, too many surfaces, not enough pairs of hands.</p>
       </div>
 
-      <h2>Contoso Plantation Berhad at a glance</h2>
+      <h2>Contoso Group at a glance</h2>
       <div class="grid-3">
         <div class="stat"><span class="num">1906</span><div class="lbl">Founded</div></div>
         <div class="stat"><span class="num">~30,000</span><div class="lbl">Employees</div></div>
-        <div class="stat"><span class="num">3</span><div class="lbl">Countries (MY · ID · LR)</div></div>
+        <div class="stat"><span class="num">3</span><div class="lbl">Regions (US · EU · APAC)</div></div>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h3 style="margin-top:0;">🌴 Plantation</h3>
-          <p>Oil palm and rubber estates in Sabah, Pahang, Perak, North Sumatra and Liberia. ~280,000 mature hectares. Mills, smallholders, sustainability programmes.</p>
+          <h3 style="margin-top:0;">🏭 Industrial Operations</h3>
+          <p>Large-scale industrial production sites across North America, Europe, and Asia-Pacific. ~280,000 active acres. Processing plants, tier-3 supplier networks, sustainability programmes.</p>
         </div>
         <div class="card">
-          <h3 style="margin-top:0;">🏭 Manufacturing</h3>
-          <p>Oleochemicals — fatty acids, fatty alcohols, glycerine, soap noodles. Plants in Klang, Rawang and Düsseldorf. Sells into FMCG, personal care, industrial.</p>
+          <h3 style="margin-top:0;">⚗️ Manufacturing</h3>
+          <p>Specialty chemicals and consumer-product intermediates. Plants in Detroit, Pittsburgh and Düsseldorf. Sells into FMCG, personal care, industrial.</p>
         </div>
         <div class="card">
           <h3 style="margin-top:0;">🏘️ Contoso Land</h3>
-          <p>Property division — township and industrial development on legacy estate land in Selangor and Negeri Sembilan. Multiple residential and industrial launches a year.</p>
+          <p>Property division — township and industrial development across major metropolitan markets. Multiple residential and industrial launches a year.</p>
         </div>
       </div>
 
@@ -623,9 +629,9 @@
       <div class="grid-4">
         <div class="card"><strong>Group Finance</strong><br /><small>Monthly close, capex, treasury, tax</small></div>
         <div class="card"><strong>Group HR</strong><br /><small>Hiring, L&amp;D, employee comms</small></div>
-        <div class="card"><strong>Sustainability</strong><br /><small>RSPO, MSPO, EUDR, climate</small></div>
+        <div class="card"><strong>Sustainability</strong><br /><small>ISO 14001, ISCC, CBAM, climate</small></div>
         <div class="card"><strong>Investor Relations</strong><br /><small>Quarterly results, analyst Q&amp;A</small></div>
-        <div class="card"><strong>Procurement</strong><br /><small>Fertiliser, fuel, contractors</small></div>
+        <div class="card"><strong>Procurement</strong><br /><small>Consumables, fuel, contractors</small></div>
         <div class="card"><strong>Group Legal</strong><br /><small>Contracts, regulatory, compliance</small></div>
         <div class="card"><strong>Group IT</strong><br /><small>Service delivery, security, change</small></div>
         <div class="card"><strong>Internal Comms</strong><br /><small>Townhalls, intranet, broadcasts</small></div>
@@ -679,12 +685,12 @@
         <tbody>
           <tr>
             <td><a href="files/01_Contoso_YieldData.xlsx" download>📊 01_Contoso_YieldData.xlsx</a></td>
-            <td>Q1 2025 plantation yield data — FFB tonnes, OER %, CPO, FFB/ha across all estates and three countries.</td>
-            <td>The Demo · Plantation use cases</td>
+            <td>Q1 2025 industrial operations yield data — throughput tonnes, yield %, primary output, throughput tons/acre across all sites and three countries.</td>
+            <td>The Demo · Industrial Operations use cases</td>
           </tr>
           <tr>
             <td><a href="files/02_Contoso_OpsReport.docx" download>📄 02_Contoso_OpsReport.docx</a></td>
-            <td>Q1 2025 Group Operations Report — 7 sections covering plantation, manufacturing, property, sustainability, risk. Includes a meeting transcript with action items.</td>
+            <td>Q1 2025 Group Operations Report — 7 sections covering industrial operations, manufacturing, property, sustainability, risk. Includes a meeting transcript with action items.</td>
             <td>The Demo · most use cases</td>
           </tr>
         </tbody>
@@ -707,7 +713,7 @@
 
       <div class="card accent">
         <h3 style="margin-top:0;">🎯 The scenario</h3>
-        <p>It's Monday. Siew Ling has the <strong>Quarterly Board Operations Review on Friday</strong>. By close of business Wednesday she needs an executive summary, a sustainability briefing note, a Board deck, an email to her division heads, a calendar invite for a follow-up review, and a heads-up Teams message to the Plantation Operations leadership channel.</p>
+        <p>It's Monday. Siew Ling has the <strong>Quarterly Board Operations Review on Friday</strong>. By close of business Wednesday she needs an executive summary, a sustainability briefing note, a Board deck, an email to her division heads, a calendar invite for a follow-up review, and a heads-up Teams message to the Industrial Operations leadership channel.</p>
         <p style="margin-bottom:0;">Last quarter, this list took her team three full days. Today, we'll watch Cowork knock most of it out in a single conversation.</p>
       </div>
 
@@ -722,40 +728,40 @@
       </ol>
 
       <h3>The master Cowork prompt</h3>
-      <div class="prompt">I am Siew Ling, Group COO at Contoso Plantation Berhad. The Quarterly Board Operations Review is on Friday. Using the attached Q1 Group Operations Report as the source of truth, prepare these SIX deliverables in parallel:
+      <div class="prompt">I am Siew Ling, Group COO at Contoso Group. The Quarterly Board Operations Review is on Friday. Using the attached Q1 Group Operations Report as the source of truth, prepare these SIX deliverables in parallel:
 
 1. WORD — "Q1 2025 Operations Executive Summary"
-   • One page, board-grade. Structure: Headline / Plantation / Manufacturing / Property / Sustainability / Top 3 Risks.
+   • One page, board-grade. Structure: Headline / Operations / Manufacturing / Property / Sustainability / Top 3 Risks.
    • Calm, factual tone. ~350 words.
 
 2. WORD — "Sustainability Briefing Note · Q1 2025"
    • Two pages.
-   • Cover RSPO recertification, MSPO compliance, EUDR readiness for the EU Deforestation Regulation.
-   • Highlight the Liberia operations gap and propose a remediation timeline.
+   • Cover ISO 14001 recertification, ISCC compliance, CBAM readiness for the EU Carbon Border Adjustment Mechanism.
+   • Highlight the Africa operations gap and propose a remediation timeline.
    • End with three questions the Board should expect from the Sustainability Sub-committee.
 
 3. POWERPOINT — "Q1 2025 Operations Review · Board Pack"
    • 10-12 slides. Conservative green/cream palette. No emojis.
-   • Title / Executive summary / Plantation OER vs target / CRITICAL estates (Temerloh, Simalungun) / Manufacturing utilisation & margin / Contoso Land launches & take-up / Sustainability scorecard / Top 3 risks / Action items / Asks of the Board.
+   • Title / Executive summary / Industrial Operations yield vs target / CRITICAL sites (Plant 4, Plant 5) / Manufacturing utilisation & margin / Contoso Land launches & take-up / Sustainability scorecard / Top 3 risks / Action items / Asks of the Board.
 
-4. EMAIL — to my four division heads (Plantation, Manufacturing, Property, Sustainability)
+4. EMAIL — to my four division heads (Industrial Operations, Manufacturing, Property, Sustainability)
    • Subject line punchy and specific.
    • Reminds them Board pack pre-reads close end of Wednesday.
    • Asks each to confirm two slides and one risk callout.
    • Warm but firm tone, signed "Siew Ling". DRAFT only — do not send until I approve.
 
-5. CALENDAR INVITE — "Liberia Operations Follow-up · Tuesday next week"
-   • 60 minutes, 9:00 AM Kuala Lumpur time. Add a Teams meeting link.
-   • Invite the Plantation Director, Liberia Country Manager, Group Sustainability Lead.
-   • Agenda in the body: yield gap, EUDR readiness, capex pipeline, ask of the Board.
+5. CALENDAR INVITE — "Africa Operations Follow-up · Tuesday next week"
+   • 60 minutes, 9:00 AM New York time. Add a Teams meeting link.
+   • Invite the Operations Director, Africa Country Manager, Group Sustainability Lead.
+   • Agenda in the body: yield gap, CBAM readiness, capex pipeline, ask of the Board.
 
-6. TEAMS MESSAGE — to the "Plantation Operations Leadership" channel
+6. TEAMS MESSAGE — to the "Operations Leadership" channel
    • Three short paragraphs, conversational but professional.
-   • Heads-up that Friday's Board review will spotlight Temerloh and Simalungun.
+   • Heads-up that Friday's Board review will spotlight Plant 4 and Plant 5.
    • Asks Regional Heads to come prepared with a one-line operational hypothesis.
-   • Ends on a positive note about Lahad Datu's strong quarter. DRAFT only — do not post until I approve.
+   • Ends on a positive note about Site Alpha's strong quarter. DRAFT only — do not post until I approve.
 
-Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, EUDR, Contoso Land. Where you cite numbers, use the figures from the attached report.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Keep terminology consistent across all six artefacts: throughput, yield %, ISO 14001, ISCC, CBAM, Contoso Land. Where you cite numbers, use the figures from the attached report.<button class="copy" onclick="copyP(this)">Copy</button></div>
 
       <h2>What to watch in the side panel</h2>
       <div class="grid-2">
@@ -840,32 +846,32 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
       <div class="rb-grid">
     <a class="rb-card" href="#rb-1" onclick="event.preventDefault();document.getElementById('rb-1').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num green">UC 1</span>
-      <h3>Estate Spreading + Parity Check</h3>
-      <p>Three estate monthly logs land in the Group Estate Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
+      <h3>Site Spreading + Parity Check</h3>
+      <p>Three site monthly logs land in the Group Site Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-2" onclick="event.preventDefault();document.getElementById('rb-2').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num green">UC 2</span>
       <h3>Capex Model → Interactive Scenario App</h3>
-      <p>A 5-year Klang oleochem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
+      <p>A 5-year Frankfurt specialty-chem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-3" onclick="event.preventDefault();document.getElementById('rb-3').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num blue">UC 3</span>
-      <h3>Investment Council of Agents — Damansara Phase 3</h3>
+      <h3>Investment Council of Agents — Riverside Phase 3</h3>
       <p>One IM + DD pack, five expert lenses in parallel — Land Bank, Macro, Construction Risk, Stress Test, Compliance — plus a synthesis pass and a dissent register.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-4" onclick="event.preventDefault();document.getElementById('rb-4').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num rose">UC 4</span>
       <h3>Mixed-Format Bank Statement Extraction</h3>
-      <p>Maybank text PDF, CIMB scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
+      <p>Bank A text PDF, Bank B scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-5" onclick="event.preventDefault();document.getElementById('rb-5').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num gold">UC 5</span>
       <h3>Recursive UBO + Sanctions Pack</h3>
-      <p>An Indonesian smallholder consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
+      <p>An Asia-Pacific tier-3 supplier consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-6" onclick="event.preventDefault();document.getElementById('rb-6').scrollIntoView({behavior:'smooth',block:'start'});">
@@ -883,19 +889,19 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
     <a class="rb-card" href="#rb-8" onclick="event.preventDefault();document.getElementById('rb-8').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num rose">UC 8</span>
       <h3>Quarterly Results Spreading + Parity Check</h3>
-      <p>Trial balance + segment reporting → Bursa quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
+      <p>Trial balance + segment reporting → exchange quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-9" onclick="event.preventDefault();document.getElementById('rb-9').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num teal">UC 9</span>
-      <h3>Multi-Estate GHG Standardisation (CDP-Ready)</h3>
-      <p>Twelve estates' fuel + electricity + fertiliser logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
+      <h3>Multi-Site GHG Standardisation (CDP-Ready)</h3>
+      <p>Twelve sites' fuel + electricity + consumables logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
     <a class="rb-card" href="#rb-10" onclick="event.preventDefault();document.getElementById('rb-10').scrollIntoView({behavior:'smooth',block:'start'});">
       <span class="rb-uc-num blue">UC 10</span>
       <h3>Group P&amp;L → Interactive Strategy App</h3>
-      <p>The FY27 group plan model — Plantation + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
+      <p>The FY27 group plan model — Industrial Operations + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
       <span class="rb-link">Open prompts →</span>
     </a>
       </div>
@@ -903,10 +909,10 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
     <div class="rb-detail" id="rb-1">
       <div class="rb-head">
         <span class="rb-uc-num green">UC 1</span>
-        <span class="rb-cat">Plantation · Group Finance</span>
-        <h2>Estate Spreading + Parity Check</h2>
+        <span class="rb-cat">Industrial Operations · Group Finance</span>
+        <h2>Site Spreading + Parity Check</h2>
       </div>
-      <p class="rb-sub">Three estate monthly logs land in the Group Estate Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
+      <p class="rb-sub">Three site monthly logs land in the Group Site Performance Template — then Cowork re-checks its own arithmetic and flags every variance.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Spreading + Parity Check</span>
@@ -915,7 +921,7 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_LahadDatu_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Tawau_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Sandakan_Mar2026.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Group_Estate_Performance_Template_v3.xlsx</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/Site_Alpha_Mar2026.xlsx" download><span class="ext">XLSX</span>Site_Alpha_Mar2026.xlsx</a><a class="rb-file xlsx" href="samples/Site_Beta_Mar2026.xlsx" download><span class="ext">XLSX</span>Site_Beta_Mar2026.xlsx</a><a class="rb-file xlsx" href="samples/Site_Gamma_Mar2026.xlsx" download><span class="ext">XLSX</span>Site_Gamma_Mar2026.xlsx</a><a class="rb-file xlsx" href="samples/Group_Site_Performance_Template_v3.xlsx" download><span class="ext">XLSX</span>Group_Site_Performance_Template_v3.xlsx</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -923,13 +929,13 @@ Keep terminology consistent across all six artefacts: OER, FFB/ha, RSPO, MSPO, E
         <span class="rb-prompt-num">P1</span>
         <span class="rb-prompt-title">Spread to template</span>
       </div>
-      <div class="prompt">I've attached three estate monthly performance logs (Lahad Datu, Tawau, Sandakan) and the Group Estate Performance Template v3.
+      <div class="prompt">I've attached three site monthly performance logs (Site Alpha, Site Beta, Site Gamma) and the Group Site Performance Template v3.
 
-Spread each estate's data into the template's `Estate Performance` sheet — one column per estate. Map: FFB tonnage, OER, mature/immature hectares, harvester productivity (FFB/manday), fertiliser issued (kg/ha), diesel consumption (litres), rainfall (mm), unit cost per FFB tonne (MYR).
+Spread each site's data into the template's `Site Performance` sheet — one column per site. Map: throughput tonnage, yield %, active/developing acres, operator productivity (throughput tons/shift), consumables issued (kg/acre), diesel consumption (litres), water usage (m³), unit cost per throughput ton (USD).
 
 Capture multi-line manager commentary intact in the `Notes` column.
 
-Standardise dates to yyyy-mm-dd. Standardise units (tonnes, hectares, mm, litres, MYR).
+Standardise dates to yyyy-mm-dd. Standardise units (tonnes, acres, mm, litres, USD).
 
 Don't perform any translation.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -939,28 +945,28 @@ Don't perform any translation.<button class="copy" onclick="copyP(this)">Copy</b
         <span class="rb-prompt-title">Parity check</span>
       </div>
       <div class="prompt">Now run a parity check on what you just spread:
-1. For each estate, sum FFB harvested per week and confirm it ties to the monthly total in the source — flag any divergence &gt; 2%.
-2. Confirm OER calculated from (CPO produced / FFB processed) ties to the OER reported in the log — flag divergence &gt; 0.3 percentage points.
-3. Confirm fertiliser kg/ha × mature hectares ties to total fertiliser issued.
+1. For each site, sum throughput produced per week and confirm it ties to the monthly total in the source — flag any divergence &gt; 2%.
+2. Confirm yield calculated from (primary output produced / throughput processed) ties to the yield reported in the log — flag divergence &gt; 0.3 percentage points.
+3. Confirm consumables kg/acre × active acres ties to total consumables issued.
 4. Cross-foot the template totals row.
 
-Produce `Parity_Check_Mar2026.xlsx` with one tab per estate showing source value, template value, variance, and a Pass/Flag column.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Produce `Parity_Check_Mar2026.xlsx` with one tab per site showing source value, template value, variance, and a Pass/Flag column.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
     <div class="rb-prompt-block">
       <div class="rb-prompt-head">
         <span class="rb-prompt-num">P3</span>
-        <span class="rb-prompt-title">Brief the Plantation MD</span>
+        <span class="rb-prompt-title">Brief the Operations MD</span>
       </div>
-      <div class="prompt">Write a one-page Word brief titled "Estate Performance Spreading — March 2026 — Group Roll-up" for the Plantation MD. Highlight: any flagged parity issues, the worst three KPI shifts vs February, and the three estates worth a site visit.
+      <div class="prompt">Write a one-page Word brief titled "Site Performance Spreading — March 2026 — Group Roll-up" for the Operations MD. Highlight: any flagged parity issues, the worst three KPI shifts vs February, and the three sites worth a site visit.
 
-Save the spreading workbook, parity check, and brief to /Plantation/Monthly/Mar2026/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Save the spreading workbook, parity check, and brief to /Operations/Monthly/Mar2026/.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
 
       <div class="rb-callouts">
         <div class="rb-callout watch">
           <div class="rb-callout-label">What to watch</div>
           <ul>
-          <li>Three different estate-log formats land in one canonical template.</li>
+          <li>Three different site-log formats land in one canonical template.</li>
           <li>Cowork re-checks its own arithmetic — finds its own errors before the MD does.</li>
           <li>Multi-line manager commentary preserved, not flattened.</li>
           <li>One single source of truth for the GM, with a parity log behind it.</li>
@@ -979,7 +985,7 @@ Save the spreading workbook, parity check, and brief to /Plantation/Monthly/Mar2
         <span class="rb-cat">Manufacturing · Strategy</span>
         <h2>Capex Model → Interactive Scenario App</h2>
       </div>
-      <p class="rb-sub">A 5-year Klang oleochem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
+      <p class="rb-sub">A 5-year Frankfurt specialty-chem capex model becomes a working app the IC can interact with — sliders, scenarios, parity report against Excel.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Model → Interactive App</span>
@@ -988,7 +994,7 @@ Save the spreading workbook, parity check, and brief to /Plantation/Monthly/Mar2
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Klang_Oleochem_Capex_Model_FY27.xlsx</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/Detroit_Capex_Model_FY27.xlsx" download><span class="ext">XLSX</span>Detroit_Capex_Model_FY27.xlsx</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -996,11 +1002,11 @@ Save the spreading workbook, parity check, and brief to /Plantation/Monthly/Mar2
         <span class="rb-prompt-num">P1</span>
         <span class="rb-prompt-title">Understand + build the app</span>
       </div>
-      <div class="prompt">I've attached our 5-year Klang oleochem capex model. First walk me through the structure — drivers, inputs, formulas, and any assumptions an investment committee will push back on.
+      <div class="prompt">I've attached our 5-year Frankfurt specialty-chem capex model. First walk me through the structure — drivers, inputs, formulas, and any assumptions an investment committee will push back on.
 
 Then convert it into a Python program with an interactive HTML front-end:
-- Sliders for: WACC (8–14%), USD/MYR (4.20–4.80), CPKO feedstock USD/T (800–1,400), capex contingency (5–15%), opex escalation (0–6%).
-- Show: total 5-year capex, NPV, IRR, payback period, year-by-year cash-out chart, sensitivity heatmap (CPKO × WACC).
+- Sliders for: WACC (8–14%), EUR/USD (1.05–1.15), raw input A feedstock USD/T (800–1,400), capex contingency (5–15%), opex escalation (0–6%).
+- Show: total 5-year capex, NPV, IRR, payback period, year-by-year cash-out chart, sensitivity heatmap (raw input A × WACC).
 
 Deliver runnable Python plus a self-contained HTML I can preview locally.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1009,12 +1015,12 @@ Deliver runnable Python plus a self-contained HTML I can preview locally.<button
         <span class="rb-prompt-num">P2</span>
         <span class="rb-prompt-title">Validate + run scenarios</span>
       </div>
-      <div class="prompt">Run the new app at the model's original assumptions and produce a parity report against the spreadsheet (capex by year, NPV, IRR, total outflow) — flag any divergence &gt; MYR 100k.
+      <div class="prompt">Run the new app at the model's original assumptions and produce a parity report against the spreadsheet (capex by year, NPV, IRR, total outflow) — flag any divergence &gt; USD 100k.
 
 Then run three scenarios:
-- Base (current): WACC 11%, MYR 4.45, CPKO USD 1,050, contingency 8%.
-- Upside: WACC 9%, MYR 4.30, CPKO USD 950, contingency 6%.
-- Downside: WACC 13%, MYR 4.65, CPKO USD 1,250, contingency 12%.
+- Base (current): WACC 11%, USD 4.45, raw input A USD 1,050, contingency 8%.
+- Upside: WACC 9%, USD 4.30, raw input A USD 950, contingency 6%.
+- Downside: WACC 13%, USD 4.65, raw input A USD 1,250, contingency 12%.
 
 Summarise NPV swing and the top three line items driving variance.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1023,7 +1029,7 @@ Summarise NPV swing and the top three line items driving variance.<button class=
         <span class="rb-prompt-num">P3</span>
         <span class="rb-prompt-title">Pack for the IC</span>
       </div>
-      <div class="prompt">Build a 6-slide Investment Committee pack titled "Klang Capacity Expansion FY27 — Sensitivity Pack":
+      <div class="prompt">Build a 6-slide Investment Committee pack titled "Detroit Capacity Expansion FY27 — Sensitivity Pack":
 1. Cover
 2. Scenario table
 3. NPV waterfall
@@ -1031,7 +1037,7 @@ Summarise NPV swing and the top three line items driving variance.<button class=
 5. Key risks
 6. Recommendation.
 
-Save to /Manufacturing/Klang/FY27_Capex/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Save to /Manufacturing/Detroit/FY27_Capex/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
 
       <div class="rb-callouts">
@@ -1055,7 +1061,7 @@ Save to /Manufacturing/Klang/FY27_Capex/. Apply the "Confidential — Board Pack
       <div class="rb-head">
         <span class="rb-uc-num blue">UC 3</span>
         <span class="rb-cat">Property · Contoso Land</span>
-        <h2>Investment Council of Agents — Damansara Phase 3</h2>
+        <h2>Investment Council of Agents — Riverside Phase 3</h2>
       </div>
       <p class="rb-sub">One IM + DD pack, five expert lenses in parallel — Land Bank, Macro, Construction Risk, Stress Test, Compliance — plus a synthesis pass and a dissent register.</p>
 
@@ -1066,7 +1072,7 @@ Save to /Manufacturing/Klang/FY27_Capex/. Apply the "Confidential — Board Pack
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Phase3_IM.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Phase3_TechDD.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Damansara_Site_Plan.pdf</span></div>
+      <div class="rb-files"><a class="rb-file pdf" href="samples/Riverside_Phase3_IM.pdf" download><span class="ext">PDF</span>Riverside_Phase3_IM.pdf</a><a class="rb-file pdf" href="samples/Riverside_Phase3_TechDD.pdf" download><span class="ext">PDF</span>Riverside_Phase3_TechDD.pdf</a><a class="rb-file pdf" href="samples/Riverside_Site_Plan.pdf" download><span class="ext">PDF</span>Riverside_Site_Plan.pdf</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1074,14 +1080,14 @@ Save to /Manufacturing/Klang/FY27_Capex/. Apply the "Confidential — Board Pack
         <span class="rb-prompt-num">P1</span>
         <span class="rb-prompt-title">Convene the council</span>
       </div>
-      <div class="prompt">You are acting as a council of AI agents helping Contoso Land assess the investment merits of the Damansara Mixed-Use Phase 3 development. For each role below, assume the role completely and produce a long, audit-ready interim report.
+      <div class="prompt">You are acting as a council of AI agents helping Contoso Land assess the investment merits of the Riverside Mixed-Use Phase 3 development. For each role below, assume the role completely and produce a long, audit-ready interim report.
 
 Roles:
 1. Land Bank Analyst — deep analysis of land cost, plot ratio, GDV/GFA, demographic catchment, comparable transactions within 5 km, current absorption rates. Cite township masterplans where relevant.
-2. Macro Strategist — assess macro regime (rate path, MYR outlook, household debt, BNM stance), implications for mortgage absorption and pre-sale velocity, correlation surprises.
-3. Construction Risk Officer — independent view across material risk (steel, cement, MYR-USD), labour availability, contractor concentration, monsoon scheduling, defects-liability exposure. Propose mitigations.
+2. Macro Strategist — assess macro regime (rate path, USD outlook, household debt, Fed stance), implications for mortgage absorption and pre-sale velocity, correlation surprises.
+3. Construction Risk Officer — independent view across material risk (steel, cement, EUR/USD), labour availability, contractor concentration, weather-window scheduling, defects-liability exposure. Propose mitigations.
 4. Stress Tester — structured scenarios (base / bear / bespoke shocks), kill-switch thresholds, sensitivity narrative, what would force a launch delay.
-5. Compliance &amp; Policy Agent — investment permissibility, township-approval gate status, RUMAH Selangorku quota, Bumiputera lot release schedule, planning conditions, environmental disclosures.
+5. Compliance &amp; Policy Agent — investment permissibility, planning-approval gate status, affordable-housing quota, set-aside release schedule, planning conditions, environmental disclosures.
 
 Finally, analyse all interim reports for recommendations, evidence, assumptions and dissenting views. Capture every claim with traceability back to a section of the IM or DD pack.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1090,13 +1096,13 @@ Finally, analyse all interim reports for recommendations, evidence, assumptions 
         <span class="rb-prompt-num">P2</span>
         <span class="rb-prompt-title">Synthesise the pack</span>
       </div>
-      <div class="prompt">Assemble the council outputs into a Word memo titled "Damansara Mixed-Use Phase 3 — Investment Council Recommendation" with:
+      <div class="prompt">Assemble the council outputs into a Word memo titled "Riverside Mixed-Use Phase 3 — Investment Council Recommendation" with:
 - Cover page (one-line recommendation)
 - One section per agent (~1 page each)
 - Dissent register — anywhere two agents disagreed and why
 - Appendix capturing every traceability link
 
-Save to /ContosoLand/Pipeline/Damansara_Phase3/Council/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Save to /ContosoLand/Pipeline/Riverside_Phase3/Council/. Apply the "Confidential — Board Pack" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
 
       <div class="rb-callouts">
@@ -1122,7 +1128,7 @@ Save to /ContosoLand/Pipeline/Damansara_Phase3/Council/. Apply the "Confidential
         <span class="rb-cat">Group Finance</span>
         <h2>Mixed-Format Bank Statement Extraction</h2>
       </div>
-      <p class="rb-sub">Maybank text PDF, CIMB scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
+      <p class="rb-sub">Bank A text PDF, Bank B scanned PDF, HSBC mobile screenshot — all become one Excel split by month, sorted ascending, ready to reconcile to the GL.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Mixed-Format Extraction</span>
@@ -1131,7 +1137,7 @@ Save to /ContosoLand/Pipeline/Damansara_Phase3/Council/. Apply the "Confidential
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Maybank_E-Stmt_Mar2026.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>CIMB_E-Stmt_Mar2026.pdf</span><span class="rb-file png"><span class="ext">PNG</span>HSBC_Stmt_Mar2026.png</span></div>
+      <div class="rb-files"><a class="rb-file pdf" href="samples/BankA_E-Stmt_Mar2026.pdf" download><span class="ext">PDF</span>BankA_E-Stmt_Mar2026.pdf</a><a class="rb-file pdf" href="samples/BankB_E-Stmt_Mar2026.pdf" download><span class="ext">PDF</span>BankB_E-Stmt_Mar2026.pdf</a><a class="rb-file png" href="samples/HSBC_Stmt_Mar2026.png" download><span class="ext">PNG</span>HSBC_Stmt_Mar2026.png</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1162,7 +1168,7 @@ Split the transactions by month into different worksheets and within each worksh
 - Compare opening balance, closing balance, total debits, total credits per bank.
 - Output `Recon_Mar2026.xlsx` with one tab per bank: source vs GL, variance, status (Match / Investigate / Missing).
 
-Flag anything &gt; MYR 1,000.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Flag anything &gt; USD 1,000.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
 
       <div class="rb-callouts">
@@ -1188,7 +1194,7 @@ Flag anything &gt; MYR 1,000.<button class="copy" onclick="copyP(this)">Copy</bu
         <span class="rb-cat">Group Procurement · Compliance</span>
         <h2>Recursive UBO + Sanctions Pack</h2>
       </div>
-      <p class="rb-sub">An Indonesian smallholder consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
+      <p class="rb-sub">An Asia-Pacific tier-3 supplier consolidator's vendor application becomes a fully drilled UBO tree, sanctions sweep, and a single PDF for Procurement Committee.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Recursive Entity Research</span>
@@ -1197,7 +1203,7 @@ Flag anything &gt; MYR 1,000.<button class="copy" onclick="copyP(this)">Copy</bu
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Vendor_Onboarding_PT_Surya_Sawit.pdf</span></div>
+      <div class="rb-files"><a class="rb-file pdf" href="samples/Vendor_Onboarding_PT_Acme_Industrial.pdf" download><span class="ext">PDF</span>Vendor_Onboarding_PT_Acme_Industrial.pdf</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1205,12 +1211,12 @@ Flag anything &gt; MYR 1,000.<button class="copy" onclick="copyP(this)">Copy</bu
         <span class="rb-prompt-num">P1</span>
         <span class="rb-prompt-title">Build the UBO tree</span>
       </div>
-      <div class="prompt">Create an Ultimate Beneficial Ownership diagram for PT Surya Sawit Lestari (the vendor on the attached application).
+      <div class="prompt">Create an Ultimate Beneficial Ownership diagram for PT Acme Industrial Lestari (the vendor on the attached application).
 
 Recursively identify the UBO of each identified shareholder until you reach individual natural persons or until you reach a 5-level depth — whichever comes first.
 
 For each entity:
-- Pull entity data from the application package; for missing data, conduct deep research using publicly available sources (Companies Commission of Malaysia, AHU Online Indonesia, OpenCorporates, EDGAR-equivalent disclosures, OFAC and EU consolidated lists, news archives).
+- Pull entity data from the application package; for missing data, conduct deep research using publicly available sources (SEC EDGAR, Companies House, OpenCorporates, equivalent national registries, OFAC and EU consolidated lists, news archives).
 - For every node, capture: legal entity name, registration number, jurisdiction, % ownership, source URL, last-verified date.
 - Where ownership is unclear or sourced from only one publication, flag the node "Verification needed" — do not guess.
 
@@ -1222,8 +1228,8 @@ Render as a hierarchical diagram (Mermaid syntax) and a tabular ownership ledger
         <span class="rb-prompt-title">Sanctions + adverse-media sweep</span>
       </div>
       <div class="prompt">For every node in the UBO tree, run:
-- Sanctions screening against OFAC SDN, EU Consolidated List, UK HMT, MAS, Bank Negara.
-- Adverse-media screening (last 36 months) for: deforestation, land disputes, child labour, corruption, environmental fines.
+- Sanctions screening against OFAC SDN, EU Consolidated List, UK HMT, MAS, FinCEN.
+- Adverse-media screening (last 36 months) for: environmental violations, land disputes, labour violations, corruption, regulatory fines.
 - Politically Exposed Person (PEP) check at the natural-person leaves.
 
 Output `Sanctions_Sweep.xlsx` with one row per check: entity, check type, source, hit/no-hit, snippet, link.<button class="copy" onclick="copyP(this)">Copy</button></div>
@@ -1233,9 +1239,9 @@ Output `Sanctions_Sweep.xlsx` with one row per check: entity, check type, source
         <span class="rb-prompt-num">P3</span>
         <span class="rb-prompt-title">Convert to KYC pack</span>
       </div>
-      <div class="prompt">Convert the UBO diagram, ownership ledger, and sanctions sweep into a single PDF titled "PT Surya Sawit Lestari — KYC Pack" for the Procurement Committee. Include: cover page, executive summary (recommendation + flag count), UBO diagram, ownership ledger, sanctions sweep, sources &amp; methodology.
+      <div class="prompt">Convert the UBO diagram, ownership ledger, and sanctions sweep into a single PDF titled "PT Acme Industrial Lestari — KYC Pack" for the Procurement Committee. Include: cover page, executive summary (recommendation + flag count), UBO diagram, ownership ledger, sanctions sweep, sources &amp; methodology.
 
-Save to /Procurement/Vendors/PT_Surya_Sawit/KYC/. Apply the "Confidential — Procurement" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Save to /Procurement/Vendors/PT_Acme_Industrial/KYC/. Apply the "Confidential — Procurement" sensitivity label.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
 
       <div class="rb-callouts">
@@ -1270,7 +1276,7 @@ Save to /Procurement/Vendors/PT_Surya_Sawit/KYC/. Apply the "Confidential — Pr
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY24.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY23.pdf</span><span class="rb-file pdf"><span class="ext">PDF</span>Counterparty_Audited_FS_FY22.pdf</span></div>
+      <div class="rb-files"><a class="rb-file pdf" href="samples/Counterparty_Audited_FS_FY24.pdf" download><span class="ext">PDF</span>Counterparty_Audited_FS_FY24.pdf</a><a class="rb-file pdf" href="samples/Counterparty_Audited_FS_FY23.pdf" download><span class="ext">PDF</span>Counterparty_Audited_FS_FY23.pdf</a><a class="rb-file pdf" href="samples/Counterparty_Audited_FS_FY22.pdf" download><span class="ext">PDF</span>Counterparty_Audited_FS_FY22.pdf</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1345,7 +1351,7 @@ Apply the "Confidential — Treasury" sensitivity label.<button class="copy" onc
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>TopTalent_Profiles_FY26.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Performance_2yr_2024_2025.xlsx</span><span class="rb-file pdf"><span class="ext">PDF</span>EngagementSurvey_2025.pdf</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/TopTalent_Profiles_FY26.xlsx" download><span class="ext">XLSX</span>TopTalent_Profiles_FY26.xlsx</a><a class="rb-file xlsx" href="samples/Performance_2yr_2024_2025.xlsx" download><span class="ext">XLSX</span>Performance_2yr_2024_2025.xlsx</a><a class="rb-file pdf" href="samples/EngagementSurvey_2025.pdf" download><span class="ext">PDF</span>EngagementSurvey_2025.pdf</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1400,7 +1406,7 @@ Save to /Group/HR/TalentReview/FY26/. Apply the "Confidential — HR Restricted"
         <span class="rb-cat">Group IR · Finance</span>
         <h2>Quarterly Results Spreading + Parity Check</h2>
       </div>
-      <p class="rb-sub">Trial balance + segment reporting → Bursa quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
+      <p class="rb-sub">Trial balance + segment reporting → exchange quarterly filing template, then four parity checks before any number leaves IR working drafts.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Spreading + Parity Check</span>
@@ -1409,23 +1415,23 @@ Save to /Group/HR/TalentReview/FY26/. Apply the "Confidential — HR Restricted"
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Q1_FY26_Trial_Balance.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Q1_FY26_Segment_Reporting.xlsx</span><span class="rb-file xlsx"><span class="ext">XLSX</span>Bursa_Quarterly_Filing_Template_v6.xlsx</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/Q1_FY26_Trial_Balance.xlsx" download><span class="ext">XLSX</span>Q1_FY26_Trial_Balance.xlsx</a><a class="rb-file xlsx" href="samples/Q1_FY26_Segment_Reporting.xlsx" download><span class="ext">XLSX</span>Q1_FY26_Segment_Reporting.xlsx</a><a class="rb-file xlsx" href="samples/NYSE_Quarterly_Filing_Template_v6.xlsx" download><span class="ext">XLSX</span>NYSE_Quarterly_Filing_Template_v6.xlsx</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
       <div class="rb-prompt-head">
         <span class="rb-prompt-num">P1</span>
-        <span class="rb-prompt-title">Spread to Bursa template</span>
+        <span class="rb-prompt-title">Spread to NYSE template</span>
       </div>
-      <div class="prompt">Spread the Q1 FY26 trial balance and segment reporting workbooks into the Bursa Quarterly Filing Template v6.
+      <div class="prompt">Spread the Q1 FY26 trial balance and segment reporting workbooks into the Exchange Quarterly Filing Template v6.
 
-Map every GL account to the correct Bursa line item per the chart-of-accounts in the template's `Mapping` sheet.
+Map every GL account to the correct NYSE line item per the chart-of-accounts in the template's `Mapping` sheet.
 
-Capture segment splits (Plantation, Manufacturing, Property, Other) into the segment table.
+Capture segment splits (Industrial Operations, Manufacturing, Property, Other) into the segment table.
 
-Don't perform any translation. Don't change formulas in the Bursa template — populate inputs only.
+Don't perform any translation. Don't change formulas in the NYSE template — populate inputs only.
 
-Date format yyyy-mm-dd. Currency MYR thousands.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Date format yyyy-mm-dd. Currency USD thousands.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
     <div class="rb-prompt-block">
       <div class="rb-prompt-head">
@@ -1433,19 +1439,19 @@ Date format yyyy-mm-dd. Currency MYR thousands.<button class="copy" onclick="cop
         <span class="rb-prompt-title">Four-way parity check</span>
       </div>
       <div class="prompt">After spreading, run a four-way parity check:
-1. Bursa template Group total revenue = sum of segment revenue.
-2. Bursa template Group net profit = sum of segment net profit ± inter-segment eliminations.
-3. Bursa template balance sheet = previous-quarter closing + current-quarter movements.
-4. Bursa template segment cap-ex = segment cap-ex from the source file.
+1. NYSE template Group total revenue = sum of segment revenue.
+2. NYSE template Group net profit = sum of segment net profit ± inter-segment eliminations.
+3. NYSE template balance sheet = previous-quarter closing + current-quarter movements.
+4. NYSE template segment cap-ex = segment cap-ex from the source file.
 
 Output `Q1_Parity_Check.xlsx` with each check, expected vs actual, variance, status. Flag anything ≠ 0.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
     <div class="rb-prompt-block">
       <div class="rb-prompt-head">
         <span class="rb-prompt-num">P3</span>
-        <span class="rb-prompt-title">Bursa announcement narrative</span>
+        <span class="rb-prompt-title">exchange announcement narrative</span>
       </div>
-      <div class="prompt">Now write the Bursa Quarterly Announcement narrative (max 4 pages) covering: overview, segment performance, balance sheet, outlook, prospects.
+      <div class="prompt">Now write the NYSE Quarterly Announcement narrative (max 4 pages) covering: overview, segment performance, balance sheet, outlook, prospects.
 
 Tone: factual, forward-looking statements caveated, every figure traceable to the spreading workbook.
 
@@ -1466,7 +1472,7 @@ Save everything to /Group/IR/Q1_FY26/Working_Drafts/. Apply the "Confidential �
         </div>
         <div class="rb-callout honest">
           <div class="rb-callout-label">Honest framing</div>
-          <p>The Bursa template owns the formulas; Cowork populates inputs only. IR working drafts are reviewed by CFO + IR before any external release — this is the analyst draft, not the announcement.</p>
+          <p>The NYSE template owns the formulas; Cowork populates inputs only. IR working drafts are reviewed by CFO + IR before any external release — this is the analyst draft, not the announcement.</p>
         </div>
       </div>
     </div>
@@ -1475,9 +1481,9 @@ Save everything to /Group/IR/Q1_FY26/Working_Drafts/. Apply the "Confidential �
       <div class="rb-head">
         <span class="rb-uc-num teal">UC 9</span>
         <span class="rb-cat">Group Sustainability</span>
-        <h2>Multi-Estate GHG Standardisation (CDP-Ready)</h2>
+        <h2>Multi-Site GHG Standardisation (CDP-Ready)</h2>
       </div>
-      <p class="rb-sub">Twelve estates' fuel + electricity + fertiliser logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
+      <p class="rb-sub">Twelve sites' fuel + electricity + consumables logs in mixed PDF / XLSX / scanned formats become one GHG Protocol tracker with Scope 1+2+3 and an outlier sweep.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Mixed-Format Extraction</span>
@@ -1486,7 +1492,7 @@ Save everything to /Group/IR/Q1_FY26/Working_Drafts/. Apply the "Confidential �
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Estate_Fuel_Logs_x4.xlsx</span><span class="rb-file pdf"><span class="ext">PDF</span>Estate_Diesel_Receipts_x5.pdf</span><span class="rb-file png"><span class="ext">PNG</span>Estate_Meter_Reads_x3_scans.png</span><span class="rb-file xlsx"><span class="ext">XLSX</span>GHG_Protocol_Scope123_Tracker_v2.xlsx</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/Site_Fuel_Logs_x4.xlsx" download><span class="ext">XLSX</span>Site_Fuel_Logs_x4.xlsx</a><a class="rb-file pdf" href="samples/Site_Diesel_Receipts_x5.pdf" download><span class="ext">PDF</span>Site_Diesel_Receipts_x5.pdf</a><a class="rb-file png" href="samples/Site_Meter_Reads_x3_scans.png" download><span class="ext">PNG</span>Site_Meter_Reads_x3_scans.png</a><a class="rb-file xlsx" href="samples/GHG_Protocol_Scope123_Tracker_v2.xlsx" download><span class="ext">XLSX</span>GHG_Protocol_Scope123_Tracker_v2.xlsx</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1494,12 +1500,12 @@ Save everything to /Group/IR/Q1_FY26/Working_Drafts/. Apply the "Confidential �
         <span class="rb-prompt-num">P1</span>
         <span class="rb-prompt-title">Extract → standardise → map to scopes</span>
       </div>
-      <div class="prompt">Extract diesel litres, electricity kWh, fertiliser tonnes (with N/P/K split where stated), and methane (kg) from the 12 attached estate monthly logs into the GHG Protocol Tracker:
+      <div class="prompt">Extract diesel litres, electricity kWh, consumables tonnes (with N/P/K split where stated), and methane (kg) from the 12 attached site monthly logs into the GHG Protocol Tracker:
 - Map each fuel/input and its emission factor (Defra 2024 / IPCC AR6) to Scope 1, 2 or 3, using the named-range factors in the tracker's `Factors` sheet.
 - Capture multi-line descriptions intact.
 - Ignore footers, signatures, and watermarks.
-- Standardise on litres (fuel), kWh (electricity), tonnes (fertiliser), kg (methane).
-- One worksheet per estate, then a Group rollup sheet.
+- Standardise on litres (fuel), kWh (electricity), tonnes (consumables), kg (methane).
+- One worksheet per site, then a Group rollup sheet.
 
 Convert into tCO2e using the named-range emission factors. Where a unit on the source is ambiguous, flag the row — do not guess.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1509,9 +1515,9 @@ Convert into tCO2e using the named-range emission factors. Where a unit on the s
         <span class="rb-prompt-title">Outlier sweep</span>
       </div>
       <div class="prompt">Run an outlier sweep:
-- Estate-month combinations where diesel litres / mature ha is &gt; 2 standard deviations above the cohort.
+- Site-month combinations where diesel litres / active acre is &gt; 2 standard deviations above the cohort.
 - Months where electricity is missing or zero (vs prior 12-month baseline).
-- Fertiliser application &gt; 1.2 × historical 12-month average.
+- Consumables application &gt; 1.2 × historical 12-month average.
 
 Output `Outlier_Sweep_Mar2026.xlsx`. Pre-fill the "Likely Cause" column with options: Data gap / Operational / Verification needed.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1520,7 +1526,7 @@ Output `Outlier_Sweep_Mar2026.xlsx`. Pre-fill the "Likely Cause" column with opt
         <span class="rb-prompt-num">P3</span>
         <span class="rb-prompt-title">CDP brief</span>
       </div>
-      <div class="prompt">Write a 3-page Word brief titled "Group Scope 1+2+3 — March 2026 — CDP Cut" for the Sustainability Director: total tCO2e, intensity (tCO2e per CPO tonne), top three contributors, vs FY25 baseline, anomalies and decisions required.
+      <div class="prompt">Write a 3-page Word brief titled "Group Scope 1+2+3 — March 2026 — CDP Cut" for the Sustainability Director: total tCO2e, intensity (tCO2e per primary output tonne), top three contributors, vs FY25 baseline, anomalies and decisions required.
 
 Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1537,7 +1543,7 @@ Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="cop
         </div>
         <div class="rb-callout honest">
           <div class="rb-callout-label">Honest framing</div>
-          <p>Emission-factor accuracy is bounded by the source files' unit clarity. This produces a draft for CDP — the assurance auditor still walks the calculation. New estate log formats may need a sample run before production use.</p>
+          <p>Emission-factor accuracy is bounded by the source files' unit clarity. This produces a draft for CDP — the assurance auditor still walks the calculation. New site log formats may need a sample run before production use.</p>
         </div>
       </div>
     </div>
@@ -1548,7 +1554,7 @@ Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="cop
         <span class="rb-cat">Group Strategy · CEO Office</span>
         <h2>Group P&amp;L → Interactive Strategy App</h2>
       </div>
-      <p class="rb-sub">The FY27 group plan model — Plantation + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
+      <p class="rb-sub">The FY27 group plan model — Industrial Operations + Manufacturing + Property + eliminations — becomes an interactive scenario app for the September strategy off-site.</p>
 
       <div class="rb-meta">
         <span class="pill">Pattern · Model → Interactive App</span>
@@ -1557,7 +1563,7 @@ Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="cop
       </div>
 
       <h4>Sample source files</h4>
-      <div class="rb-files"><span class="rb-file xlsx"><span class="ext">XLSX</span>Group_FY27_Plan_Model.xlsx</span></div>
+      <div class="rb-files"><a class="rb-file xlsx" href="samples/Group_FY27_Plan_Model.xlsx" download><span class="ext">XLSX</span>Group_FY27_Plan_Model.xlsx</a></div>
 
       <h4>Prompts</h4>
     <div class="rb-prompt-block">
@@ -1568,7 +1574,7 @@ Save to /Group/Sustainability/Monthly/Mar2026/.<button class="copy" onclick="cop
       <div class="prompt">I've attached Contoso's FY27 group plan model. First walk me through the structure — divisions, drivers, intercompany eliminations, and any assumptions Strategy will have to defend at the September board.
 
 Then convert into a Python program with an interactive HTML front-end:
-- Sliders: CPO USD/T (750–1,250), USD/MYR (4.20–4.80), oleochem EBITDA margin (8–18%), property pre-sale velocity (60–110% of plan), opex inflation (0–6%).
+- Sliders: primary output USD/T (750–1,250), EUR/USD (1.05–1.15), specialty-chem EBITDA margin (8–18%), property pre-sale velocity (60–110% of plan), opex inflation (0–6%).
 - Show: Group revenue, Group EBITDA, Group PAT, division contribution waterfall, EBITDA bridge vs FY26, board-level scorecard.
 
 Deliver runnable Python plus a self-contained HTML I can preview locally.<button class="copy" onclick="copyP(this)">Copy</button></div>
@@ -1578,12 +1584,12 @@ Deliver runnable Python plus a self-contained HTML I can preview locally.<button
         <span class="rb-prompt-num">P2</span>
         <span class="rb-prompt-title">Validate + run scenarios</span>
       </div>
-      <div class="prompt">Run the new app at the original plan assumptions. Produce a parity report against the spreadsheet (revenue, EBITDA, PAT by division, group total) — flag any divergence &gt; MYR 1m.
+      <div class="prompt">Run the new app at the original plan assumptions. Produce a parity report against the spreadsheet (revenue, EBITDA, PAT by division, group total) — flag any divergence &gt; USD 1m.
 
 Then run three scenarios:
 - Base (current plan).
-- Bull: CPO USD 1,200, MYR 4.30, oleochem margin 16%, property pre-sale 105%.
-- Bear: CPO USD 850, MYR 4.65, oleochem margin 9%, property pre-sale 75%.
+- Bull: primary output USD 1,200, USD 4.30, specialty-chem margin 16%, property pre-sale 105%.
+- Bear: primary output USD 850, USD 4.65, specialty-chem margin 9%, property pre-sale 75%.
 
 Summarise EBITDA swing, the top three division/driver combinations driving variance, and identify the one assumption the bear scenario hinges on.<button class="copy" onclick="copyP(this)">Copy</button></div>
     </div>
@@ -1597,10 +1603,10 @@ Summarise EBITDA swing, the top three division/driver combinations driving varia
 2. Scenario table
 3. EBITDA bridge
 4. Division contribution waterfall
-5. Sensitivity heatmap (CPO × FX)
+5. Sensitivity heatmap (primary output × FX)
 6. Bear-case kill switch
 7. Property pre-sale sensitivity
-8. Oleochem margin sensitivity
+8. Specialty Chemicals margin sensitivity
 9. Decisions required
 10. Appendix.
 
@@ -1652,7 +1658,7 @@ Save to /Group/Strategy/FY27_Offsite/. Apply the "Confidential — Board Pack" s
       <table class="skills">
         <thead><tr><th>Pattern</th><th>Cowork skills involved</th><th>Where it earns its keep</th></tr></thead>
         <tbody>
-          <tr><td class="skill-name">Spreading + Parity Check</td><td>Excel · Word · Enterprise Search</td><td>Monthly close, segment reporting, regulator filings, estate / plant rollups.</td></tr>
+          <tr><td class="skill-name">Spreading + Parity Check</td><td>Excel · Word · Enterprise Search</td><td>Monthly close, segment reporting, regulator filings, site / plant rollups.</td></tr>
           <tr><td class="skill-name">Mixed-Format Extraction</td><td>Excel · PDF · Image · Word</td><td>Bank statement extraction, supplier invoices, expense receipts, ESG meter logs.</td></tr>
           <tr><td class="skill-name">Council of Agents</td><td>Word · PowerPoint · Deep Research · Enterprise Search</td><td>Investment Committee, M&amp;A DD, Talent review, Sustainability committee.</td></tr>
           <tr><td class="skill-name">Recursive Entity Research</td><td>Deep Research · Word · PDF · Excel</td><td>Vendor onboarding, KYC, customer due diligence, joint-venture screening.</td></tr>
@@ -1668,30 +1674,30 @@ Save to /Group/Strategy/FY27_Offsite/. Apply the "Confidential — Board Pack" s
           <li><strong>Deep Research (UC 3 + UC 5)</strong> — public-source-only; will not access paywalled databases or internal CRM unless those are surfaced through M365 search.</li>
           <li><strong>OCR (UC 4 + UC 9)</strong> — scanned PDFs and low-resolution images return per-row confidence; low-confidence rows are flagged, not silently committed.</li>
           <li><strong>Sensitivity labels</strong> — Cowork can apply labels you have permission to apply. The label list itself is governed by Purview in your tenant.</li>
-          <li><strong>Approval gates</strong> — every external send (email / LinkedIn / Bursa) is drafts-only; the human still presses send.</li>
+          <li><strong>Approval gates</strong> — every external send (email / LinkedIn / NYSE) is drafts-only; the human still presses send.</li>
         </ul>
       </div>
 
     </section>
 
-    <!-- ═══════════════ USE CASES · PLANTATION ═══════════════ -->
-    <section class="page" id="uc-plantation">
-      <h1 class="page-title">Plantation Use Cases</h1>
-      <p class="page-sub">Where Cowork saves hours across estates, mills and the Plantation HQ.</p>
+    <!-- ═══════════════ USE CASES · INDUSTRIAL OPERATIONS ═══════════════ -->
+    <section class="page" id="uc-industrial">
+      <h1 class="page-title">Industrial Operations Use Cases</h1>
+      <p class="page-sub">Where Cowork saves hours across sites, plants and the Industrial Operations HQ.</p>
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span></div>
-        <h3>1 · Estate visit follow-up pack</h3>
-        <p><strong>Trigger:</strong> COO returns from a two-day site visit to Sabah estates.</p>
-        <p><strong>Cowork delivers:</strong> a one-page visit summary (Word) with key observations and asks; a follow-up email to each Estate Manager confirming the action items they own; a Teams post in the regional channel summarising what was seen and praising specific teams.</p>
+        <h3>1 · Site visit follow-up pack</h3>
+        <p><strong>Trigger:</strong> COO returns from a two-day visit to North America sites.</p>
+        <p><strong>Cowork delivers:</strong> a one-page visit summary (Word) with key observations and asks; a follow-up email to each Site Manager confirming the action items they own; a Teams post in the regional channel summarising what was seen and praising specific teams.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Compile a follow-up pack for my [REGION] estates visit on [VISIT_DATE].
+        <div class="prompt">Compile a follow-up pack for my [REGION] sites visit on [VISIT_DATE].
 
-From my voice notes attached and the visit agenda in /Plantation/SiteVisits/[VISIT_DATE]/:
-1. Draft a one-page Word visit summary titled "[REGION] Estates Visit — [VISIT_DATE]" with sections: Estates visited, Key observations, Risks flagged, Decisions made, Asks for HQ.
-2. For each Estate Manager visited (Lahad Datu, Tawau, Sandakan), draft an individual Outlook follow-up email confirming the action items they own, with deadlines.
+From my voice notes attached and the visit agenda in /Industrial Operations/SiteVisits/[VISIT_DATE]/:
+1. Draft a one-page Word visit summary titled "[REGION] Sites Visit — [VISIT_DATE]" with sections: Sites visited, Key observations, Risks flagged, Decisions made, Asks for HQ.
+2. For each Site Manager visited (Site Alpha, Site Beta, Site Gamma), draft an individual Outlook follow-up email confirming the action items they own, with deadlines.
 3. Draft a Teams post for the "[REGIONAL_CHANNEL]" channel summarising what was seen and praising specific teams by name.
-4. Save all artefacts to /Plantation/SiteVisits/[VISIT_DATE]/Outputs/.
+4. Save all artefacts to /Industrial Operations/SiteVisits/[VISIT_DATE]/Outputs/.
 
 Drafts only — wait for my approval before sending the emails or posting in Teams.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -1700,33 +1706,33 @@ Drafts only — wait for my approval before sending the emails or posting in Tea
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span><span class="purple pill">Scheduled</span></div>
         <h3>2 · Monthly yield variance commentary</h3>
-        <p><strong>Trigger:</strong> First Monday of every month, when the FFB and OER numbers close.</p>
-        <p><strong>Cowork delivers:</strong> a monthly OER and FFB/ha variance Excel; a one-page narrative commentary; a Teams update for the Plantation Operations leadership channel.</p>
+        <p><strong>Trigger:</strong> First Monday of every month, when the throughput and yield numbers close.</p>
+        <p><strong>Cowork delivers:</strong> a monthly yield and throughput tons/acre variance Excel; a one-page narrative commentary; a Teams update for the Industrial Operations leadership channel.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every first Monday at 8 AM Kuala Lumpur time, run the monthly plantation yield review.
+        <div class="prompt">Every first Monday at 8 AM New York time, run the monthly industrial operations yield review.
 
-1. Pull the latest OER and FFB/ha numbers for [MONTH] from /Plantation/Monthly/[MONTH]/ for every estate across Malaysia, Indonesia and Liberia.
-2. Build a variance Excel titled "FFB &amp; OER Variance — [MONTH]" with sheets: Group rollup, Country breakdowns, Estate detail, Outliers (&gt;10% variance vs target).
+1. Pull the latest yield and throughput tons/acre numbers for [MONTH] from /Operations/Monthly/[MONTH]/ for every site across North America, Asia-Pacific and Africa.
+2. Build a variance Excel titled "throughput &amp; yield Variance — [MONTH]" with sheets: Group rollup, Country breakdowns, Site detail, Outliers (&gt;10% variance vs target).
 3. Draft a one-page Word commentary in our house style with sections: Headline, Country breakdowns, Outliers, Watchlist for next month.
-4. Post a 3-paragraph summary in the "Plantation Ops Leadership" Teams channel.
-5. Save Excel and Word to /Plantation/Monthly/[MONTH]/Outputs/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+4. Post a 3-paragraph summary in the "Industrial Operations Ops Leadership" Teams channel.
+5. Save Excel and Word to /Operations/Monthly/[MONTH]/Outputs/.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
       </div>
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
-        <h3>3 · New estate acquisition due diligence</h3>
-        <p><strong>Trigger:</strong> Strategy team is evaluating a 12,000-ha plantation in West Kalimantan.</p>
-        <p><strong>Cowork delivers:</strong> a deep-research briefing covering regulatory environment, land status, deforestation history (EUDR-relevant), local labour market, infrastructure access; followed by a Group-format due diligence template.</p>
+        <h3>3 · New site acquisition due diligence</h3>
+        <p><strong>Trigger:</strong> Strategy team is evaluating a 12,000-acre industrial site acquisition in [TARGET_REGION].</p>
+        <p><strong>Cowork delivers:</strong> a deep-research briefing covering regulatory environment, land status, environmental compliance history (CBAM-relevant), local labour market, infrastructure access; followed by a Group-format due diligence template.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Prepare a due diligence pack for the prospective [HECTARES]-ha plantation at [LOCATION].
+        <div class="prompt">Prepare a due diligence pack for the prospective [ACRES]-acre industrial site at [LOCATION].
 
-1. Conduct deep research on Indonesian land-status regulations (HGU, ISPO, plasma-smallholder obligations) relevant to oil-palm acquisition in [LOCATION] over the last 5 years — cite source URLs.
-2. Conduct deep research on the property's deforestation history from 2010 onward (EUDR-relevant) using publicly published analyses — Global Forest Watch, MapBiomas-equivalent for Indonesia, NGO reports — list the named sources and quoted findings.
-3. Research the local labour market in [LOCATION] — population, prevailing wage rates for harvesters and processors, unionisation, recent wage disputes.
+1. Conduct deep research on regional land-status regulations (land title, regional sustainability certifications, tier-3 supplier obligations) relevant to industrial site acquisition in [LOCATION] over the last 5 years — cite source URLs.
+2. Conduct deep research on the property's environmental compliance history from 2010 onward (CBAM-relevant) using publicly published analyses — Global Forest Watch, regional satellite-imagery analyses, NGO reports — list the named sources and quoted findings.
+3. Research the local labour market in [LOCATION] — population, prevailing wage rates for operators and processors, unionisation, recent wage disputes.
 4. Map road and port infrastructure within 50 km — distances, throughput capacity, condition — from publicly available data.
 
-Output as a Word brief titled "[LOCATION] Plantation — Due Diligence" with sections: Executive summary, Legal &amp; land status, Environmental, Social, Operational, Top 3 red flags, Recommended next steps. Apply the "Confidential — M&amp;A" sensitivity label. Save to /Plantation/M&amp;A/[LOCATION]/.
+Output as a Word brief titled "[LOCATION] Industrial Site — Due Diligence" with sections: Executive summary, Legal &amp; land status, Environmental, Social, Operational, Top 3 red flags, Recommended next steps. Apply the "Confidential — M&amp;A" sensitivity label. Save to /Industrial Operations/M&amp;A/[LOCATION]/.
 
 Notify me in Teams when ready.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -1734,18 +1740,18 @@ Notify me in Teams when ready.<button class="copy" onclick="copyP(this)">Copy</b
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">Email</span><span class="pill">Calendar</span></div>
-        <h3>4 · RSPO surveillance audit prep</h3>
-        <p><strong>Trigger:</strong> Annual RSPO audit scheduled in 8 weeks.</p>
-        <p><strong>Cowork delivers:</strong> audit prep checklist, evidence pack table-of-contents, kickoff email to internal estate auditors, calendar invites for evidence-pull workshops, weekly Teams updates on audit-readiness.</p>
+        <h3>4 · ISO 14001 surveillance audit prep</h3>
+        <p><strong>Trigger:</strong> Annual ISO 14001 audit scheduled in 8 weeks.</p>
+        <p><strong>Cowork delivers:</strong> audit prep checklist, evidence pack table-of-contents, kickoff email to internal site auditors, calendar invites for evidence-pull workshops, weekly Teams updates on audit-readiness.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build the [YEAR] RSPO surveillance audit prep pack — audit is in 8 weeks on [AUDIT_DATE].
+        <div class="prompt">Build the [YEAR] ISO 14001 surveillance audit prep pack — audit is in 8 weeks on [AUDIT_DATE].
 
-1. Read every document in /Plantation/Certifications/RSPO/Evidence/ and tag each against the relevant RSPO P&amp;C principle.
-2. Build a Word audit-readiness checklist organised by P&amp;C principle, with status (Ready / Gaps / Missing) per estate.
+1. Read every document in /Industrial Operations/Certifications/ISO 14001/Evidence/ and tag each against the relevant ISO 14001 P&amp;C principle.
+2. Build a Word audit-readiness checklist organised by P&amp;C principle, with status (Ready / Gaps / Missing) per site.
 3. Build an Excel evidence-pack table-of-contents listing every document needed by principle, with owner and due date.
-4. Draft an Outlook email to the four internal estate auditors with the kickoff ask, deadlines, and the checklist attached.
+4. Draft an Outlook email to the four internal site auditors with the kickoff ask, deadlines, and the checklist attached.
 5. Schedule three calendar invites for evidence-pull workshops over the next four weeks with the audit team.
-6. Build a weekly Teams update template for the "RSPO Audit Readiness" channel covering progress vs gaps.
+6. Build a weekly Teams update template for the "ISO 14001 Audit Readiness" channel covering progress vs gaps.
 
 Drafts only — wait for my approval before sending the email or invites.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -1753,35 +1759,35 @@ Drafts only — wait for my approval before sending the email or invites.<button
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
-        <h3>5 · Bahasa Malaysia estate manager updates</h3>
-        <p><strong>Trigger:</strong> Estate Managers default to Bahasa Malaysia for weekly updates.</p>
-        <p><strong>Cowork delivers:</strong> translates BM weekly updates into English with terminology guardrails (FFB stays FFB; OER stays OER); reverse-translates HQ memos into BM for distribution.</p>
+        <h3>5 · Spanish-language site manager updates</h3>
+        <p><strong>Trigger:</strong> Site Managers in Latin America default to Spanish for weekly updates.</p>
+        <p><strong>Cowork delivers:</strong> translates Spanish weekly updates into English with terminology guardrails (throughput stays throughput; yield stays yield); reverse-translates HQ memos into Spanish for distribution.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Translate the attached weekly update from Estate Manager [MANAGER_NAME] for HQ.
+        <div class="prompt">Translate the attached weekly update from Site Manager [MANAGER_NAME] for HQ.
 
-1. Translate the document from Bahasa Malaysia into English.
-2. Keep these technical terms untranslated: FFB, OER, CPO, PKO, FFB/ha, MSPO, RSPO.
+1. Translate the document from Spanish into English.
+2. Keep these technical terms untranslated: throughput, yield, primary output, secondary output, kg/acre, ISCC, ISO 14001.
 3. Use our Group glossary for any role/title translations.
-4. Then draft a short response in Bahasa Malaysia thanking [MANAGER_NAME] and asking these clarifying questions: what is the harvesting interval at Block 7, and what is the current vacancy in the harvester team.
-5. Save both the translated update and the BM response to /Plantation/Translations/[ESTATE]/[DATE]/.
+4. Then draft a short response in Spanish thanking [MANAGER_NAME] and asking these clarifying questions: what is the operating interval at Line 7, and what is the current vacancy in the operator team.
+5. Save both the translated update and the Spanish response to /Industrial Operations/Translations/[SITE]/[DATE]/.
 
-Drafts only on the BM response.<button class="copy" onclick="copyP(this)">Copy</button></div>
+Drafts only on the Spanish response.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
       </div>
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span></div>
-        <h3>6 · CAPEX paper · new mill</h3>
-        <p><strong>Trigger:</strong> Plantation Director needs to take a new-mill capex to the Investment Committee.</p>
+        <h3>6 · CAPEX paper · new plant</h3>
+        <p><strong>Trigger:</strong> Operations Director needs to take a new-plant capex to the Investment Committee.</p>
         <p><strong>Cowork delivers:</strong> standardised one-pager (Word), payback &amp; sensitivity model (Excel), Investment Committee deck (PPT), all from the attached project workbook.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build the Investment Committee package for the proposed new mill at [SITE].
+        <div class="prompt">Build the Investment Committee package for the proposed new plant at [SITE].
 
-From the project workbook in /Plantation/CAPEX/[SITE]/Master.xlsx:
+From the project workbook in /Industrial Operations/CAPEX/[SITE]/Master.xlsx:
 1. Create a Word one-page Investment Committee paper using our IC template with sections: Background, Strategic rationale, Financials, Risks, Recommendation.
-2. Build a payback and sensitivity model in Excel with three sheets: Base case, FFB price ±15%, OER ±0.5pp. Pull all inputs from the Assumptions tab.
+2. Build a payback and sensitivity model in Excel with three sheets: Base case, throughput price ±15%, yield ±0.5pp. Pull all inputs from the Assumptions tab.
 3. Build an Investment Committee deck (PowerPoint, max 12 slides) covering project description, financials, risks and approvals sought.
-4. Draft a calendar invite for the next IC slot on [IC_DATE] with the Plantation Director and CFO, attaching the three artefacts.
+4. Draft a calendar invite for the next IC slot on [IC_DATE] with the Operations Director and CFO, attaching the three artefacts.
 
 Use the Assumptions tab as the single source of truth — all figures must reconcile across the three artefacts. Apply the "Confidential — Board Pack" sensitivity label to the IC paper and deck.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -1789,17 +1795,17 @@ Use the Assumptions tab as the single source of truth — all figures must recon
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span></div>
-        <h3>7 · Crisis response · estate flooding</h3>
-        <p><strong>Trigger:</strong> Heavy floods affect three Pahang estates.</p>
-        <p><strong>Cowork delivers:</strong> incident summary (Word), notification email to Group Risk and Insurance, Teams broadcast to all Pahang estate teams, holding statement for external comms — drafted in parallel.</p>
+        <h3>7 · Crisis response · site flooding</h3>
+        <p><strong>Trigger:</strong> Heavy floods affect three North Region sites.</p>
+        <p><strong>Cowork delivers:</strong> incident summary (Word), notification email to Group Risk and Insurance, Teams broadcast to all North Region site teams, holding statement for external comms — drafted in parallel.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Heavy floods are hitting our three Pahang estates: [ESTATE_1], [ESTATE_2], [ESTATE_3].
+        <div class="prompt">A severe weather event is hitting our three North Region sites: [SITE_1], [SITE_2], [SITE_3].
 
-1. Draft a one-page Word incident summary titled "Pahang Floods — Initial Report" with sections: What we know, What we don't, Immediate actions taken, Asks of HQ.
+1. Draft a one-page Word incident summary titled "North Region Floods — Initial Report" with sections: What we know, What we don't, Immediate actions taken, Asks of HQ.
 2. Draft an Outlook notification email to Group Risk and Insurance with the standard Group incident-notification fields populated.
-3. Draft a Teams broadcast for the "Pahang Estates" channel reassuring the estate teams and confirming HQ support.
+3. Draft a Teams broadcast for the "North Region Sites" channel reassuring the site teams and confirming HQ support.
 4. Draft a holding statement (Word, 150 words) for external comms in case media call.
-5. Source any facts from /Plantation/Incidents/Pahang-Floods-[DATE]/.
+5. Source any facts from /Industrial Operations/Incidents/North Region-Floods-[DATE]/.
 
 Drafts only — I will review before anything goes out.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -1807,25 +1813,25 @@ Drafts only — I will review before anything goes out.<button class="copy" oncl
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Adaptive Cards</span></div>
-        <h3>8 · Smallholder engagement update</h3>
-        <p><strong>Trigger:</strong> Quarterly Smallholder Sub-committee.</p>
-        <p><strong>Cowork delivers:</strong> a smallholder engagement scorecard, a one-page narrative on certification progress, an interactive card response in chat with the top three risks for review.</p>
+        <h3>8 · Supplier engagement update</h3>
+        <p><strong>Trigger:</strong> Quarterly Supplier Sub-committee.</p>
+        <p><strong>Cowork delivers:</strong> a supplier engagement scorecard, a one-page narrative on certification progress, an interactive card response in chat with the top three risks for review.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build the [QUARTER] Smallholder Sub-committee pack.
+        <div class="prompt">Build the [QUARTER] Supplier Sub-committee pack.
 
-1. Pull the latest data from /Plantation/Smallholders/[QUARTER]/ — number of smallholders, hectares covered, certification progress, training delivered, grievances raised vs closed.
-2. Build a Word smallholder engagement scorecard (2 pages) with charts for RSPO and MSPO uptake.
+1. Pull the latest data from /Industrial Operations/Suppliers/[QUARTER]/ — number of suppliers, volume covered, certification progress, training delivered, grievances raised vs closed.
+2. Build a Word supplier engagement scorecard (2 pages) with charts for ISO 14001 and ISCC uptake.
 3. Draft a one-page Word narrative on certification progress in our house style, calling out the top three risks.
-4. Post an interactive Adaptive Card in the "Smallholder Sub-committee" Teams channel listing the top three risks with quick-action buttons (Acknowledge / Need more info / Discuss in meeting).
-5. Save the scorecard and narrative to /Plantation/Smallholders/[QUARTER]/Outputs/.<button class="copy" onclick="copyP(this)">Copy</button></div>
+4. Post an interactive Adaptive Card in the "Supplier Sub-committee" Teams channel listing the top three risks with quick-action buttons (Acknowledge / Need more info / Discuss in meeting).
+5. Save the scorecard and narrative to /Industrial Operations/Suppliers/[QUARTER]/Outputs/.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
       </div>
     </section>
 
     <!-- ═══════════════ USE CASES · MANUFACTURING ═══════════════ -->
     <section class="page" id="uc-manufacturing">
-      <h1 class="page-title">Manufacturing &amp; Oleochemicals Use Cases</h1>
-      <p class="page-sub">Klang, Rawang, Düsseldorf — fatty acids, fatty alcohols, glycerine, soap noodles.</p>
+      <h1 class="page-title">Manufacturing &amp; Specialty Chemicals Use Cases</h1>
+      <p class="page-sub">Detroit, Pittsburgh, Düsseldorf — specialty chemicals, consumer-product intermediates, industrial-grade outputs.</p>
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Daily Briefing</span><span class="purple pill">Scheduled</span></div>
@@ -1833,9 +1839,9 @@ Drafts only — I will review before anything goes out.<button class="copy" oncl
         <p><strong>Trigger:</strong> Every morning at 7:30 AM.</p>
         <p><strong>Cowork delivers:</strong> a daily briefing for the Manufacturing GM — overnight production from each plant, customer issues raised in the last 24 hours, planned shutdowns this week, top three meetings on the calendar with prep notes.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every weekday at 7:30 AM Kuala Lumpur time, prepare the Manufacturing GM's daily briefing.
+        <div class="prompt">Every weekday at 7:30 AM New York time, prepare the Manufacturing GM's daily briefing.
 
-1. Pull overnight production volumes from each plant (Klang, Rawang, Düsseldorf) using files in /Manufacturing/Daily/[DATE]/.
+1. Pull overnight production volumes from each plant (Detroit, Pittsburgh, Düsseldorf) using files in /Manufacturing/Daily/[DATE]/.
 2. Read the QA inbox for customer issues raised in the last 24 hours and summarise the top 3.
 3. Pull planned shutdowns this week from the "Manufacturing Maintenance" calendar.
 4. Identify the GM's top three meetings today and write a one-paragraph prep note for each, citing recent emails and Teams threads with the attendees.
@@ -1870,11 +1876,11 @@ Tone: warm and confident; stay accountable on past complaints. Drafts only on th
         <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span></div>
         <h3>3 · Margin and spread weekly</h3>
         <p><strong>Trigger:</strong> Weekly commercial review on Mondays.</p>
-        <p><strong>Cowork delivers:</strong> the spread tracker (Excel) — fatty acid, fatty alcohol, glycerine — vs. CPKO and feedstock, plus a one-pager calling out where margin compressed.</p>
+        <p><strong>Cowork delivers:</strong> the spread tracker (Excel) — industrial acid, specialty alcohol, glycerol byproduct — vs. raw input A and feedstock, plus a one-pager calling out where margin compressed.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every Monday at 7 AM Kuala Lumpur time, build the weekly margin &amp; spread pack.
+        <div class="prompt">Every Monday at 7 AM New York time, build the weekly margin &amp; spread pack.
 
-1. Pull pricing data from /Manufacturing/Pricing/Weekly/[WEEK]/ for fatty acids, fatty alcohols, glycerine, CPKO and feedstock.
+1. Pull pricing data from /Manufacturing/Pricing/Weekly/[WEEK]/ for industrial acids, specialty alcohols, glycerol byproduct, raw input A and feedstock.
 2. Build an Excel tracker with rolling 12-week spreads, using last week's chart layout and colour scheme.
 3. Draft a one-page Word commentary in our house style calling out where margin compressed by more than 5% week-on-week and the likely cause.
 4. Post a 3-paragraph summary in the "Manufacturing Commercial" Teams channel highlighting the two biggest movers.
@@ -1885,14 +1891,14 @@ Tone: warm and confident; stay accountable on past complaints. Drafts only on th
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Teams</span><span class="pill">Email</span></div>
         <h3>4 · Plant incident report</h3>
-        <p><strong>Trigger:</strong> Process upset at the Klang fatty alcohol unit.</p>
+        <p><strong>Trigger:</strong> Process upset at the Detroit specialty alcohol unit.</p>
         <p><strong>Cowork delivers:</strong> an incident report (Word), a Teams update to the plant management channel, a notification email to Group HSSE and Insurance, and a calendar block for the incident review meeting.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">There is a process upset at the Klang fatty-alcohol unit at [TIMESTAMP].
+        <div class="prompt">There is a process upset at the Detroit fatty-alcohol unit at [TIMESTAMP].
 
-From /Manufacturing/Incidents/Klang-[DATE]/:
+From /Manufacturing/Incidents/Detroit-[DATE]/:
 1. Draft a Word incident report using the IIRR template with sections: Timeline, Immediate cause, Containment actions, Follow-up actions, Owners.
-2. Post a Teams update in the "Klang Plant Management" channel with what's known so far and the next update time.
+2. Post a Teams update in the "Detroit Plant Management" channel with what's known so far and the next update time.
 3. Draft an Outlook notification email to Group HSSE and Insurance with the standard Group incident-notification fields populated.
 4. Block 60 minutes in the Manufacturing GM's calendar today and tomorrow for the incident review meeting and add the Plant Manager and HSSE lead.
 
@@ -1939,10 +1945,10 @@ Drafts only on the customer email until I approve.<button class="copy" onclick="
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">PowerPoint</span></div>
         <h3>7 · New product launch brief</h3>
-        <p><strong>Trigger:</strong> R&amp;D commercialises a new biodegradable surfactant.</p>
+        <p><strong>Trigger:</strong> R&amp;D commercialises a new specialty surfactant.</p>
         <p><strong>Cowork delivers:</strong> commercial launch brief, internal sales-force enablement deck, draft customer announcement email, a Teams post in the Sales channel.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">R&amp;D have commercialised a new biodegradable surfactant — codename [PRODUCT].
+        <div class="prompt">R&amp;D have commercialised a new specialty surfactant — codename [PRODUCT].
 
 From /Manufacturing/R&amp;D/[PRODUCT]/:
 1. Draft a Word commercial launch brief (4 pages) with sections: Product description, Target segments, Competitive positioning, Pricing strategy, Launch timeline.
@@ -1959,7 +1965,7 @@ Tone: confident, sustainability-credible, technically accurate. Drafts only on t
     <!-- ═══════════════ USE CASES · CONTOSO LAND ═══════════════ -->
     <section class="page" id="uc-property">
       <h1 class="page-title">Contoso Land · Property Use Cases</h1>
-      <p class="page-sub">Township and industrial development on legacy estate land.</p>
+      <p class="page-sub">Township and mixed-use development on legacy land holdings.</p>
 
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">PowerPoint</span><span class="pill">Word</span><span class="pill">Email</span><span class="pill">Teams</span><span class="purple pill">Scheduled</span></div>
@@ -1967,7 +1973,7 @@ Tone: confident, sustainability-credible, technically accurate. Drafts only on t
         <p><strong>Trigger:</strong> Every Monday morning, the Group MD wants the weekly Contoso Land sales pack.</p>
         <p><strong>Cowork delivers:</strong> a 4-slide deck (PPT), a one-page commentary (Word), an email to the MD's office, a Teams post in the Sales channel — all driven from the CRM exports in OneDrive.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every Monday at 7 AM Kuala Lumpur time, build the Contoso Land weekly sales pack.
+        <div class="prompt">Every Monday at 7 AM New York time, build the Contoso Land weekly sales pack.
 
 1. Pull last week's bookings, signings and conversions from /ContosoLand/Sales/Weekly/[WEEK]/.
 2. Build a 4-slide PowerPoint pack: Headline numbers, Performance vs target, Top three projects this week, Watchlist.
@@ -1983,17 +1989,17 @@ Drafts only on the email — wait for my approval before sending.<button class="
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span><span class="pill">Email</span></div>
         <h3>2 · Township launch communications</h3>
-        <p><strong>Trigger:</strong> New Contoso Land township phase launch in Selangor.</p>
+        <p><strong>Trigger:</strong> New Contoso Land township phase launch in Central Region.</p>
         <p><strong>Cowork delivers:</strong> media release, FAQ document, customer email blast, internal Teams announcement, drafted in one consistent voice.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build the launch comms pack for the [PHASE] township phase in Selangor — launch date [LAUNCH_DATE].
+        <div class="prompt">Build the launch comms pack for the [PHASE] township phase in Central Region — launch date [LAUNCH_DATE].
 
-From /ContosoLand/Selangor/[PHASE]/:
+From /ContosoLand/Central Region/[PHASE]/:
 1. Draft a Word media release (2 pages) with headline numbers, project description, sustainability features and a Group MD quote in our usual house style.
 2. Draft a Word FAQ document addressing the top 15 buyer questions on tenure, pricing, completion timeline, financing.
 3. Draft a customer email blast to our prospect database with a clear call to action and the launch RSVP link.
 4. Draft a Teams announcement for the "Contoso Land Sales" channel and the "Group All-Hands" channel.
-5. Save all four artefacts to /ContosoLand/Selangor/[PHASE]/Comms/.
+5. Save all four artefacts to /ContosoLand/Central Region/[PHASE]/Comms/.
 
 Drafts only — do not send anything externally until I approve.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -2058,13 +2064,13 @@ Drafts only on the customer email.<button class="copy" onclick="copyP(this)">Cop
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">PowerPoint</span><span class="pill">Word</span></div>
         <h3>6 · Land-bank monetisation paper</h3>
-        <p><strong>Trigger:</strong> Group Strategy reviewing legacy estate land for property conversion.</p>
+        <p><strong>Trigger:</strong> Group Strategy reviewing legacy land holdings for property conversion.</p>
         <p><strong>Cowork delivers:</strong> a land-bank summary deck and a board paper outlining options, tenure, NPV and risks.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Build the land-bank monetisation paper for Group Strategy review.
 
 From /Group/Strategy/LandBank/[REGION]/:
-1. Build a PowerPoint summary deck (12 slides) covering total hectares, geographic breakdown, current land use, conversion potential, and three illustrative options.
+1. Build a PowerPoint summary deck (12 slides) covering total acres, geographic breakdown, current land use, conversion potential, and three illustrative options.
 2. Draft a Word board paper (8 pages) with sections: Background, Options, Tenure considerations, Illustrative NPV under three scenarios, Key risks, Recommended path.
 3. Use the Assumptions tab in the master Excel as the single source of truth — all figures must reconcile across both artefacts.
 4. Apply the "Confidential — Board Pack" sensitivity label to deck and paper.
@@ -2085,9 +2091,9 @@ From /Group/Strategy/LandBank/[REGION]/:
         <h3>1 · Monthly close commentary pack</h3>
         <p>Cowork pulls each segment's MIS pack, builds a roll-up Excel, drafts segment commentaries, assembles the Group MD note, and notifies division CFOs via Teams — automatically on day-5 of every month.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">On day-5 of every month at 9 AM Kuala Lumpur time, build the Group monthly close pack for [MONTH].
+        <div class="prompt">On day-5 of every month at 9 AM New York time, build the Group monthly close pack for [MONTH].
 
-1. Pull each segment's MIS pack from /Group/Finance/MIS/[MONTH]/ — Plantation, Manufacturing, Contoso Land.
+1. Pull each segment's MIS pack from /Group/Finance/MIS/[MONTH]/ — Industrial Operations, Manufacturing, Contoso Land.
 2. Build an Excel roll-up with revenue, EBIT, EBIT margin and net debt, with variance vs budget and prior month.
 3. Draft Word segment commentaries in our Group MD's house style (calm, factual, board-grade) — one page per segment.
 4. Assemble the Group MD note (Word, 3 pages) titled "[MONTH] Close — MD Note".
@@ -2117,11 +2123,11 @@ Drafts only on the email.<button class="copy" onclick="copyP(this)">Copy</button
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
         <h3>3 · Tax change impact note</h3>
-        <p>Cowork researches the latest Malaysian budget proposals, builds a Group-impact note covering plantation, manufacturing and property, and circulates it to Group Tax and the Audit Committee.</p>
+        <p>Cowork researches the latest global budget proposals, builds a Group-impact note covering industrial operations, manufacturing and property, and circulates it to Group Tax and the Audit Committee.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build the Group impact note on the latest Malaysian budget proposals announced [BUDGET_DATE].
+        <div class="prompt">Build the Group impact note on the latest global budget proposals announced [BUDGET_DATE].
 
-1. Conduct deep research summarising the proposed tax changes most relevant to plantation, manufacturing and property — cite source URLs.
+1. Conduct deep research summarising the proposed tax changes most relevant to industrial operations, manufacturing and property — cite source URLs.
 2. Draft a Word Group-impact note (5 pages) with sections per segment, estimating quantitative impact using illustrative figures from /Group/Finance/Latest/.
 3. Draft an Outlook email to Group Tax and the Audit Committee chair with a 3-bullet executive summary in the body and the note attached.
 4. Post a one-paragraph note in the "Group Finance Leadership" Teams channel.
@@ -2169,16 +2175,16 @@ Drafts only on the invites.<button class="copy" onclick="copyP(this)">Copy</butt
       </div>
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Email</span></div>
-        <h3>6 · Hiring kit · Estate Manager role</h3>
+        <h3>6 · Hiring kit · Site Manager role</h3>
         <p>Cowork drafts a job description, an interview scorecard, a candidate-experience email sequence, and a Teams onboarding-channel announcement template.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Build a complete Estate Manager hiring kit for the [REGION] vacancy.
+        <div class="prompt">Build a complete Site Manager hiring kit for the [REGION] vacancy.
 
-1. Draft a Word job description (2 pages) using our standard estate-manager template plus region-specific responsibilities for [REGION].
+1. Draft a Word job description (2 pages) using our standard site-manager template plus region-specific responsibilities for [REGION].
 2. Build an interview scorecard (Excel) with our 6-competency model and behavioural anchors for each.
 3. Draft a Word candidate-experience email sequence with four emails: invite, post-interview, offer, day-1.
 4. Draft a Teams onboarding-channel announcement template for when the role is filled.
-5. Save the kit to /Group/HR/Hiring/EstateManager-[REGION]/.
+5. Save the kit to /Group/HR/Hiring/SiteManager-[REGION]/.
 
 Drafts only on email content — talent acquisition will personalise per candidate.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -2204,12 +2210,12 @@ Tone: warm and specific — never generic.<button class="copy" onclick="copyP(th
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span></div>
         <h3>8 · Annual Sustainability Report drafting</h3>
-        <p>Cowork pulls the year's RSPO, MSPO, EUDR, climate, biodiversity and social data; builds a 60-page draft report; and produces a 12-slide Investor Sustainability Pack.</p>
+        <p>Cowork pulls the year's ISO 14001, ISCC, CBAM, climate, biodiversity and social data; builds a 60-page draft report; and produces a 12-slide Investor Sustainability Pack.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Draft the [YEAR] Annual Sustainability Report — print deadline [PRINT_DATE].
 
 From /Group/Sustainability/Annual/[YEAR]/:
-1. Pull all data — RSPO, MSPO, EUDR, climate, biodiversity, social, governance — and consolidate into an Excel data-book with prior-year comparison.
+1. Pull all data — ISO 14001, ISCC, CBAM, climate, biodiversity, social, governance — and consolidate into an Excel data-book with prior-year comparison.
 2. Draft a 60-page Word report following last year's structure (LastYear.docx as the master template).
 3. Build a 12-slide PowerPoint Investor Sustainability Pack summary.
 4. Post a Teams update in the "Sustainability Steering Committee" channel with the top 5 highlights and 3 narrative gaps to fill.
@@ -2220,11 +2226,11 @@ From /Group/Sustainability/Annual/[YEAR]/:
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
         <h3>9 · Climate-risk scenario brief</h3>
-        <p>Cowork conducts deep research on TCFD-aligned climate scenarios for Malaysian palm oil and produces a board-grade risk note with mitigations.</p>
+        <p>Cowork conducts deep research on TCFD-aligned climate scenarios for global palm oil and produces a board-grade risk note with mitigations.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Build a TCFD-aligned climate-risk scenario brief for the next Sustainability Committee on [COMMITTEE_DATE].
 
-1. Conduct deep research on physical and transition risks for Malaysian palm oil under 1.5°C, 2°C and 3°C scenarios — cite the latest IPCC and IEA reports.
+1. Conduct deep research on physical and transition risks for global palm oil under 1.5°C, 2°C and 3°C scenarios — cite the latest IPCC and IEA reports.
 2. Draft a board-grade Word risk note (6 pages) with sections: Scenarios, Key risks per segment, Indicative financial impact, Mitigations.
 3. Build a one-slide PowerPoint summary for the Committee pre-read.
 4. Post a one-paragraph update in the "Sustainability Leadership" Teams channel.
@@ -2274,7 +2280,7 @@ Keep all figures consistent across the four artefacts. Treat every figure as pri
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Build a 30-question analyst Q&amp;A bank for the [QUARTER] earnings call.
 
-1. Conduct deep research on what equity analysts have asked the Group and our top 5 plantation peers on earnings calls in the last four quarters, using publicly available transcripts.
+1. Conduct deep research on what equity analysts have asked the Group and our top 5 industrial operations peers on earnings calls in the last four quarters, using publicly available transcripts.
 2. Categorise the questions into themes: yields, costs, sustainability, M&amp;A, capex, capital allocation.
 3. Draft Word pre-approved responses in our IR voice for each question, citing our published positions.
 4. Draft a one-page Word hot-topics summary for the Group MD before the [QUARTER] earnings call.
@@ -2304,16 +2310,16 @@ Drafts only on the emails.<button class="copy" onclick="copyP(this)">Copy</butto
       <h2>🛒 Procurement</h2>
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Excel</span><span class="pill">Word</span><span class="pill">Email</span></div>
-        <h3>14 · Fertiliser RFQ comparison</h3>
+        <h3>14 · Consumables RFQ comparison</h3>
         <p>From a stack of supplier PDFs, Cowork builds a side-by-side comparison table (Excel), a recommendation memo (Word), and a clarification-questions email to the shortlisted three.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Run the comparison for fertiliser RFQ [RFQ_NUMBER].
+        <div class="prompt">Run the comparison for consumables RFQ [RFQ_NUMBER].
 
-From the supplier PDFs in /Procurement/Fertiliser/[RFQ_NUMBER]/:
+From the supplier PDFs in /Procurement/Consumables/[RFQ_NUMBER]/:
 1. Build an Excel side-by-side comparison with columns: price per nutrient unit (N, P, K), MOQ, delivery lead time, payment terms, ESG credentials.
 2. Draft a Word recommendation memo (2 pages) recommending a primary and a backup supplier with reasoning.
 3. Draft an Outlook clarification-questions email to the shortlisted three suppliers asking the same 6 questions for fair comparison.
-4. Save the comparison and memo to /Procurement/Fertiliser/[RFQ_NUMBER]/Outputs/.
+4. Save the comparison and memo to /Procurement/Consumables/[RFQ_NUMBER]/Outputs/.
 
 Drafts only on the email.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
@@ -2337,12 +2343,12 @@ From /Procurement/Contractors/[CONTRACTOR]/:
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Word</span><span class="pill">Communications</span></div>
         <h3>16 · Supplier code of conduct rollout</h3>
-        <p>Cowork drafts a supplier letter (English and BM), an FAQ, and a Teams post for the procurement community of practice.</p>
+        <p>Cowork drafts a supplier letter (English and Spanish), an FAQ, and a Teams post for the procurement community of practice.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Roll out the updated Supplier Code of Conduct (effective [EFFECTIVE_DATE]).
 
 1. Draft a Word supplier letter in English announcing the new code with attachment.
-2. Translate the supplier letter into Bahasa Malaysia.
+2. Translate the supplier letter into Spanish.
 3. Draft a Word FAQ (4 pages) covering the top 15 questions suppliers are likely to ask.
 4. Draft a Teams post for the "Procurement Community of Practice" channel introducing the code and inviting questions.
 5. Save all four artefacts to /Procurement/Policies/SupplierCode-[YEAR]/.
@@ -2371,11 +2377,11 @@ Drafts only on the email.<button class="copy" onclick="copyP(this)">Copy</button
       <div class="uc-card">
         <div class="uc-meta"><span class="pill">Deep Research</span><span class="pill">Word</span></div>
         <h3>18 · Regulatory horizon scan</h3>
-        <p>Quarterly Cowork scan of the regulatory environment — MPOB, Bursa, EUDR, Indonesia ISPO — turned into a one-page brief and a Top-5 implications list for the Group Legal Counsel.</p>
+        <p>Quarterly Cowork scan of the regulatory environment — industry regulator, NYSE, CBAM, Asia-Pacific regional sustainability cert — turned into a one-page brief and a Top-5 implications list for the Group Legal Counsel.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
         <div class="prompt">Run the [QUARTER] regulatory horizon scan.
 
-1. Conduct deep research on regulatory developments at MPOB, Bursa Malaysia, EUDR, Indonesia ISPO, and any others material to the Group over the last 90 days.
+1. Conduct deep research on regulatory developments at industry regulator, NYSE, CBAM, Asia-Pacific regional sustainability cert, and any others material to the Group over the last 90 days.
 2. Draft a Word one-page brief summarising the changes by jurisdiction with effective dates and source URLs as footnotes.
 3. Draft a Word Top-5 implications list for the Group Legal Counsel with suggested next steps and named owners.
 4. Post a one-paragraph update in the "Group Legal &amp; Compliance" Teams channel.
@@ -2392,7 +2398,7 @@ Drafts only on the email.<button class="copy" onclick="copyP(this)">Copy</button
 1. Draft an Outlook all-employee email announcing the refresher with the training link.
 2. Draft a Teams broadcast for the "All-Group" channel mirroring the email with a shorter summary.
 3. Draft an intranet article (Word) with three real-world scenarios and the Group's expectations.
-4. Schedule training sessions across regions (Malaysia, Indonesia, Liberia, Düsseldorf) using the calendar availability of the regional Compliance leads.
+4. Schedule training sessions across regions (North America, Europe, Asia-Pacific, Africa) using the calendar availability of the regional Compliance leads.
 5. Build an Excel completion-tracker template with named columns per region.
 6. Save all artefacts to /Group/Compliance/ABC/[HALF_YEAR]/.
 
@@ -2436,7 +2442,7 @@ Hold the advisory pending my approval.<button class="copy" onclick="copyP(this)"
         <h3>22 · Weekly service review</h3>
         <p>Every Friday, Cowork drafts the IT weekly service-review pack — incidents, problems, changes, watchlist — for the IT Steering Committee.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every Friday at 4 PM Kuala Lumpur time, build the IT weekly service-review pack.
+        <div class="prompt">Every Friday at 4 PM New York time, build the IT weekly service-review pack.
 
 1. Pull data from /IT/ServiceMgmt/Weekly/[WEEK]/ on incidents (with priority breakdown), problems, changes (with success rate), and watchlist of degraded services.
 2. Draft a Word service-review pack (4 pages) for the IT Steering Committee.
@@ -2470,9 +2476,9 @@ Tone: warm, energising, direct. Drafts only — Group MD must review before deli
         <h3>24 · COO daily briefing</h3>
         <p>Every weekday at 6:30 AM Cowork prepares Siew Ling's daily briefing — yesterday's headlines across all three segments, today's meetings with prep notes, top emails to triage, and any approvals waiting.</p>
         <details class="uc-detail"><summary>Show prompt</summary>
-        <div class="prompt">Every weekday at 6:30 AM Kuala Lumpur time, prepare my daily briefing.
+        <div class="prompt">Every weekday at 6:30 AM New York time, prepare my daily briefing.
 
-1. Pull headlines from each segment (Plantation / Manufacturing / Contoso Land) using the last 24 hours of files in /Group/Daily/.
+1. Pull headlines from each segment (Operations / Manufacturing / Contoso Land) using the last 24 hours of files in /Group/Daily/.
 2. Identify my top three meetings today and write a one-paragraph prep note for each, citing recent emails and Teams threads with the attendees.
 3. List the five emails most likely to need my decision, with a one-line summary of each.
 4. List any Cowork approvals waiting in my queue.
@@ -2513,11 +2519,11 @@ Tone: warm, specific, never generic. Drafts only on the LinkedIn post and the em
         </thead>
         <tbody>
           <tr><td class="skill-name">Word</td><td>Create and edit Word documents</td><td>Sustainability briefing note</td></tr>
-          <tr><td class="skill-name">Excel</td><td>Create and edit Excel spreadsheets</td><td>Estate yield variance tracker</td></tr>
+          <tr><td class="skill-name">Excel</td><td>Create and edit Excel spreadsheets</td><td>Site yield variance tracker</td></tr>
           <tr><td class="skill-name">PowerPoint</td><td>Create and edit PowerPoint presentations</td><td>Quarterly Board deck</td></tr>
           <tr><td class="skill-name">PDF</td><td>Work with PDF documents</td><td>Read supplier RFQ submissions</td></tr>
           <tr><td class="skill-name">Email</td><td>Compose, reply, forward, send. Save drafts. Manage attachments.</td><td>Pre-Board email to division heads</td></tr>
-          <tr><td class="skill-name">Scheduling</td><td>Schedule meetings</td><td>Liberia operations follow-up</td></tr>
+          <tr><td class="skill-name">Scheduling</td><td>Schedule meetings</td><td>Africa operations follow-up</td></tr>
           <tr><td class="skill-name">Calendar Management</td><td>Create events using natural language, add Teams meeting links, manage your calendar</td><td>Investor roadshow logistics</td></tr>
           <tr><td class="skill-name">Meetings</td><td>Prepare meeting intelligence and insights</td><td>Pre-meeting brief on a customer</td></tr>
           <tr><td class="skill-name">Daily Briefing</td><td>Prepare your daily briefing</td><td>COO 6:30 AM briefing</td></tr>
@@ -2533,10 +2539,10 @@ Tone: warm, specific, never generic. Drafts only on the LinkedIn post and the em
         <p>Cowork can be extended with custom skills stored in your OneDrive. Create a subfolder in <code>/Documents/Cowork/Skills/</code> with a <code>SKILL.md</code> file inside — name, description and instructions. Cowork picks up your custom skills automatically at the start of each conversation.</p>
         <p style="margin-bottom:0;">Examples for the Group:</p>
         <ul class="checks">
-          <li><strong>EUDR-readiness assessor</strong> — checks a shipment file against the EU Deforestation Regulation evidence checklist</li>
+          <li><strong>CBAM-readiness assessor</strong> — checks a shipment file against the EU Carbon Border Adjustment Mechanism evidence checklist</li>
           <li><strong>House-style writer</strong> — rewrites any draft in the Group's corporate voice (calm, factual, board-grade)</li>
-          <li><strong>FFB-anomaly flagger</strong> — given a yield Excel, returns a written anomaly summary in the standard variance-commentary format</li>
-          <li><strong>BM ↔ EN translator with terminology guard</strong> — keeps FFB, OER, CPO, PKO untranslated and uses the Group glossary</li>
+          <li><strong>throughput-anomaly flagger</strong> — given a yield Excel, returns a written anomaly summary in the standard variance-commentary format</li>
+          <li><strong>Spanish ↔ English translator with terminology guard</strong> — keeps throughput, yield, primary output, secondary output untranslated and uses the Group glossary</li>
         </ul>
       </div>
 
@@ -2593,7 +2599,7 @@ Tone: warm, specific, never generic. Drafts only on the LinkedIn post and the em
       </table>
 
       <h3>Worked example</h3>
-      <div class="prompt"><span class="gcse-context">I am Siew Ling, Group COO at Contoso Plantation Berhad, preparing for the Quarterly Board Operations Review.</span> <span class="gcse-goal">From the attached Q1 Operations Report, draft three artefacts in parallel: a one-page executive summary, a sustainability briefing note, and an email to my four division heads.</span> <span class="gcse-source">Use only the figures and risks in the document — no external sources.</span> <span class="gcse-expect">Tone: calm, factual, board-grade for the docs; warm but firm for the email. Email is draft only — do not send until I approve.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+      <div class="prompt"><span class="gcse-context">I am Siew Ling, Group COO at Contoso Group, preparing for the Quarterly Board Operations Review.</span> <span class="gcse-goal">From the attached Q1 Operations Report, draft three artefacts in parallel: a one-page executive summary, a sustainability briefing note, and an email to my four division heads.</span> <span class="gcse-source">Use only the figures and risks in the document — no external sources.</span> <span class="gcse-expect">Tone: calm, factual, board-grade for the docs; warm but firm for the email. Email is draft only — do not send until I approve.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
 
       <h2>Cowork prompt patterns</h2>
 
@@ -2633,7 +2639,7 @@ Drafts only — wait for my approval before sending anything.<button class="copy
       <h3>Pattern 5 · Cross-divisional rollup</h3>
       <div class="prompt">Build the Group rollup for [QUARTER] [YEAR].
 
-From the latest segment reports in /Group/Q-end/[QUARTER]/ for Plantation, Manufacturing and Contoso Land:
+From the latest segment reports in /Group/Q-end/[QUARTER]/ for Industrial Operations, Manufacturing and Contoso Land:
 1. Draft a Word 1-page narrative in the Group MD's house style.
 2. Build a 4-slide PowerPoint summary deck.
 3. Post a Teams update in the "Group Operations" channel with the three biggest movers across segments.
@@ -2646,7 +2652,7 @@ From the latest segment reports in /Group/Q-end/[QUARTER]/ for Plantation, Manuf
 
       <div class="footer-note">
         Cowork Immersion · Microsoft 365 Copilot · For licensed users<br />
-        Persona, company name, figures and estates used in this site are fictional and for demonstration only.<br />
+        Persona, company name, figures and sites used in this site are fictional and for demonstration only.<br />
         Cowork capabilities and skills referenced from
         <a href="https://support.microsoft.com/en-us/topic/get-started-with-cowork-frontier-60be4cea-b913-471b-a0d8-f9ab73c6b0be" target="_blank">Microsoft Support · Get started with Cowork (Frontier)</a>.
       </div>
