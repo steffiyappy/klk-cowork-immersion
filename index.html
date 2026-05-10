@@ -457,6 +457,13 @@
       <a onclick="show('uc-group', this)">Group Functions</a>
     </nav>
 
+    <div class="nav-section">Beyond Cowork</div>
+    <nav>
+      <a onclick="show('researcher', this)">Researcher · Overview <span class="badge">★</span></a>
+      <a onclick="show('critique', this)">· Critique</a>
+      <a onclick="show('council', this)">· Model Council</a>
+    </nav>
+
     <div class="nav-section">Reference</div>
     <nav>
       <a onclick="show('skills', this)">Cowork Skills</a>
@@ -2501,6 +2508,207 @@ Output as a Teams chat message titled "Daily briefing — [DATE]". Keep under 60
 
 Tone: warm, specific, never generic. Drafts only on the LinkedIn post and the email.<button class="copy" onclick="copyP(this)">Copy</button></div>
         </details>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCHER · OVERVIEW ═══════════════ -->
+    <section class="page" id="researcher">
+      <h1 class="page-title">Researcher <span class="frontier-badge">Frontier</span></h1>
+      <p class="page-sub">Microsoft 365 Copilot's <strong>deep research agent</strong> for work — now with multi-model intelligence.</p>
+
+      <div class="card accent">
+        <h3 style="margin-top:0;">Why Researcher exists</h3>
+        <p>Cowork is built for <em>multi-step tasks</em> across your apps. Researcher is built for <em>complex questions</em> that need long-form synthesis from many sources — internal documents, the public web, third-party data — into a Board-grade brief. Think of Researcher as the Group's deep-research analyst; think of Cowork as your operational chief of staff.</p>
+      </div>
+
+      <h2>The two new capabilities — at a glance</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">⚖️ Critique <span class="pill gold">Default</span></h3>
+          <p><strong>One report, two AI partners.</strong> A generator model plans, retrieves and drafts. A second model — acting as expert reviewer — applies a rubric across source reliability, completeness, and evidence grounding, then strengthens the report.</p>
+          <p class="rb-meta">When to use: <em>most</em> deep-research questions. Critique is the default when Auto is selected in the model picker.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">🎭 Model Council</h3>
+          <p><strong>Multiple reports, side-by-side.</strong> An Anthropic model and an OpenAI model each produce a complete, standalone report in parallel. A dedicated judge then writes a cover letter calling out where the models agree, where they diverge, and the unique insights of each.</p>
+          <p class="rb-meta">When to use: high-stakes, contested, or directional questions where you want diverse framings before you commit.</p>
+        </div>
+      </div>
+
+      <h2>Cowork vs Researcher — when to use which</h2>
+      <table class="gcse-table">
+        <tr>
+          <th style="width:140px;"><span class="gcse-goal">Cowork</span></th>
+          <td><em>"Carry out this task for me."</em> Multi-step execution across Outlook, Word, Excel, PowerPoint, Teams, OneDrive — pulling on the work graph. Best for parallel deliverables, recurring rollups, triage and document-grounded automation.</td>
+        </tr>
+        <tr>
+          <th><span class="gcse-context">Researcher</span></th>
+          <td><em>"Go deep on this question and come back with a defensible answer."</em> Long-running synthesis across internal + external sources. Best for market scans, competitive landscape, regulatory analysis, M&amp;A diligence, supplier-risk deep-dives.</td>
+        </tr>
+        <tr>
+          <th><span class="gcse-source">Together</span></th>
+          <td>Researcher feeds the brief, Cowork turns the brief into the deck, the email and the Teams broadcast. Use them in sequence on the biggest questions — not in competition.</td>
+        </tr>
+      </table>
+
+      <h2>Where Contoso Group will use Researcher first</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3 style="margin-top:0;">Industrial Operations</h3>
+          <p>Feedstock outlooks, weather-pattern impact studies, regulatory horizon-scanning across 8 sites in 5 jurisdictions, ISO-14001 benchmarking.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Manufacturing</h3>
+          <p>CBAM (carbon border) impact, polymer demand forecasts, Detroit Phase 3 competitive landscape, technology scouting for solid-state catalysis.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Property · Contoso Land</h3>
+          <p>Riverside Phase 3 catchment study, township pipeline competitive benchmarking, US property cycle reads, retail anchor-tenant scouting.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Group Functions — Finance &amp; IR</h3>
+          <p>NYSE peer benchmarking, credit-rating sensitivity, hostile-question prep for earnings calls, ESG ratings landscape.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Group Functions — Strategy &amp; M&amp;A</h3>
+          <p>Counterparty deep-dives, supplier UBO + sanctions sweeps, target screening for adjacencies, geopolitical scenario reads.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Group Functions — Sustainability &amp; Legal</h3>
+          <p>Scope 3 methodology updates, climate-litigation tracking, jurisdictional ESG disclosure rule changes, board-grade risk briefs.</p>
+        </div>
+      </div>
+
+      <div class="card warn">
+        <h3 style="margin-top:0;">📌 Availability</h3>
+        <p>Critique and Model Council are broadly available in the <strong>Frontier</strong> program for licensed M365 Copilot users. Both appear in the Researcher model picker — <em>Auto</em> selects Critique by default; <em>Model Council</em> is selected explicitly when you need divergent perspectives.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCHER · CRITIQUE ═══════════════ -->
+    <section class="page" id="critique">
+      <h1 class="page-title">Researcher · Critique <span class="frontier-badge">Frontier</span></h1>
+      <p class="page-sub">A multi-model deep-research architecture: one model generates, another reviews — like academic peer review at AI speed.</p>
+
+      <h2>How it works</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3 style="margin-top:0;">1 · Generator</h3>
+          <p>One frontier model leads the heavy lifting — plans the task, iterates through retrieval across internal sources and the web, synthesises the evidence, and produces an initial draft report.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">2 · Reviewer</h3>
+          <p>A second frontier model takes the draft and acts as expert reviewer — running a structured, rubric-based evaluation. Not a second author. A reviewer.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">3 · Enhanced report</h3>
+          <p>The reviewer returns an enhanced final report — sharper claims, stronger evidence-grounding, fewer holes. You see one polished output; under the hood, two models agreed it was ready.</p>
+        </div>
+      </div>
+
+      <h2>The rubric — three review dimensions</h2>
+      <table class="gcse-table">
+        <tr>
+          <th style="width:200px;"><span class="gcse-context">Source Reliability</span></th>
+          <td>Reviewer prioritises reputable, authoritative, domain-appropriate sources. Throws out weak citations. Verifies that evidence is verifiable and contextually right.</td>
+        </tr>
+        <tr>
+          <th><span class="gcse-goal">Report Completeness</span></th>
+          <td>Did the final report actually answer the question? Reviewer pushes for relevant, unique, missing-angle coverage. This is where most of Critique's quality lift comes from.</td>
+        </tr>
+        <tr>
+          <th><span class="gcse-expect">Strict Evidence Grounding</span></th>
+          <td>Every key claim must be anchored to a reliable source with a precise citation. Conservative grounding — speculation gets cut. This is the headline trust uplift.</td>
+        </tr>
+      </table>
+
+      <h2>What the benchmark says</h2>
+      <div class="card">
+        <p>On the <strong>DRACO benchmark</strong> (Deep Research Accuracy, Completeness, and Objectivity — 100 complex tasks across 10 domains), Researcher with Critique scored <strong>+7.0 points</strong> (SEM ±1.90) over the best system in the published paper — a <strong>+13.88%</strong> improvement over the previous benchmark leader.</p>
+        <ul>
+          <li><strong>Breadth and Depth of Analysis</strong>: +3.33 — biggest gain. Critique closes coverage holes.</li>
+          <li><strong>Presentation Quality</strong>: +3.04 — clearer narrative, better organisation.</li>
+          <li><strong>Factual Accuracy</strong>: +2.58 — weak claims are challenged and dropped.</li>
+          <li><strong>Citation Quality</strong>: positive — better use of existing sources.</li>
+          <li>Statistically significant gains in <strong>8 of 10 domains</strong> (p &lt; 0.05).</li>
+        </ul>
+      </div>
+
+      <h2>Try these Contoso prompts in Researcher · Critique</h2>
+
+      <h3>Prompt 1 · CBAM impact deep-dive — Manufacturing</h3>
+      <div class="prompt"><span class="gcse-context">I am the Group Sustainability Director at Contoso Group, a NYSE-listed conglomerate with a Manufacturing division running specialty-chemicals plants in Düsseldorf, Detroit, and Pittsburgh.</span> <span class="gcse-goal">Produce a deep-research brief on the EU Carbon Border Adjustment Mechanism (CBAM) — its current state for 2026 reporting, the 2026-2030 phase-in schedule, treatment of indirect emissions, embedded-carbon calculation methodology for our product mix, and the cost impact for European-bound exports from our Detroit and Pittsburgh sites.</span> <span class="gcse-source">Pull from EU regulatory sources, recent industry analyses, peer disclosures from the top 5 specialty-chemicals listeds, and our own /Sustainability/CBAM/ folder.</span> <span class="gcse-expect">Output a 6-page Word brief with executive summary, methodology section, financial-impact estimate range with explicit assumptions, peer-comparison table, and 5 specific actions for Group ExCo. Cite every claim with a footnote URL or internal document reference.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <h3>Prompt 2 · Counterparty risk deep-dive — Procurement</h3>
+      <div class="prompt"><span class="gcse-context">I am the Head of Group Procurement at Contoso Group, evaluating Steelbridge Industries Pte Ltd (Singapore) as a strategic supplier for our Manufacturing division.</span> <span class="gcse-goal">Produce a counterparty risk deep-dive covering financial trajectory (3-year), credit metrics, regulatory and litigation exposure across Singapore and Vietnam, customer concentration, FX exposure, and any reputational signals from the public web. Surface anything that contradicts what they've told us in onboarding.</span> <span class="gcse-source">Use the audited FS files in /Procurement/Counterparties/Steelbridge/, public regulatory filings, news in the last 24 months, and the engagement-letter scope.</span> <span class="gcse-expect">Output a Word brief with one-page executive summary, financial trend table, three lines of evidence rated High/Medium/Low confidence, list of unresolved questions, and a recommended go / pause / hard-no with reasoning. No speculation — every flag must cite a source.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <h3>Prompt 3 · Earnings-call hostile-Q prep — Investor Relations</h3>
+      <div class="prompt"><span class="gcse-context">I am the Head of IR at Contoso Group, preparing the Group MD for the Q1 FY26 earnings call. The market has been concerned about margin compression in Manufacturing and capex discipline at Riverside Phase 3.</span> <span class="gcse-goal">Produce the top 15 hostile analyst questions we should expect, ranked by likelihood, with a tested first-line answer and a fall-back follow-up answer for each. Cover Manufacturing margin trajectory, Detroit Phase 3 ROI, Riverside cost overrun risk, FX sensitivity, sustainability spend ROI, and group leverage.</span> <span class="gcse-source">Pull from our last 4 quarterly transcripts in /IR/Transcripts/, sell-side notes in /IR/Analyst-coverage/, the Q1 FY26 segment reporting in /IR/Q1-FY26/, and recent peer earnings transcripts.</span> <span class="gcse-expect">Output a Word brief — one question per page — with question, why analysts would ask now, recommended answer, fall-back, and supporting data points with internal references. No fluff. Tight, defensible, board-grade.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <div class="card accent">
+        <h3 style="margin-top:0;">💡 Tip</h3>
+        <p>Critique <em>shines</em> when the question demands <strong>defensibility</strong> — when you'll be challenged by a regulator, an auditor, an analyst, or your Board. The reviewer-pass is a quiet quality gate that catches the kind of thin-evidence claims that, in single-model output, would have to be caught by a human reviewer downstream. You're getting a peer-reviewer for free.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCHER · MODEL COUNCIL ═══════════════ -->
+    <section class="page" id="council">
+      <h1 class="page-title">Researcher · Model Council <span class="frontier-badge">Frontier</span></h1>
+      <p class="page-sub">Two frontier models. Two complete reports. One judge. Surfaces where they agree, where they diverge, and what each saw that the other missed.</p>
+
+      <h2>How it works</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3 style="margin-top:0;">1 · Parallel reports</h3>
+          <p>Council runs an <strong>Anthropic</strong> model and an <strong>OpenAI</strong> model simultaneously. Each one produces a full, standalone, end-to-end research report — not a fragment.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">2 · Judge model</h3>
+          <p>A dedicated judge model reads both reports and writes a <strong>distilled cover letter</strong> — what the two reports agree on, where they meaningfully diverge in magnitude / framing / interpretation, and the unique contributions of each.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">3 · You decide</h3>
+          <p>You see all three: Report A, Report B, and the cover letter. You're not consuming a black-box answer — you're seeing two perspectives and choosing which framing is most useful for <em>your</em> decision.</p>
+        </div>
+      </div>
+
+      <h2>When to reach for Model Council (instead of Critique)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0;">✅ Good fit</h3>
+          <ul>
+            <li>Strategic / directional questions where there's no single right answer.</li>
+            <li>High-stakes investment, divestment, or M&amp;A reads.</li>
+            <li>Geopolitical or regulatory scenarios with multiple plausible interpretations.</li>
+            <li>Hostile-territory questions where you want to triangulate framing.</li>
+            <li>Anything where you'll defend the answer in front of a Board.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">⚠️ Less of a fit</h3>
+          <ul>
+            <li>Questions with a single defensible answer (use Critique).</li>
+            <li>Tight, document-grounded synthesis where you need one polished output.</li>
+            <li>Operational / multi-app execution (use Cowork instead).</li>
+            <li>Time-sensitive briefs — Council takes longer because it runs two pipelines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Try these Contoso prompts in Researcher · Model Council</h2>
+
+      <h3>Prompt 1 · Riverside Phase 3 — go / pause / scale-back</h3>
+      <div class="prompt"><span class="gcse-context">I am the Group MD at Contoso Group. Riverside Phase 3 is a US property mid-rise development with USD 312M committed capex over FY27-FY28. Recent macro signals — softening US property cycle, rising construction inputs, and the Detroit competitive overhang — have made me want a second opinion.</span> <span class="gcse-goal">Produce a directional read on whether to proceed at full scope, pause for 2 quarters, or scale back to Phases 3A only. I want the strategic case both ways — bull and bear — not a consensus.</span> <span class="gcse-source">Pull from /Property/Riverside-Phase3/IM/ for our internal numbers, the latest US property cycle indicators, comparable township launches in the Midwest in the last 18 months, financing-cost sensitivity, and our current group leverage room.</span> <span class="gcse-expect">Use Model Council. I want both reports plus the cover letter. The cover letter must explicitly state where the two models diverge in their go / pause / scale-back recommendation and why.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <h3>Prompt 2 · Geopolitical scenario — Group exposure</h3>
+      <div class="prompt"><span class="gcse-context">I am the Head of Group Strategy at Contoso Group. The Board has asked for a 24-month outlook on three macro scenarios that materially affect us: (1) US-EU trade friction sharpening, (2) Asia-Pacific currency volatility expanding, (3) global insurance-market hardening on industrial assets.</span> <span class="gcse-goal">For each scenario, produce a directional read on Group revenue, EBITDA, and credit-rating impact, and the top 3 management actions we should pre-position for each. I want different framings — not a single consensus view.</span> <span class="gcse-source">Pull from public macro forecasts from the IMF, OECD, World Bank, top 5 sell-side macro desks, our own segment reports in /Group/Q-end/, and credit-rating agency methodology documents.</span> <span class="gcse-expect">Use Model Council. The cover letter should call out the single biggest disagreement between the two models and which one I should weight more heavily given my time horizon (24 months).</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <h3>Prompt 3 · M&amp;A target — adjacency screen</h3>
+      <div class="prompt"><span class="gcse-context">I am the Head of M&amp;A at Contoso Group. The Group MD wants to scale Manufacturing into adjacent specialty chemicals — coatings, additives, and bio-based polymers — via a USD 200-400M acquisition over the next 18 months.</span> <span class="gcse-goal">Produce two competing target screens — one optimised for strategic fit (technology, customer overlap, talent), one optimised for financial fit (multiple, leverage, FCF accretion). Each list should rank 8-10 named targets globally with a one-line investment thesis, key risks, and reachability assessment.</span> <span class="gcse-source">Pull from public M&amp;A databases, sector analyst notes, regulatory filings of the top 50 specialty-chemicals listeds, our own /M&amp;A/Sector-views/ folder, and recent transaction multiples.</span> <span class="gcse-expect">Use Model Council. The cover letter should highlight any target that appears on both lists — those are the strongest candidates. For any target on only one list, the cover letter should explain why one model included it and the other did not.</span><button class="copy" onclick="copyP(this)">Copy</button></div>
+
+      <div class="card accent">
+        <h3 style="margin-top:0;">🌱 The mental model</h3>
+        <p>Model Council mirrors how senior teams already work. You don't ask one analyst — you ask two. You read both. Then you read what the senior reviewer said about where they disagreed. The disagreement <em>is</em> the insight. Council brings that practice to AI research without the calendar tax.</p>
       </div>
     </section>
 
